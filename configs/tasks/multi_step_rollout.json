@@ -1,0 +1,8 @@
+{
+  "task_id": "multi_step_rollout",
+  "task_type": "multi_step_rollout",
+  "window_id": "rollout_horizon20",
+  "input_object_type": "z_start",
+  "target_object_type": "z_future",
+  "metric_ids": ["rollout_mse"]
+}

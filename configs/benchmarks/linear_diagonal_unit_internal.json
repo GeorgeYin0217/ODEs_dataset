@@ -1,0 +1,10 @@
+{
+  "benchmark_id": "linear_diagonal_unit_internal",
+  "system_ids": ["linear_diagonal"],
+  "observation_ids": ["full_state_identity"],
+  "split_ids": ["split_I_70_15_15_seed1"],
+  "window_ids": ["one_step_lag1", "rollout_horizon20"],
+  "task_ids": ["one_step_forecast", "multi_step_rollout"],
+  "difficulty_level": "small",
+  "release_version": "0.1.0-dev"
+}

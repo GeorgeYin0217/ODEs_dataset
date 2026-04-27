@@ -1,0 +1,5 @@
+{
+  "window_id": "rollout_horizon20",
+  "window_type": "rollout",
+  "horizon": 20
+}
