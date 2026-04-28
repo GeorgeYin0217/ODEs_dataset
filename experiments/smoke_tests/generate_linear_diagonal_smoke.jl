@@ -57,14 +57,14 @@ end
 
 ## 3. Load smoke-test configuration
 
-system_config = load_config("systems", "linear_diagonal_small.json")
-observation_config = load_config("observations", "full_state_identity.json")
-split_config = load_config("splits", "split_I_70_15_15_seed1.json")
-one_step_config = load_config("windows", "one_step_lag1.json")
-rollout_config = load_config("windows", "rollout_horizon20.json")
-one_step_task_config = load_config("tasks", "one_step_forecast.json")
-rollout_task_config = load_config("tasks", "multi_step_rollout.json")
-benchmark_config = load_config("benchmarks", "linear_diagonal_smoke.json")
+system_config = load_config("systems", "unit_internal", "linear_diagonal_small.json")
+observation_config = load_config("observations", "unit_internal", "full_state_identity.json")
+split_config = load_config("splits", "unit_internal", "split_I_70_15_15_seed1.json")
+one_step_config = load_config("windows", "unit_internal", "one_step_lag1.json")
+rollout_config = load_config("windows", "unit_internal", "rollout_horizon20.json")
+one_step_task_config = load_config("tasks", "unit_internal", "one_step_forecast.json")
+rollout_task_config = load_config("tasks", "unit_internal", "multi_step_rollout.json")
+benchmark_config = load_config("benchmarks", "unit_internal", "linear_diagonal_smoke.json")
 
 system_spec = linear_diagonal_spec_from_config(system_config)
 observation_spec = full_state_observation_spec_from_config(observation_config)
@@ -88,8 +88,8 @@ processed_dir = joinpath(
     observation_spec.observation_id,
     difficulty,
 )
-manifest_dir = joinpath(project_root, "data", "manifests", system_spec.system_id, difficulty)
-plot_dir = joinpath(project_root, "reports", "plots", system_spec.system_id, "smoke")
+manifest_dir = joinpath(project_root, "data", "manifests", system_spec.family, system_spec.system_id, difficulty)
+plot_dir = joinpath(project_root, "reports", "plots", system_spec.family, system_spec.system_id, "smoke")
 
 raw_trajectories = RawTrajectory[]
 observed_trajectories = ObservedTrajectory[]

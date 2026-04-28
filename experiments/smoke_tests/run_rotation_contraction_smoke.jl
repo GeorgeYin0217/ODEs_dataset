@@ -372,6 +372,7 @@ function save_rotation_contraction_outputs(;
     split::AbstractDict,
     window_summary::AbstractDict,
     diagnostics::AbstractDict,
+    report_stem::AbstractString = "rotation_contraction_smoke",
 )
     output_policy = configs["benchmark"]["output_policy"]
     raw_path = project_path(output_policy["raw_path"])
@@ -380,9 +381,9 @@ function save_rotation_contraction_outputs(;
     windows_summary_path = project_path(output_policy["windows_summary_path"])
     manifest_path = project_path(output_policy["manifest_path"])
     release_index_path = project_path(output_policy["release_index_path"])
-    table_path = joinpath(PROJECT_ROOT, "reports", "tables", "unit_internal", "rotation_contraction_smoke_diagnostics.csv")
+    table_path = joinpath(PROJECT_ROOT, "reports", "tables", "unit_internal", string(report_stem, "_diagnostics.csv"))
     plot_dir = joinpath(PROJECT_ROOT, "reports", "plots", "unit_internal")
-    log_path = joinpath(PROJECT_ROOT, "reports", "logs", "unit_internal", "rotation_contraction_smoke.log")
+    log_path = joinpath(PROJECT_ROOT, "reports", "logs", "unit_internal", string(report_stem, ".log"))
 
     save_rotation_contraction_raw(raw_path, raw_trajectories)
     save_rotation_contraction_observed(processed_path, observed_trajectories)

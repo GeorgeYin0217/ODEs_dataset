@@ -67,14 +67,14 @@ function generate_linear_diagonal_dataset(;
     manifest_filename::AbstractString = "linear_diagonal_manifest.json",
     plot_subdir::AbstractString = "diagnostics",
 )
-    system_config = load_config("systems", system_config_name)
-    observation_config = load_config("observations", observation_config_name)
-    split_config = load_config("splits", split_config_name)
-    one_step_config = load_config("windows", one_step_window_config_name)
-    rollout_config = load_config("windows", rollout_window_config_name)
-    one_step_task_config = load_config("tasks", one_step_task_config_name)
-    rollout_task_config = load_config("tasks", rollout_task_config_name)
-    benchmark_config = load_config("benchmarks", benchmark_config_name)
+    system_config = load_config("systems", "unit_internal", system_config_name)
+    observation_config = load_config("observations", "unit_internal", observation_config_name)
+    split_config = load_config("splits", "unit_internal", split_config_name)
+    one_step_config = load_config("windows", "unit_internal", one_step_window_config_name)
+    rollout_config = load_config("windows", "unit_internal", rollout_window_config_name)
+    one_step_task_config = load_config("tasks", "unit_internal", one_step_task_config_name)
+    rollout_task_config = load_config("tasks", "unit_internal", rollout_task_config_name)
+    benchmark_config = load_config("benchmarks", "unit_internal", benchmark_config_name)
 
     system_spec = linear_diagonal_spec_from_config(system_config)
     observation_spec = full_state_observation_spec_from_config(observation_config)
@@ -96,8 +96,8 @@ function generate_linear_diagonal_dataset(;
         observation_spec.observation_id,
         difficulty,
     )
-    manifest_dir = joinpath(PROJECT_ROOT, "data", "manifests", system_spec.system_id, difficulty)
-    plot_dir = joinpath(PROJECT_ROOT, "reports", "plots", system_spec.system_id, plot_subdir)
+    manifest_dir = joinpath(PROJECT_ROOT, "data", "manifests", system_spec.family, system_spec.system_id, difficulty)
+    plot_dir = joinpath(PROJECT_ROOT, "reports", "plots", system_spec.family, system_spec.system_id, plot_subdir)
 
     raw_trajectories = RawTrajectory[]
     observed_trajectories = ObservedTrajectory[]

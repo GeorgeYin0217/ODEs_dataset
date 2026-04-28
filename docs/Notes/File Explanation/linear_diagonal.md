@@ -1,515 +1,276 @@
-基于刚才那份计划，第一版 Julia 脚本的使用方式应该是：**运行一个 smoke-test 生成入口，它自动读取/构造配置，生成线性对角系统数据，写入 raw / processed / split / window / manifest，并输出诊断结果**。这正好对应工程文档中的数据链：
+# linear_diagonal 文件说明
 
-$$
-(\mathbf f,\boldsymbol\mu,\mathbf x_0,\tau)
-\Longrightarrow
-\{\mathbf x_m\}
-\Longrightarrow
-\{\mathbf z_m\}
-\Longrightarrow
-\text{split}
-\Longrightarrow
-\text{window}
-\Longrightarrow
-\text{task}
-\Longrightarrow
-\text{metric report}.
-$$
-
-
-文档也强调原始状态轨线、观测后样本、切分协议、窗口协议要彼此解耦，且 `raw`、`processed`、`manifest` 要分开保存。fileciteturn4file0
-
-## 一、脚本应该怎么用
-
-项目根目录假设是：
+本文说明 `linear_diagonal` 内部单元测试数据集的当前文件归类。该系统属于：
 
 ```text
-ODEs_dataset/
+family = unit_internal
+system_id = linear_diagonal
 ```
 
-进入项目根目录后，第一次需要实例化 Julia 环境：
+本次整理只移动文件位置并修正文档，不修改 Julia 代码内容。
 
-```bash
-julia --project=.
-```
+## 一、入口脚本归档
 
-进入 Julia REPL 后执行：
-
-```julia
-using Pkg
-Pkg.instantiate()
-```
-
-之后生成线性对角系统 small 数据集时，运行：
-
-```bash
-julia --project=. experiments/smoke_tests/generate_linear_diagonal_smoke.jl
-```
-
-这个脚本会完成一条最小数据工厂流水线：
+### Smoke 脚本
 
 ```text
-读取配置
-  ↓
-生成线性对角 raw trajectories
-  ↓
-施加 full-state identity observation
-  ↓
-保存 processed trajectories
-  ↓
-按轨线生成 train / val / test split
-  ↓
-在各 split 内部生成 one-step 和 rollout windows
-  ↓
-运行解析误差、一步残差、维度、split 泄漏检查
-  ↓
-写 manifest、日志和 smoke-test 图像
+experiments/smoke_tests/generate_linear_diagonal_smoke.jl
 ```
 
-注意这里的关键是：**先按轨线 split，再在各 split 内部生成窗口**。不能先把所有窗口打乱再切分，否则同一条轨线的相邻窗口会同时进入训练集和测试集，长期传播指标会虚高。你的指南里也专门强调了这一点。fileciteturn4file1
-
----
-
-## 二、默认会生成什么系统
-
-第一版默认系统是：
-
-$$
-\dot{\mathbf x}=\Lambda \mathbf x,
-\qquad
-\Lambda=\operatorname{diag}(-1.0,-0.3,0.1,0.5).
-$$
-
-
-默认参数建议为：
+作用：线性对角系统的最小端到端 smoke 入口。它对应数据链：
 
 ```text
-system_id           = linear_diagonal
-family              = unit_internal
-difficulty_level    = small
-state_dim           = 4
-dt                  = 0.05
-trajectory_length   = 200
-num_trajectories    = 64
-observation_mode    = full_state_identity
-split_type          = Split-I / initial_condition
-window types        = one_step, rollout_horizon20
+system config
+  -> raw trajectories
+  -> full-state observed trajectories
+  -> trajectory-level Split-I
+  -> one-step / rollout windows
+  -> diagnostics
+  -> manifest and plots
 ```
 
-每条轨线有：
+### 正式数据生成脚本
 
-$$
-M+1=201
-$$
+```text
+experiments/data_generation/generate_linear_diagonal_dataset.jl
+```
 
+作用：线性对角系统的正式数据生成入口。该文件原先位于：
 
-个时间快照，状态矩阵按文档约定保存为：
+```text
+src/generators/generate_linear_diagonal.jl
+```
 
-$$
-\mathbf X\in\mathbb R^{4\times 201}.
-$$
+现在已按项目分层移动到 `experiments/data_generation/`。`src/generators/` 保留给可复用生成器组件，不再放正式实验入口。
 
+## 二、配置文件归档
 
-全状态观测下：
+所有 `linear_diagonal` 相关配置已归入 `unit_internal` 层。
 
-$$
-\mathbf Z=\mathbf X.
-$$
+### Benchmark 配置
 
+```text
+configs/benchmarks/unit_internal/linear_diagonal_smoke.json
+configs/benchmarks/unit_internal/linear_diagonal_unit_internal.json
+```
 
-也就是说 processed 数据暂时不会加噪声、不会归一化、不会降维。这样第一版的目标是验证协议和生成器，而不是引入观测复杂性。
+### 系统配置
 
----
+```text
+configs/systems/unit_internal/linear_diagonal_small.json
+```
 
-## 三、会产生哪些数据文件
+核心声明：
 
-### 1. Raw trajectories
+```text
+state_dim = 4
+eigenvalues = [-1.0, -0.3, 0.1, 0.5]
+dt = 0.05
+trajectory_length = 200
+num_trajectories = 64
+solver_name = exact_diagonal
+difficulty_level = small
+```
 
-路径类似：
+### 观测配置
+
+```text
+configs/observations/unit_internal/full_state_identity.json
+```
+
+含义：
+
+```text
+z_m = x_m
+```
+
+即 full-state identity observation，不加噪声、不归一化、不降维。
+
+### Split 配置
+
+```text
+configs/splits/unit_internal/split_I_70_15_15_seed1.json
+```
+
+按完整 `trajectory_id` 做 Split-I 初值泛化切分：
+
+```text
+train / val / test = 70% / 15% / 15%
+```
+
+### Window 配置
+
+```text
+configs/windows/unit_internal/one_step_lag1.json
+configs/windows/unit_internal/rollout_horizon20.json
+```
+
+其中 `one_step_lag1.json` 与旋转-收缩系统使用的 unit-internal one-step 配置完全相同，因此旧扁平副本已移除，只保留 `configs/windows/unit_internal/one_step_lag1.json` 这一份。
+
+### Task 配置
+
+```text
+configs/tasks/unit_internal/one_step_forecast.json
+configs/tasks/unit_internal/multi_step_rollout.json
+```
+
+对应任务：
+
+```text
+one_step_forecast
+multi_step_rollout
+```
+
+## 三、数据文件归档
+
+raw 与 processed 数据原本已经按 `unit_internal` 归档，无需移动：
 
 ```text
 data/raw/unit_internal/linear_diagonal/small/
-```
-
-里面会有多条 `.jld2` 文件，例如：
-
-```text
-trajectory_0001_raw.jld2
-trajectory_0002_raw.jld2
-...
-trajectory_0064_raw.jld2
-```
-
-每个 raw 文件主要包含：
-
-```text
-trajectory_id
-system_id
-times
-state_matrix
-parameter_instance
-initial_condition_instance
-dt
-trajectory_length
-solver_name
-```
-
-其中：
-
-```text
-times        :: Vector{Float64}, length = 201
-state_matrix :: Matrix{Float64}, size = (4, 201)
-```
-
-raw 数据的含义是：**动力系统本体生成的原始状态轨线**。
-
----
-
-### 2. Processed / observed trajectories
-
-路径类似：
-
-```text
 data/processed/unit_internal/linear_diagonal/full_state_identity/small/
 ```
 
-文件类似：
+raw 数据是一条条 JLD2 轨线文件：
 
 ```text
-trajectory_0001_observed.jld2
-trajectory_0002_observed.jld2
+linear_diagonal_traj_0001.jld2
 ...
-trajectory_0064_observed.jld2
+linear_diagonal_traj_0064.jld2
 ```
 
-每个 processed 文件主要包含：
+每条 raw trajectory 的核心对象是：
 
 ```text
-trajectory_id
-system_id
-observation_id
-times
-state_matrix
-observation_matrix
-parameter_instance
-initial_condition_instance
+times :: Vector{Float64}, length = 201
+state_matrix :: Matrix{Float64}, size = (4, 201)
 ```
 
-其中：
-
-```text
-state_matrix       :: Matrix{Float64}, size = (4, 201)
-observation_matrix :: Matrix{Float64}, size = (4, 201)
-```
-
-在第一版中：
+processed 数据使用 full-state identity observation，因此：
 
 ```text
 observation_matrix == state_matrix
 ```
 
-这是因为使用的是最简单观测链：
+## 四、Manifest 与窗口索引归档
 
-$$
-U=\mathcal I,\qquad S=\mathcal I,\qquad Z=\mathcal I.
-$$
-
-
-工程文档中也把低维 ODE 的这个情形写成 $\mathbf z=\mathbf x$。fileciteturn4file0
-
----
-
-### 3. Split 文件
-
-路径类似：
+旧 manifest 目录：
 
 ```text
-data/manifests/linear_diagonal/splits/
+data/manifests/linear_diagonal/small/
 ```
 
-文件例如：
+已移动为：
+
+```text
+data/manifests/unit_internal/linear_diagonal/small/
+```
+
+当前包含：
+
+```text
+linear_diagonal_manifest.json
+linear_diagonal_smoke_manifest.json
+split_I_70_15_15_seed1.json
+one_step_lag1.json
+rollout_horizon20.json
+```
+
+其中：
 
 ```text
 split_I_70_15_15_seed1.json
 ```
 
-内容大致是：
+记录 train / val / test 的轨线 ID。窗口索引文件只保存索引，不复制大矩阵：
 
 ```text
-split_id
-split_type
-grouping_unit
-seed
-train_trajectory_ids
-val_trajectory_ids
-test_trajectory_ids
+one_step_lag1.json
+rollout_horizon20.json
 ```
 
-如果默认生成 64 条轨线，并用 floor 规则做 70/15/15 切分，那么大约是：
+one-step 任务使用：
 
 ```text
-train: 44 条轨线
-val:    9 条轨线
-test:  11 条轨线
+(z_m, z_{m+1})
 ```
 
-这不是按单点切，也不是按窗口切，而是按完整轨线切。
-
----
-
-### 4. Window index 文件
-
-路径类似：
+rollout horizon 20 使用：
 
 ```text
-data/manifests/linear_diagonal/windows/
+(z_s, z_{s+1}, ..., z_{s+20})
 ```
 
-会保存 one-step 和 rollout 的索引文件，例如：
+## 五、报告与图像归档
+
+旧图像目录：
 
 ```text
-one_step_lag1_split_I_70_15_15_seed1.json
-rollout_horizon20_split_I_70_15_15_seed1.json
+reports/plots/linear_diagonal/
 ```
 
-这些文件不复制大矩阵，只保存索引，例如：
+已移动为：
 
 ```text
-trajectory_id
-index_m
-split_name
+reports/plots/unit_internal/linear_diagonal/
 ```
 
-或：
+当前包含：
 
 ```text
-trajectory_id
-start_index
-horizon
-split_name
+reports/plots/unit_internal/linear_diagonal/smoke/coordinate_timeseries.png
+reports/plots/unit_internal/linear_diagonal/smoke/log_amplitudes.png
+reports/plots/unit_internal/linear_diagonal/diagnostics/coordinate_timeseries.png
+reports/plots/unit_internal/linear_diagonal/diagnostics/log_amplitudes.png
 ```
 
-默认 `trajectory_length = 200` 时，每条轨线有：
+图像用途：
 
 ```text
-one-step samples per trajectory = 200
+coordinate_timeseries.png
 ```
 
-如果 rollout horizon 是 20，并且窗口是：
-
-$$
-(\mathbf z_s,\mathbf z_{s+1},\dots,\mathbf z_{s+20}),
-$$
-
-
-那么每条轨线有：
+检查各状态分量是否按线性对角系统的特征值增长或衰减。
 
 ```text
-rollout windows per trajectory = 181
+log_amplitudes.png
 ```
 
-因为共有 201 个快照，起点最大为 $201-20=181$。
+检查 `log(abs(x_i(t)))` 的斜率是否接近对应连续特征值。
 
-在默认 44 / 9 / 11 轨线切分下，数量大约是：
+## 六、当前归档后的目录关系
+
+整理后，`linear_diagonal` 与 `linear_rotation_contraction_2d` 采用同一类项目组织规则：
 
 ```text
-one-step:
-  train = 44 × 200 = 8800
-  val   =  9 × 200 = 1800
-  test  = 11 × 200 = 2200
-
-rollout horizon 20:
-  train = 44 × 181 = 7964
-  val   =  9 × 181 = 1629
-  test  = 11 × 181 = 1991
+configs/<kind>/unit_internal/
+experiments/smoke_tests/
+experiments/data_generation/
+data/raw/unit_internal/<system_id>/
+data/processed/unit_internal/<system_id>/<observation_id>/
+data/manifests/unit_internal/<system_id>/
+reports/plots/unit_internal/<system_id>/
 ```
 
----
-
-### 5. Manifest 文件
-
-路径类似：
+这样后续新增 unit-internal 系统时，可以继续沿用相同分类：
 
 ```text
-data/manifests/linear_diagonal/
+linear_diagonal
+linear_rotation_contraction_2d
+jordan_or_nonnormal_linear_system
 ```
 
-文件例如：
+## 七、脚本路径适配
+
+文件归类后，`linear_diagonal` 的 smoke 和正式脚本已经同步改为读取 `configs/*/unit_internal/` 下的配置，并把 manifest、窗口索引和图像写入 `unit_internal` 层：
 
 ```text
-linear_diagonal_full_state_identity_small_manifest.json
+data/manifests/unit_internal/linear_diagonal/small/
+reports/plots/unit_internal/linear_diagonal/
 ```
 
-它是本次数据生成的总索引，记录：
+因此当前入口可以直接运行：
 
-```text
-dataset_version
-benchmark_id
-system_id
-family
-difficulty_level
-state_dim
-eigenvalues
-dt
-trajectory_length
-num_trajectories
-observation_id
-observation_mode
-noise_model
-normalization_policy
-split_id
-window_ids
-task_ids
-solver_name
-solver_abstol
-solver_reltol
-seed
-raw_data_dir
-processed_data_dir
-split_file
-window_files
-diagnostic_report
-plot_dir
+```bash
+julia --project=. experiments/smoke_tests/generate_linear_diagonal_smoke.jl
+julia --project=. experiments/data_generation/generate_linear_diagonal_dataset.jl
 ```
-
-它的作用是：以后算法脚本不需要手动猜数据在哪里，只要读 manifest，就能知道应该加载哪些轨线、哪些 split、哪些窗口和哪些任务。
-
-你的指南也建议每个系统保存 `raw`、`processed`、`splits`、`metadata`，并从第一天冻结 `benchmark_version`、`system_id`、`split_id`、`observation_mode`、`difficulty_level`、`solver_metadata` 等信息。fileciteturn3file5
-
----
-
-### 6. Diagnostic report / log
-
-路径类似：
-
-```text
-reports/logs/linear_diagonal/
-```
-
-文件例如：
-
-```text
-linear_diagonal_smoke_log.txt
-linear_diagonal_diagnostics.json
-```
-
-主要记录：
-
-```text
-max_analytic_error
-max_one_step_residual
-max_abs_state_value
-state_matrix_size_check
-observation_matrix_size_check
-split_disjoint_check
-window_index_check
-file_readback_check
-```
-
-期望结果是：
-
-```text
-max_analytic_error      ≈ 1e-14 到 1e-12
-max_one_step_residual   ≈ 1e-14 到 1e-12
-state_matrix size       = (4, 201)
-observation_matrix size = (4, 201)
-split disjoint          = true
-window valid            = true
-```
-
-如果这些检查不过，说明还不能进入后续算法 benchmark。
-
----
-
-### 7. Smoke-test figures
-
-路径类似：
-
-```text
-reports/plots/linear_diagonal/smoke/
-```
-
-会产生几张基础图，例如：
-
-```text
-trajectory_coordinates.png
-analytic_error.png
-log_amplitude_slopes.png
-```
-
-它们的用途分别是：
-
-```text
-trajectory_coordinates.png
-```
-
-检查四个坐标是否按照各自特征值衰减或增长。
-
-```text
-analytic_error.png
-```
-
-检查解析公式与生成轨线是否一致。
-
-```text
-log_amplitude_slopes.png
-```
-
-检查 $\log |x_i(t)|$ 的斜率是否接近 $\lambda_i$。对线性对角系统，这是最直接的谱正确性检查。
-
----
-
-## 四、后续算法应该怎么读取这些数据
-
-后续算法不应该直接随机扫 `data/processed/` 文件夹，而应该从 manifest 开始：
-
-```text
-1. 读取 manifest
-2. 从 manifest 找到 processed_data_dir
-3. 读取 split_file
-4. 根据 train_trajectory_ids / val_trajectory_ids / test_trajectory_ids 读取轨线
-5. 读取对应 window index
-6. 构造 one-step 或 rollout batch
-```
-
-对于 one-step 任务：
-
-$$
-\text{input}=\mathbf z_m,
-\qquad
-\text{target}=\mathbf z_{m+1}.
-$$
-
-
-对于 rollout 任务：
-
-$$
-\text{input}=\mathbf z_s,
-\qquad
-\text{target}=(\mathbf z_{s+1},\dots,\mathbf z_{s+L}).
-$$
-
-
-这样做的好处是数据层和算法层完全解耦：以后你换成 EDMD、SINDy、Neural ODE、Koopman autoencoder、HSKL，都不需要重新生成或重新切分数据。
-
----
-
-## 五、这次不会产生什么
-
-第一版线性对角系统不会产生：
-
-```text
-噪声观测数据
-部分观测数据
-线性混合观测数据
-非线性传感器数据
-参数泛化 Split-P
-观测泛化 Split-O
-长期统计窗口
-正式 release 文件
-leaderboard 结果
-```
-
-这些是后续阶段再加的内容。当前目标只是把 **unit_internal / linear_diagonal / full_state / Split-I / one-step + rollout** 这条最小链路跑通。
-
-确认这个使用方式和输出布局后，我就可以开始写第一版 Julia 代码。
