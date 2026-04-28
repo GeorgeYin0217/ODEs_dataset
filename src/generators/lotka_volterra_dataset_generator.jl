@@ -10,11 +10,12 @@ end
 
 function validate_lotka_volterra_manual_initial_conditions(system_config::AbstractDict)
     domain = system_config["initial_condition_domain"]
-    String(domain["type"]) == "manual_smoke_set" ||
-        throw(ArgumentError("Lotka-Volterra smoke expects initial_condition_domain type manual_smoke_set"))
+    domain_type = String(domain["type"])
+    domain_type in ("manual_smoke_set", "manual_orbit_family") ||
+        throw(ArgumentError("Lotka-Volterra expects a manual positive initial-condition set"))
     values = domain["values"]
     length(values) == Int(system_config["num_trajectories"]) ||
-        throw(ArgumentError("num_trajectories must equal the manual smoke initial-condition count"))
+        throw(ArgumentError("num_trajectories must equal the manual initial-condition count"))
     for x0 in values
         length(x0) == 2 || throw(ArgumentError("each Lotka-Volterra initial condition must have two entries"))
         x0_float = Float64.(x0)

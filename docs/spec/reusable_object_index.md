@@ -38,6 +38,7 @@ Superseded registry files removed on 2026-04-28:
 - `docs/Notes/File Explanation/vanderpol_unforced_fullobs_v1_file_guide.md`
 - `docs/notes/file explanation/duffing_unforced_double_well_smoke.md`
 - `docs/notes/file explanation/lotka_volterra_smoke.md`
+- `docs/notes/file explanation/lotka_volterra_orbit_family.md`
 
 ## Mathematical Explanations
 
@@ -61,7 +62,7 @@ These are background references, not default coding-task plans.
 | `linear_oscillator` | `v1_core` | `configs/systems/linear_oscillator_smoke_undamped.json`, `configs/systems/linear_oscillator_v1_core_damped.json` | Community-facing linear oscillator baseline with exact discrete propagation. |
 | `vanderpol_unforced` | `v1_core` | `configs/systems/v1_core/vanderpol_unforced_smoke.json`, `configs/systems/v1_core/vanderpol_unforced_formal.json` | Nonlinear limit-cycle benchmark with initial-condition and parameter splits. |
 | `duffing_unforced_double_well` | `v1_core` | `configs/systems/v1_core/duffing_unforced_double_well_smoke.json` | Damped double-well nonlinear benchmark with energy monotonicity and well-membership diagnostics. |
-| `lotka_volterra` | `v1_core` | `configs/systems/v1_core/lotka_volterra_smoke.json` | Predator-prey benchmark with positive-state checks and invariant-drift diagnostics. |
+| `lotka_volterra` | `v1_core` | `configs/systems/v1_core/lotka_volterra_smoke.json`, `configs/systems/v1_core/lotka_volterra_orbit_family.json` | Predator-prey benchmark with positive-state checks and invariant-drift diagnostics. |
 
 ## Source Modules
 
@@ -125,6 +126,7 @@ Dataset generation scripts:
 - `experiments/data_generation/generate_linear_oscillator_damped_full_state.jl`
 - `experiments/data_generation/generate_vanderpol_formal_dataset.jl`
 - `experiments/data_generation/generate_duffing_unforced_double_well_formal_dataset.jl`
+- `experiments/data_generation/generate_lotka_volterra_orbit_family_dataset.jl`
 
 ## Observation Configs
 
@@ -153,6 +155,7 @@ v1-core:
 - `configs/splits/v1_core/vanderpol_formal_split_p.json`
 - `configs/splits/v1_core/duffing_smoke_split_i.json`
 - `configs/splits/v1_core/lotka_volterra_smoke_split_i.json`
+- `configs/splits/v1_core/lotka_volterra_orbit_family_split_i.json`
 
 ## Window Configs
 
@@ -172,6 +175,7 @@ v1-core:
 - `configs/windows/v1_core/vanderpol_formal_windows.json`
 - `configs/windows/v1_core/duffing_smoke_windows.json`
 - `configs/windows/v1_core/lotka_volterra_smoke_windows.json`
+- `configs/windows/v1_core/lotka_volterra_orbit_family_windows.json`
 
 ## Task Configs
 
@@ -194,6 +198,7 @@ v1-core:
 - `configs/tasks/v1_core/vanderpol_formal_tasks.json`
 - `configs/tasks/v1_core/duffing_smoke_tasks.json`
 - `configs/tasks/v1_core/lotka_volterra_smoke_tasks.json`
+- `configs/tasks/v1_core/lotka_volterra_orbit_family_tasks.json`
 
 ## Benchmark Configs
 
@@ -213,12 +218,14 @@ v1-core:
 - `configs/benchmarks/v1_core/vanderpol_formal_benchmark.json`
 - `configs/benchmarks/v1_core/duffing_smoke_benchmark.json`
 - `configs/benchmarks/v1_core/lotka_volterra_smoke_benchmark.json`
+- `configs/benchmarks/v1_core/lotka_volterra_orbit_family_benchmark.json`
 
 ## Release Configs
 
 - `configs/releases/unit_internal_dev_rotation_contraction.json`
 - `configs/releases/linear_oscillator_v1_core_release_preview.json`
 - `configs/releases/vanderpol_unforced_fullobs_v1_release.json`
+- `configs/releases/lotka_volterra_v1_core_release_candidate.json`
 
 ## Dataset Manifests
 
@@ -236,6 +243,7 @@ v1-core:
 | `duffing_unforced_double_well` smoke | `data/manifests/v1_core/duffing_unforced_double_well/smoke/manifest.json` | 8 trajectories, length 800, fixed-step RK4, full-state observation, energy monotonicity checks. |
 | `duffing_unforced_double_well` formal smoke-params | `data/manifests/v1_core/duffing_unforced_double_well/formal/manifest.json` | Formal entry point using the same 8-trajectory, length-800 smoke parameters. |
 | `lotka_volterra` smoke | `data/manifests/v1_core/lotka_volterra/smoke/full_state_clean/manifest.json` | 5 positive trajectories, length 1600, fixed-step RK4, full-state observation, invariant drift checks. |
+| `lotka_volterra` orbit-family | `data/manifests/v1_core/lotka_volterra/orbit_family/full_state_clean/manifest.json` | 24 positive trajectories, length 4000, fixed-step RK4, full-state observation, invariant drift checks. |
 
 Auxiliary linear diagonal window/split manifests:
 
@@ -257,6 +265,7 @@ Diagnostics tables:
 - `reports/tables/v1_core/duffing/smoke/diagnostics.csv`
 - `reports/tables/v1_core/duffing/formal/diagnostics.csv`
 - `reports/tables/v1_core/lotka_volterra/smoke/diagnostics.csv`
+- `reports/tables/v1_core/lotka_volterra/orbit_family/diagnostics.csv`
 
 Plot directories:
 

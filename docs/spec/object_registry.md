@@ -458,3 +458,41 @@ Failed or blocked objects:
 
 - None. The smoke command passed with 5 positive trajectories, trajectory
   length 1600, and maximum relative invariant drift about `1.031112e-10`.
+
+## 2026-04-28, Lotka-Volterra Orbit-Family Workflow
+
+Successful objects:
+
+- v1-core orbit-family system config:
+  `configs/systems/v1_core/lotka_volterra_orbit_family.json`.
+- v1-core orbit-family split config:
+  `configs/splits/v1_core/lotka_volterra_orbit_family_split_i.json`.
+- v1-core orbit-family window config:
+  `configs/windows/v1_core/lotka_volterra_orbit_family_windows.json`.
+- v1-core orbit-family task config:
+  `configs/tasks/v1_core/lotka_volterra_orbit_family_tasks.json`.
+- v1-core orbit-family benchmark config:
+  `configs/benchmarks/v1_core/lotka_volterra_orbit_family_benchmark.json`.
+- Release-candidate config:
+  `configs/releases/lotka_volterra_v1_core_release_candidate.json`.
+- Formal orbit-family generation entry point:
+  `experiments/data_generation/generate_lotka_volterra_orbit_family_dataset.jl`.
+- Reused and updated generator:
+  `src/generators/lotka_volterra_dataset_generator.jl`, now accepting
+  `manual_orbit_family` initial-condition configs.
+- Orbit-family manifest:
+  `data/manifests/v1_core/lotka_volterra/orbit_family/full_state_clean/manifest.json`.
+- Diagnostics table:
+  `reports/tables/v1_core/lotka_volterra/orbit_family/diagnostics.csv`.
+- Diagnostic plots under:
+  `reports/plots/v1_core/lotka_volterra/orbit_family/`.
+- File explanation:
+  `docs/notes/file explanation/lotka_volterra_orbit_family.md`.
+- Task report:
+  `reports/notebooks/lotka_volterra_orbit_family_report.md`.
+
+Failed or blocked objects:
+
+- None. The orbit-family command passed with 24 positive trajectories,
+  trajectory length 4000, Split-I counts `17 / 4 / 3`, and maximum relative
+  invariant drift about `3.544013388196914e-10`.

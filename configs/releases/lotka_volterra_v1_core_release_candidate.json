@@ -1,0 +1,25 @@
+{
+  "dataset_version": "0.1.0-dev",
+  "release_id": "lotka_volterra_full_state_clean_v1_core_candidate",
+  "system_ids": ["lotka_volterra"],
+  "observation_ids": ["lotka_volterra_full_state_clean"],
+  "split_ids": [
+    "lotka_volterra_smoke_split_i",
+    "lotka_volterra_orbit_family_split_i"
+  ],
+  "window_ids": [
+    "lotka_volterra_one_step_lag1",
+    "lotka_volterra_rollout_orbit_family",
+    "lotka_volterra_statistics_h1000"
+  ],
+  "task_ids": [
+    "lotka_volterra_one_step_forecast",
+    "lotka_volterra_rollout_orbit_family",
+    "lotka_volterra_long_time_statistics"
+  ],
+  "benchmark_ids": [
+    "lotka_volterra_fullobs_v1_smoke",
+    "lotka_volterra_fullobs_v1_orbit_family"
+  ],
+  "notes": "Release-candidate declaration for fixed-parameter Lotka-Volterra full-state clean smoke and orbit-family data."
+}
