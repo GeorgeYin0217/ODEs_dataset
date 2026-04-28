@@ -1,0 +1,9 @@
+{
+  "split_id": "split_i_70_15_15_seed202604",
+  "split_type": "initial_condition",
+  "train_ratio": 0.70,
+  "val_ratio": 0.15,
+  "test_ratio": 0.15,
+  "grouping_unit": "trajectory",
+  "seed": 202604
+}

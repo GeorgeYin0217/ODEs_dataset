@@ -1,0 +1,2 @@
+system_id,observation_id,gamma,omega,dt,rho_true,rho_empirical_mean,rho_empirical_max_abs_error,theta_step_true,theta_step_empirical_mean,theta_step_max_abs_error,rollout_residual_max,spectrum_abs_error_max,num_trajectories,trajectory_length,smoke_passed
+"linear_rotation_contraction_2d","full_state_clean",0.15,6.283185307179586,0.01,0.9985011244377109,0.9985011244377097,4.440892098500626e-16,0.06283185307179587,0.06283185307179588,3.913536161803677e-15,2.8951074449790722e-15,0.0,64,500,true

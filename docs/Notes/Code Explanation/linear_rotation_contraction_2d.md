@@ -83,8 +83,8 @@ $$
 本系统主要测试：
 
 1. 二维实状态中的复共轭谱；
-2. 收缩率是否等于 $e^{-\gamma\tau}$；
-3. 单步旋转角是否等于 $\omega\tau$；
+2. 收缩率是否等于 \(e^{-\gamma\tau}\)；
+3. 单步旋转角是否等于 \(\omega\tau\)；
 4. DMD / EDMD / Koopman 方法后续能否恢复  
    $$
 
@@ -102,7 +102,7 @@ $$
 
 目的：用配置文件声明系统参数、初值策略、时间步长、轨线长度、随机种子和精确推进方式。
 
-输入：数学规划中的 $\gamma,\omega,\tau,M,R$。
+输入：数学规划中的 \(\gamma,\omega,\tau,M,R\)。
 
 输出：`SystemSpec` 配置文件。
 
@@ -126,8 +126,8 @@ $$
 诊断检查：
 
 - `state_dim = 2`；
-- $\gamma>0$；
-- $\omega\neq 0$；
+- \(\gamma>0\)；
+- \(\omega\neq 0\)；
 - `dt > 0`；
 - `trajectory_length = M` 为正整数；
 - 初值半径区间合法。
@@ -142,10 +142,10 @@ $$
 
 输出：
 
-- 连续矩阵 $\mathbf A\in\mathbb R^{2\times2}$；
-- 离散推进矩阵 $\mathbf F^\tau\in\mathbb R^{2\times2}$；
-- 真值连续谱 $\nu_\pm$；
-- 真值离散谱 $\lambda_\pm$。
+- 连续矩阵 \(\mathbf A\in\mathbb R^{2\times2}\)；
+- 离散推进矩阵 \(\mathbf F^\tau\in\mathbb R^{2\times2}\)；
+- 真值连续谱 \(\nu_\pm\)；
+- 真值离散谱 \(\lambda_\pm\)。
 
 依赖：2.1。
 
@@ -225,7 +225,7 @@ $$
 
 ## 2.4 新增观测配置
 
-目的：通过 `ObservationSpec` 将状态轨线转换为算法输入轨线。数据集指南要求动力系统与观测链解耦，算法输入统一记为 $\mathbf z_m$，而不默认等于状态 $\mathbf x_m$。fileciteturn7file0
+目的：通过 `ObservationSpec` 将状态轨线转换为算法输入轨线。数据集指南要求动力系统与观测链解耦，算法输入统一记为 \(\mathbf z_m\)，而不默认等于状态 \(\mathbf x_m\)。fileciteturn7file0
 
 第一版保留两个观测：
 
@@ -255,7 +255,7 @@ $$
 
 诊断检查：
 
-- clean 模式下 $\mathbf Z=\mathbf X$；
+- clean 模式下 \(\mathbf Z=\mathbf X\)；
 - noisy 模式下 `observation_matrix` 与 `state_matrix` 维度一致；
 - 噪声均值、标准差接近配置值；
 - 噪声 seed 可复现。
@@ -333,7 +333,7 @@ L\in\{10,50,100\}.
 
 $$
 
-其中 $L=100$ 对应默认参数下约一个完整周期。
+其中 \(L=100\) 对应默认参数下约一个完整周期。
 
 输入：
 
@@ -353,8 +353,8 @@ $$
 
 诊断检查：
 
-- one-step 样本数为每条轨线 $M$；
-- rollout horizon $L$ 的起点数为 $M+1-L$；
+- one-step 样本数为每条轨线 \(M\)；
+- rollout horizon \(L\) 的起点数为 \(M+1-L\)；
 - 每个窗口只来自单条轨线；
 - train/val/test 内部分别生成窗口，不跨 split。
 
@@ -384,7 +384,7 @@ spectrum_recovery_diagnostic
 
 - 每个 task 引用的 `window_id` 存在；
 - 每个 task 引用的 `metric_id` 存在；
-- 谱诊断 task 能读取真值 $\lambda_\pm$。
+- 谱诊断 task 能读取真值 \(\lambda_\pm\)。
 
 ---
 
@@ -456,7 +456,7 @@ $$
 
 测试层次：
 
-1. unit test：检查 $\mathbf A,\mathbf F^\tau,\lambda_\pm$；
+1. unit test：检查 \(\mathbf A,\mathbf F^\tau,\lambda_\pm\)；
 2. integration test：检查完整生成流水线；
 3. regression test：固定 seed 下比较参考 manifest 与诊断统计。
 
@@ -677,8 +677,8 @@ $$
 职责：
 
 - 参数合法性检查；
-- 构造 $\mathbf A$；
-- 构造 $\mathbf F^\tau$；
+- 构造 \(\mathbf A\)；
+- 构造 \(\mathbf F^\tau\)；
 - 给出连续谱；
 - 给出离散谱；
 - 支持解析单步推进；
@@ -694,7 +694,7 @@ $$
 职责：
 
 - 读取已经注册的线性系统对象；
-- 根据初值策略采样 $\mathbf x_0^{(q)}$；
+- 根据初值策略采样 \(\mathbf x_0^{(q)}\)；
 - 调用系统离散推进矩阵；
 - 生成 `RawTrajectory`；
 - 将结果交给观测链模块。
@@ -736,7 +736,7 @@ $$
 
 改动职责：
 
-- 支持保存 $\mathbf A$、$\mathbf F^\tau$；
+- 支持保存 \(\mathbf A\)、\(\mathbf F^\tau\)；
 - 支持保存连续谱与离散谱；
 - 支持保存 `contraction_factor`；
 - 支持保存 `rotation_angle_per_step`。
@@ -892,7 +892,7 @@ trajectory_length
 
 角色：相图。
 
-内容：若干条轨线在 $(x_1,x_2)$ 平面中的衰减螺旋。
+内容：若干条轨线在 \((x_1,x_2)\) 平面中的衰减螺旋。
 
 ---
 
@@ -900,7 +900,7 @@ trajectory_length
 
 角色：半径衰减图。
 
-内容：经验 $r_m$ 与理论 $r_0 e^{-\gamma t_m}$ 对比。
+内容：经验 \(r_m\) 与理论 \(r_0 e^{-\gamma t_m}\) 对比。
 
 ---
 
@@ -908,7 +908,7 @@ trajectory_length
 
 角色：角度增量图。
 
-内容：经验 $\Delta\theta_m$ 与理论 $\omega\tau$ 对比。
+内容：经验 \(\Delta\theta_m\) 与理论 \(\omega\tau\) 对比。
 
 ---
 
@@ -916,7 +916,7 @@ trajectory_length
 
 角色：离散谱图。
 
-内容：$\lambda_\pm$ 在复平面中的位置，以及单位圆参考。
+内容：\(\lambda_\pm\) 在复平面中的位置，以及单位圆参考。
 
 ---
 
@@ -942,11 +942,11 @@ trajectory_length
 
 检查：
 
-- $\mathbf A$ 维度为 $2\times2$；
-- $\mathbf F^\tau$ 维度为 $2\times2$；
-- $\operatorname{eig}(\mathbf A)$ 等于 $-\gamma\pm i\omega$；
-- $\operatorname{eig}(\mathbf F^\tau)$ 等于 $e^{(-\gamma\pm i\omega)\tau}$；
-- $\mathbf F^\tau{}^\top \mathbf F^\tau\approx \rho^2\mathbf I$。
+- \(\mathbf A\) 维度为 \(2\times2\)；
+- \(\mathbf F^\tau\) 维度为 \(2\times2\)；
+- \(\operatorname{eig}(\mathbf A)\) 等于 \(-\gamma\pm i\omega\)；
+- \(\operatorname{eig}(\mathbf F^\tau)\) 等于 \(e^{(-\gamma\pm i\omega)\tau}\)；
+- \(\mathbf F^\tau{}^\top \mathbf F^\tau\approx \rho^2\mathbf I\)。
 
 ---
 
@@ -1044,7 +1044,7 @@ $$
 
 ## `src/observations/`
 
-负责从 $\mathbf X$ 得到 $\mathbf Z$。
+负责从 \(\mathbf X\) 得到 \(\mathbf Z\)。
 
 第一版：
 
@@ -1315,7 +1315,7 @@ $$
 
 ## 6.2 初值流
 
-对第 $q$ 条轨线：
+对第 \(q\) 条轨线：
 
 $$
 
@@ -1434,7 +1434,7 @@ $$
 
 ## 6.6 one-step windows
 
-对每条轨线有 $M$ 个 one-step 样本：
+对每条轨线有 \(M\) 个 one-step 样本：
 
 $$
 
@@ -1456,7 +1456,7 @@ $$
 
 ## 6.7 rollout windows
 
-对 horizon $L$，每条轨线有：
+对 horizon \(L\)，每条轨线有：
 
 $$
 
@@ -1823,7 +1823,7 @@ theta_step_max_abs_error
 
 ## 8.7 rollout 一致性检查
 
-对若干起点 $s$ 和 horizon $L$，检查：
+对若干起点 \(s\) 和 horizon \(L\)，检查：
 
 $$
 
@@ -1960,14 +1960,14 @@ $$
 
 诊断：
 
-- 检查 $\theta_{m+1}-\theta_m$ 的符号；
-- 检查 $\arg(\lambda_\pm)$ 是否为 $\pm\omega\tau$。
+- 检查 \(\theta_{m+1}-\theta_m\) 的符号；
+- 检查 \(\arg(\lambda_\pm)\) 是否为 \(\pm\omega\tau\)。
 
 ---
 
 ## 10.2 角度 wrap 导致诊断错误
 
-风险：直接相减 `atan2` 角度会在 $-\pi,\pi$ 边界跳变。
+风险：直接相减 `atan2` 角度会在 \(-\pi,\pi\) 边界跳变。
 
 诊断策略：
 
@@ -1984,7 +1984,7 @@ $$
 
 ## 10.3 轨线索引 off-by-one
 
-风险：`trajectory_length = M` 可能被误解为保存 $M$ 个点，而协议中应保存 $M+1$ 个快照。
+风险：`trajectory_length = M` 可能被误解为保存 \(M\) 个点，而协议中应保存 \(M+1\) 个快照。
 
 诊断：
 
@@ -2016,7 +2016,7 @@ $$
 
 ## 10.5 初值太小导致角度不稳定
 
-风险：若 $\|\mathbf x_0\|$ 太小，角度计算对舍入误差敏感。
+风险：若 \(\|\mathbf x_0\|\) 太小，角度计算对舍入误差敏感。
 
 策略：
 
@@ -2032,13 +2032,13 @@ $$
 
 ## 10.6 轨线太长导致全部塌到原点
 
-风险：若 $t_{\max}$ 太大，后半段半径过小，不利于角度和谱诊断。
+风险：若 \(t_{\max}\) 太大，后半段半径过小，不利于角度和谱诊断。
 
 策略：
 
-- small 档建议 $M=500,\tau=0.01,t_{\max}=5$；
-- medium 档可用 $M=2000,t_{\max}=20$；
-- 若 $\gamma$ 增大，应同步缩短 $t_{\max}$。
+- small 档建议 \(M=500,\tau=0.01,t_{\max}=5\)；
+- medium 档可用 \(M=2000,t_{\max}=20\)；
+- 若 \(\gamma\) 增大，应同步缩短 \(t_{\max}\)。
 
 ---
 
@@ -2056,11 +2056,11 @@ $$
 
 ## 10.8 noisy observation 破坏 exact diagnostic
 
-风险：如果对 noisy $\mathbf Z$ 做半径和角度真值检查，误差会变大。
+风险：如果对 noisy \(\mathbf Z\) 做半径和角度真值检查，误差会变大。
 
 策略：
 
-- exact diagnostic 默认基于 raw $\mathbf X$；
+- exact diagnostic 默认基于 raw \(\mathbf X\)；
 - noisy observation 只额外报告噪声统计；
 - 不把 noisy 误差当作系统生成错误。
 

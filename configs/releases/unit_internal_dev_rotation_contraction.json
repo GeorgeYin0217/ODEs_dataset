@@ -1,0 +1,9 @@
+{
+  "release_id": "unit_internal_dev_rotation_contraction",
+  "release_version": "0.1.0-dev",
+  "system_ids": ["linear_rotation_contraction_2d"],
+  "benchmark_ids": ["benchmark_rotation_contraction_smoke"],
+  "manifest_paths": [
+    "data/manifests/unit_internal/linear_rotation_contraction_2d/full_state_clean_small_manifest.json"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "window_id": "rollout_h10_h50_h100",
+  "window_type": "rollout",
+  "horizons": [10, 50, 100]
+}

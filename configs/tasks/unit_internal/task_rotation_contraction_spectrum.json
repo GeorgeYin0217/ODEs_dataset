@@ -1,0 +1,6 @@
+{
+  "task_id": "rotation_contraction_spectrum",
+  "task_type": "spectrum_recovery_diagnostic",
+  "target_spectrum_source": "system_truth_metadata",
+  "metric_ids": ["spectrum_matching_abs_error"]
+}

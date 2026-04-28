@@ -1,0 +1,38 @@
+{
+  "system_id": "linear_rotation_contraction_2d",
+  "family": "unit_internal",
+  "state_dim": 2,
+  "parameter_names": ["gamma", "omega"],
+  "parameter_domain": {
+    "gamma": [0.0, 10.0],
+    "omega": [-31.41592653589793, 31.41592653589793]
+  },
+  "default_parameters": {
+    "gamma": 0.15,
+    "omega": 6.283185307179586
+  },
+  "initial_condition_domain": {
+    "type": "polar_annulus",
+    "radius_lower": 0.5,
+    "radius_upper": 2.0,
+    "angle_lower": 0.0,
+    "angle_upper": 6.283185307179586
+  },
+  "dt": 0.01,
+  "tspan": [0.0, 5.0],
+  "trajectory_length": 500,
+  "num_trajectories": 64,
+  "solver_name": "exact_discrete_linear",
+  "solver_abstol": 1.0e-12,
+  "solver_reltol": 1.0e-12,
+  "seed_policy": {
+    "generation_seed": 202604
+  },
+  "truth_metadata_policy": {
+    "write_continuous_matrix": true,
+    "write_discrete_matrix": true,
+    "write_continuous_spectrum": true,
+    "write_discrete_spectrum": true
+  },
+  "difficulty_level": "small"
+}

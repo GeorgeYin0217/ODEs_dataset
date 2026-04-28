@@ -1,0 +1,11 @@
+{
+  "observation_id": "full_state_noise_1e-3",
+  "mode": "full_state",
+  "input_space_name": "state",
+  "sensor_map_id": "identity",
+  "noise_model": "gaussian_iid",
+  "noise_level": 0.001,
+  "normalization_policy": "none",
+  "quantization_policy": "none",
+  "output_dim": 2
+}

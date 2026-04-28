@@ -1,0 +1,8 @@
+{
+  "task_id": "rotation_contraction_rollout",
+  "task_type": "multi_step_rollout",
+  "window_id": "rollout_h10_h50_h100",
+  "input_object_type": "z_start",
+  "target_object_type": "z_future",
+  "metric_ids": ["rollout_mse"]
+}

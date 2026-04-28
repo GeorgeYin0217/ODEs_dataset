@@ -1,0 +1,226 @@
+{
+  "array_layout": "state_dim_by_time_by_trajectory",
+  "benchmark_id": "benchmark_rotation_contraction_smoke",
+  "continuous_eigenvalues": {
+    "nu_minus": {
+      "abs": 6.284975545247367,
+      "angle": -1.5946650344369315,
+      "imag": -6.283185307179586,
+      "real": -0.15
+    },
+    "nu_plus": {
+      "abs": 6.284975545247367,
+      "angle": 1.5946650344369315,
+      "imag": 6.283185307179586,
+      "real": -0.15
+    }
+  },
+  "continuous_matrix_A": [
+    [
+      -0.15,
+      -6.283185307179586
+    ],
+    [
+      6.283185307179586,
+      -0.15
+    ]
+  ],
+  "contraction_factor": 0.9985011244377109,
+  "created_at": "2026-04-28T10:17:37.697",
+  "dataset_version": "0.1.0-dev",
+  "diagnostics": {
+    "array_layout": "state_dim_by_time",
+    "by_horizon": {
+      "h10": {
+        "rollout_horizon": 10,
+        "rollout_residual_max": 1.3506446028928519e-15,
+        "rollout_residual_mean": 1.487312042913222e-16
+      },
+      "h100": {
+        "rollout_horizon": 100,
+        "rollout_residual_max": 2.8951074449790722e-15,
+        "rollout_residual_mean": 4.3287543834675144e-16
+      },
+      "h50": {
+        "rollout_horizon": 50,
+        "rollout_residual_max": 2.7012892057857038e-15,
+        "rollout_residual_mean": 3.4260630200312786e-16
+      }
+    },
+    "dt": 0.01,
+    "family": "unit_internal",
+    "gamma": 0.15,
+    "max_one_step_residual": 0.0,
+    "num_trajectories": 64,
+    "omega": 6.283185307179586,
+    "one_step_window_counts": {
+      "test": 4500,
+      "train": 22500,
+      "val": 5000
+    },
+    "rho_empirical_max_abs_error": 4.440892098500626e-16,
+    "rho_empirical_mean": 0.9985011244377097,
+    "rho_empirical_std": 1.2422429800531648e-15,
+    "rho_true": 0.9985011244377109,
+    "rollout_residual_max": 2.8951074449790722e-15,
+    "rollout_window_counts": {
+      "h10": {
+        "test": 4419,
+        "train": 22095,
+        "val": 4910
+      },
+      "h100": {
+        "test": 3609,
+        "train": 18045,
+        "val": 4010
+      },
+      "h50": {
+        "test": 4059,
+        "train": 20295,
+        "val": 4510
+      }
+    },
+    "smoke_passed": true,
+    "spectrum_abs_error_max": 0.0,
+    "split_counts": {
+      "test": 9,
+      "train": 45,
+      "val": 10
+    },
+    "state_matrix_size": [
+      2,
+      501
+    ],
+    "system_id": "linear_rotation_contraction_2d",
+    "theta_step_empirical_mean": 0.06283185307179588,
+    "theta_step_empirical_std": 1.4931323999786878e-15,
+    "theta_step_max_abs_error": 3.913536161803677e-15,
+    "theta_step_true": 0.06283185307179587,
+    "trajectory_length": 500
+  },
+  "discrete_eigenvalues": {
+    "lambda_minus": {
+      "abs": 0.9985011244377109,
+      "angle": -0.06283185307179587,
+      "imag": -0.06269640435404746,
+      "real": 0.9965308105545191
+    },
+    "lambda_plus": {
+      "abs": 0.9985011244377109,
+      "angle": 0.06283185307179587,
+      "imag": 0.06269640435404746,
+      "real": 0.9965308105545191
+    }
+  },
+  "discrete_matrix_F": [
+    [
+      0.9965308105545191,
+      -0.06269640435404746
+    ],
+    [
+      0.06269640435404746,
+      0.9965308105545191
+    ]
+  ],
+  "dt": 0.01,
+  "family": "unit_internal",
+  "gamma": 0.15,
+  "generated_files": {
+    "diagnostics_table": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\tables\\unit_internal\\rotation_contraction_smoke_diagnostics.csv",
+    "log": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\logs\\unit_internal\\rotation_contraction_smoke.log",
+    "plots": [
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\unit_internal\\rotation_contraction_phase_portrait.png",
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\unit_internal\\rotation_contraction_radius_decay.png",
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\unit_internal\\rotation_contraction_angle_increment.png",
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\unit_internal\\rotation_contraction_discrete_spectrum.png"
+    ],
+    "processed_trajectories": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\unit_internal\\linear_rotation_contraction_2d\\full_state_clean\\small\\observed_trajectories.jld2",
+    "raw_trajectories": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\raw\\unit_internal\\linear_rotation_contraction_2d\\small\\raw_trajectories.jld2",
+    "split": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\unit_internal\\linear_rotation_contraction_2d\\full_state_clean\\small\\splits.json",
+    "windows_summary": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\unit_internal\\linear_rotation_contraction_2d\\full_state_clean\\small\\windows_summary.json"
+  },
+  "generator_commit_hash_or_local_placeholder": "local_uncommitted_or_unknown",
+  "initial_condition_policy": {
+    "type": "polar_annulus",
+    "radius_lower": 0.5,
+    "radius_upper": 2.0,
+    "angle_lower": 0.0,
+    "angle_upper": 6.283185307179586
+  },
+  "num_trajectories": 64,
+  "observation_id": "full_state_clean",
+  "omega": 6.283185307179586,
+  "rotation_angle_per_step": 0.06283185307179587,
+  "seed": 202604,
+  "solver_name": "exact_discrete_linear",
+  "split_counts": {
+    "test": 9,
+    "train": 45,
+    "val": 10
+  },
+  "split_id": "split_i_70_15_15_seed202604",
+  "state_dim": 2,
+  "system_id": "linear_rotation_contraction_2d",
+  "task_ids": [
+    "rotation_contraction_one_step",
+    "rotation_contraction_rollout",
+    "rotation_contraction_spectrum"
+  ],
+  "trajectory_length": 500,
+  "window_ids": [
+    "one_step_lag1",
+    "rollout_h10_h50_h100"
+  ],
+  "window_summary": {
+    "one_step": {
+      "counts": {
+        "test": 4500,
+        "train": 22500,
+        "val": 5000
+      },
+      "lag": 1,
+      "samples_per_trajectory": 500,
+      "window_id": "one_step_lag1"
+    },
+    "rollout": {
+      "by_horizon": {
+        "h10": {
+          "counts": {
+            "test": 4419,
+            "train": 22095,
+            "val": 4910
+          },
+          "horizon": 10,
+          "starts_per_trajectory": 491,
+          "window_id": "rollout_horizon10"
+        },
+        "h100": {
+          "counts": {
+            "test": 3609,
+            "train": 18045,
+            "val": 4010
+          },
+          "horizon": 100,
+          "starts_per_trajectory": 401,
+          "window_id": "rollout_horizon100"
+        },
+        "h50": {
+          "counts": {
+            "test": 4059,
+            "train": 20295,
+            "val": 4510
+          },
+          "horizon": 50,
+          "starts_per_trajectory": 451,
+          "window_id": "rollout_horizon50"
+        }
+      },
+      "horizons": [
+        10,
+        50,
+        100
+      ],
+      "window_id": "rollout_h10_h50_h100"
+    }
+  }
+}
