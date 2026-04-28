@@ -1,0 +1,8 @@
+{
+  "task_id": "jordan_rollout_forecast",
+  "task_type": "multi_step_rollout",
+  "window_id": "jordan_rollout_smoke",
+  "input_object_type": "z_start",
+  "target_object_type": "z_future",
+  "metric_ids": ["rollout_mse"]
+}

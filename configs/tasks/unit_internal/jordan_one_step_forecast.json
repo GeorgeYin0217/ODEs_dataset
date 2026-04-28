@@ -1,0 +1,8 @@
+{
+  "task_id": "jordan_one_step_forecast",
+  "task_type": "one_step_forecast",
+  "window_id": "one_step_lag1",
+  "input_object_type": "z_now",
+  "target_object_type": "z_next",
+  "metric_ids": ["one_step_mse"]
+}

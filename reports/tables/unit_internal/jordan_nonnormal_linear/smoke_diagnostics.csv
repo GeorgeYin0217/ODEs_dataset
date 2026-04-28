@@ -1,0 +1,2 @@
+system_id,observation_id,alpha,gamma,dt,lambda_discrete,rank_A_minus_alphaI,geom_mult,max_closed_form_error,max_one_step_residual,max_rollout_residual,max_norm_amplification,x2_activation_min_abs,x2_activation_mean_abs,num_trajectories,trajectory_length,smoke_passed
+"jordan_nonnormal_linear","full_state_clean",-0.35,3.0,0.05,0.9826522356650732,1,1,0.0,1.7798229048217483e-15,4.47545209131181e-15,3.162209559888641,0.8168673456576132,0.9283019170313708,12,80,true

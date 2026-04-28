@@ -1,0 +1,218 @@
+{
+  "alpha": -0.35,
+  "array_layout": "state_dim_by_time_by_trajectory",
+  "benchmark_id": "jordan_nonnormal_smoke_benchmark",
+  "created_at": "2026-04-28T13:02:46.045",
+  "dataset_version": "0.1.0-dev",
+  "diagnostics": {
+    "alpha": -0.35,
+    "array_layout": "state_dim_by_time",
+    "by_horizon": {
+      "h10": {
+        "rollout_horizon": 10,
+        "rollout_residual_max": 2.673771110915334e-15,
+        "rollout_residual_mean": 6.36789912829163e-16
+      },
+      "h20": {
+        "rollout_horizon": 20,
+        "rollout_residual_max": 4.47545209131181e-15,
+        "rollout_residual_mean": 1.204012466010019e-15
+      },
+      "h5": {
+        "rollout_horizon": 5,
+        "rollout_residual_max": 2.2232198742534223e-15,
+        "rollout_residual_mean": 4.669036537767526e-16
+      }
+    },
+    "discrete_eigenvalue_max_abs_error": 0.0,
+    "discrete_matrix_size": [
+      2,
+      2
+    ],
+    "dt": 0.05,
+    "family": "unit_internal",
+    "gamma": 3.0,
+    "generator_matrix_size": [
+      2,
+      2
+    ],
+    "geom_mult": 1,
+    "lambda_discrete": 0.9826522356650732,
+    "max_closed_form_error": 0.0,
+    "max_norm_amplification": 3.162209559888641,
+    "max_one_step_residual": 1.7798229048217483e-15,
+    "max_rollout_residual": 4.47545209131181e-15,
+    "mean_norm_amplification": 2.992322076014146,
+    "num_trajectories": 12,
+    "one_step_window_counts": {
+      "test": 160,
+      "train": 640,
+      "val": 160
+    },
+    "rank_A_minus_alphaI": 1,
+    "rollout_window_counts": {
+      "h10": {
+        "test": 142,
+        "train": 568,
+        "val": 142
+      },
+      "h20": {
+        "test": 122,
+        "train": 488,
+        "val": 122
+      },
+      "h5": {
+        "test": 152,
+        "train": 608,
+        "val": 152
+      }
+    },
+    "smoke_passed": true,
+    "split_counts": {
+      "test": 2,
+      "train": 8,
+      "val": 2
+    },
+    "state_dim": 2,
+    "state_matrix_size": [
+      2,
+      81
+    ],
+    "system_id": "jordan_nonnormal_linear",
+    "trajectory_length": 80,
+    "x2_activation_mean_abs": 0.9283019170313708,
+    "x2_activation_min_abs": 0.8168673456576132
+  },
+  "dt": 0.05,
+  "family": "unit_internal",
+  "gamma": 3.0,
+  "generated_files": {
+    "diagnostics_table": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\tables\\unit_internal\\jordan_nonnormal_linear\\smoke_diagnostics.csv",
+    "log": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\logs\\unit_internal\\jordan_nonnormal_linear\\smoke_generation.log",
+    "plots": [
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\unit_internal\\jordan_nonnormal_linear\\smoke_time_series.png",
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\unit_internal\\jordan_nonnormal_linear\\smoke_phase_portrait.png",
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\unit_internal\\jordan_nonnormal_linear\\smoke_norm_amplification.png"
+    ],
+    "processed_trajectories": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\unit_internal\\jordan_nonnormal_linear\\smoke\\observed_trajectories.jld2",
+    "raw_trajectories": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\raw\\unit_internal\\jordan_nonnormal_linear\\smoke\\raw_trajectories.jld2",
+    "split": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\unit_internal\\jordan_nonnormal_linear\\smoke\\splits.json",
+    "windows_summary": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\unit_internal\\jordan_nonnormal_linear\\smoke\\windows_summary.json"
+  },
+  "generator_commit_hash_or_local_placeholder": "local_uncommitted_or_unknown",
+  "initial_condition_policy": {
+    "type": "box_with_x2_activation",
+    "x1_lower": -0.5,
+    "x1_upper": 0.5,
+    "x2_abs_lower": 0.7,
+    "x2_abs_upper": 1.3
+  },
+  "num_trajectories": 12,
+  "observation_id": "full_state_clean",
+  "seed": 20260428,
+  "solver_name": "exact_jordan_closed_form",
+  "split_counts": {
+    "test": 2,
+    "train": 8,
+    "val": 2
+  },
+  "split_id": "jordan_split_i_smoke",
+  "state_dim": 2,
+  "system_id": "jordan_nonnormal_linear",
+  "task_ids": [
+    "jordan_one_step_forecast",
+    "jordan_rollout_forecast"
+  ],
+  "trajectory_length": 80,
+  "truth_metadata": {
+    "alpha": -0.35,
+    "continuous_matrix_A": [
+      [
+        -0.35,
+        3.0
+      ],
+      [
+        0.0,
+        -0.35
+      ]
+    ],
+    "discrete_matrix_K": [
+      [
+        0.9826522356650732,
+        0.147397835349761
+      ],
+      [
+        0.0,
+        0.9826522356650732
+      ]
+    ],
+    "dt": 0.05,
+    "family": "unit_internal",
+    "gamma": 3.0,
+    "geom_mult": 1,
+    "lambda_discrete": 0.9826522356650732,
+    "rank_A_minus_alphaI": 1,
+    "solver_abstol": 1.0e-12,
+    "solver_name": "exact_jordan_closed_form",
+    "solver_reltol": 1.0e-12,
+    "state_dim": 2,
+    "system_id": "jordan_nonnormal_linear",
+    "trajectory_length": 80
+  },
+  "window_ids": [
+    "one_step_lag1",
+    "jordan_rollout_smoke"
+  ],
+  "window_summary": {
+    "one_step": {
+      "counts": {
+        "test": 160,
+        "train": 640,
+        "val": 160
+      },
+      "lag": 1,
+      "samples_per_trajectory": 80,
+      "window_id": "one_step_lag1"
+    },
+    "rollout": {
+      "by_horizon": {
+        "h10": {
+          "counts": {
+            "test": 142,
+            "train": 568,
+            "val": 142
+          },
+          "horizon": 10,
+          "starts_per_trajectory": 71,
+          "window_id": "jordan_rollout_horizon10"
+        },
+        "h20": {
+          "counts": {
+            "test": 122,
+            "train": 488,
+            "val": 122
+          },
+          "horizon": 20,
+          "starts_per_trajectory": 61,
+          "window_id": "jordan_rollout_horizon20"
+        },
+        "h5": {
+          "counts": {
+            "test": 152,
+            "train": 608,
+            "val": 152
+          },
+          "horizon": 5,
+          "starts_per_trajectory": 76,
+          "window_id": "jordan_rollout_horizon5"
+        }
+      },
+      "horizons": [
+        5,
+        10,
+        20
+      ],
+      "window_id": "jordan_rollout_smoke"
+    }
+  }
+}

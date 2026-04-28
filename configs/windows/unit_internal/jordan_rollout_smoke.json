@@ -1,0 +1,5 @@
+{
+  "window_id": "jordan_rollout_smoke",
+  "window_type": "rollout",
+  "horizons": [5, 10, 20]
+}

@@ -1,0 +1,20 @@
+{
+  "benchmark_id": "jordan_nonnormal_smoke_benchmark",
+  "system_ids": ["jordan_nonnormal_linear"],
+  "observation_ids": ["full_state_clean"],
+  "split_ids": ["jordan_split_i_smoke"],
+  "window_ids": ["one_step_lag1", "jordan_rollout_smoke"],
+  "task_ids": [
+    "jordan_one_step_forecast",
+    "jordan_rollout_forecast"
+  ],
+  "difficulty_level": "smoke",
+  "release_version": "0.1.0-dev",
+  "output_policy": {
+    "raw_path": "data/raw/unit_internal/jordan_nonnormal_linear/smoke/raw_trajectories.jld2",
+    "processed_path": "data/processed/unit_internal/jordan_nonnormal_linear/smoke/observed_trajectories.jld2",
+    "split_path": "data/processed/unit_internal/jordan_nonnormal_linear/smoke/splits.json",
+    "windows_summary_path": "data/processed/unit_internal/jordan_nonnormal_linear/smoke/windows_summary.json",
+    "manifest_path": "data/manifests/unit_internal/jordan_nonnormal_linear/smoke/manifest.json"
+  }
+}
