@@ -1,0 +1,2 @@
+system_id,observation_id,variant,gamma,omega0,dt,energy_relative_drift_max,full_state_observation_error_max,rollout_residual_max,discrete_spectrum_abs_error_max,discrete_spectrum_modulus_error_from_one_max,num_trajectories,trajectory_length,smoke_passed
+"linear_oscillator","full_state_2d_clean","damped_v1_core",0.05,1.0,0.02,0.9975782615142643,0.0,6.853098368756236e-15,2.2473876566261383e-16,0.000999500166624978,256,3000,false

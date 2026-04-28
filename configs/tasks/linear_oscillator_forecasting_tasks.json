@@ -1,0 +1,23 @@
+{
+  "task_group_id": "linear_oscillator_forecasting_tasks",
+  "tasks": [
+    {
+      "task_id": "linear_oscillator_one_step_forecast",
+      "task_type": "one_step_forecast",
+      "window_id": "linear_oscillator_one_step_lag1",
+      "target": "observation"
+    },
+    {
+      "task_id": "linear_oscillator_rollout_short",
+      "task_type": "multi_step_rollout",
+      "window_id": "linear_oscillator_rollout_short",
+      "target": "observation",
+      "horizons": [10, 50]
+    },
+    {
+      "task_id": "linear_oscillator_spectrum_diagnostic",
+      "task_type": "spectrum_recovery_diagnostic",
+      "target": "truth_spectrum"
+    }
+  ]
+}

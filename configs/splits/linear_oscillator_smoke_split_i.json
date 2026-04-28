@@ -1,0 +1,9 @@
+{
+  "split_id": "linear_oscillator_smoke_split_i",
+  "split_type": "initial_condition",
+  "train_ratio": 0.80,
+  "val_ratio": 0.10,
+  "test_ratio": 0.10,
+  "grouping_unit": "trajectory",
+  "seed": 20260428
+}

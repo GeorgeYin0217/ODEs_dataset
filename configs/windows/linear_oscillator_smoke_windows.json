@@ -1,0 +1,13 @@
+{
+  "window_id": "linear_oscillator_smoke_windows",
+  "one_step": {
+    "window_id": "linear_oscillator_one_step_lag1",
+    "window_type": "one_step",
+    "lag": 1
+  },
+  "rollout": {
+    "window_id": "linear_oscillator_rollout_short",
+    "window_type": "rollout",
+    "horizons": [10, 50]
+  }
+}

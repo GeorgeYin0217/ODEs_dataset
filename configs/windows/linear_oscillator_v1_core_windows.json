@@ -1,0 +1,18 @@
+{
+  "window_id": "linear_oscillator_v1_core_windows",
+  "one_step": {
+    "window_id": "linear_oscillator_v1_core_one_step_lag1",
+    "window_type": "one_step",
+    "lag": 1
+  },
+  "rollout": {
+    "window_id": "linear_oscillator_v1_core_rollout",
+    "window_type": "rollout",
+    "horizons": [25, 100, 500]
+  },
+  "statistics": {
+    "window_id": "linear_oscillator_v1_core_statistics_full_trajectory",
+    "window_type": "statistics",
+    "policy": "full_trajectory"
+  }
+}

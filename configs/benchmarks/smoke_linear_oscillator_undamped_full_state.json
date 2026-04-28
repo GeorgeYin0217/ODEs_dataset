@@ -1,0 +1,22 @@
+{
+  "benchmark_id": "smoke_linear_oscillator_undamped_full_state",
+  "system_ids": ["linear_oscillator"],
+  "observation_ids": ["full_state_2d_clean"],
+  "split_ids": ["linear_oscillator_smoke_split_i"],
+  "window_ids": ["linear_oscillator_smoke_windows"],
+  "task_ids": [
+    "linear_oscillator_one_step_forecast",
+    "linear_oscillator_rollout_short",
+    "linear_oscillator_spectrum_diagnostic"
+  ],
+  "difficulty_level": "smoke",
+  "release_version": "0.1.0-dev",
+  "output_policy": {
+    "raw_path": "data/raw/v1_core/linear_oscillator/smoke_undamped_full_state/raw_trajectories.jld2",
+    "processed_path": "data/processed/v1_core/linear_oscillator/smoke_undamped_full_state/observed_trajectories.jld2",
+    "split_path": "data/processed/v1_core/linear_oscillator/smoke_undamped_full_state/splits.json",
+    "windows_summary_path": "data/processed/v1_core/linear_oscillator/smoke_undamped_full_state/windows_summary.json",
+    "manifest_path": "data/manifests/v1_core/linear_oscillator/smoke_undamped_full_state/manifest.json",
+    "release_index_path": "data/releases/v1_core/linear_oscillator/smoke_undamped_full_state/release_index.json"
+  }
+}

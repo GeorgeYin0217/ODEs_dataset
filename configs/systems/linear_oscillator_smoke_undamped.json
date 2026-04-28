@@ -1,0 +1,31 @@
+{
+  "system_id": "linear_oscillator",
+  "family": "v1_core",
+  "variant": "undamped_smoke",
+  "state_dim": 2,
+  "parameter_names": ["gamma", "omega0"],
+  "default_parameters": {
+    "gamma": 0.0,
+    "omega0": 1.0
+  },
+  "parameter_domain": {
+    "gamma": [0.0, 0.0],
+    "omega0": [1.0, 1.0]
+  },
+  "initial_condition_domain": {
+    "type": "box",
+    "lower": [-2.0, -2.0],
+    "upper": [2.0, 2.0],
+    "min_norm": 0.25
+  },
+  "dt": 0.02,
+  "tspan": [0.0, 16.0],
+  "trajectory_length": 800,
+  "num_trajectories": 8,
+  "solver_name": "exact_discrete_linear",
+  "solver_abstol": 1.0e-12,
+  "solver_reltol": 1.0e-12,
+  "seed_policy": {
+    "generation_seed": 20260428
+  }
+}

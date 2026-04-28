@@ -1,0 +1,17 @@
+{
+  "task_group_id": "linear_oscillator_reconstruction_tasks",
+  "tasks": [
+    {
+      "task_id": "linear_oscillator_state_reconstruction_full_state",
+      "task_type": "state_reconstruction",
+      "target": "state",
+      "observation_id": "full_state_2d_clean"
+    },
+    {
+      "task_id": "linear_oscillator_observation_reconstruction_full_state",
+      "task_type": "observation_reconstruction",
+      "target": "observation",
+      "observation_id": "full_state_2d_clean"
+    }
+  ]
+}

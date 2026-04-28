@@ -1,0 +1,24 @@
+{
+  "benchmark_id": "v1_core_linear_oscillator_damped_full_state",
+  "system_ids": ["linear_oscillator"],
+  "observation_ids": ["full_state_2d_clean"],
+  "split_ids": ["linear_oscillator_v1_core_split_i"],
+  "window_ids": ["linear_oscillator_v1_core_windows"],
+  "task_ids": [
+    "linear_oscillator_one_step_forecast",
+    "linear_oscillator_rollout_short",
+    "linear_oscillator_spectrum_diagnostic",
+    "linear_oscillator_state_reconstruction_full_state",
+    "linear_oscillator_observation_reconstruction_full_state"
+  ],
+  "difficulty_level": "v1_core",
+  "release_version": "1.0.0-preview",
+  "output_policy": {
+    "raw_path": "data/raw/v1_core/linear_oscillator/damped_full_state/raw_trajectories.jld2",
+    "processed_path": "data/processed/v1_core/linear_oscillator/damped_full_state/observed_trajectories.jld2",
+    "split_path": "data/processed/v1_core/linear_oscillator/damped_full_state/splits.json",
+    "windows_summary_path": "data/processed/v1_core/linear_oscillator/damped_full_state/windows_summary.json",
+    "manifest_path": "data/manifests/v1_core/linear_oscillator/damped_full_state/manifest.json",
+    "release_index_path": "data/releases/v1_core/linear_oscillator/damped_full_state/release_index.json"
+  }
+}

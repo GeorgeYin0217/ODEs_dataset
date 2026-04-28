@@ -1,0 +1,13 @@
+{
+  "release_id": "linear_oscillator_v1_core_release_preview",
+  "release_version": "1.0.0-preview",
+  "family": "v1_core",
+  "system_id": "linear_oscillator",
+  "variant": "damped_v1_core",
+  "benchmark_id": "v1_core_linear_oscillator_damped_full_state",
+  "system_config": "configs/systems/linear_oscillator_v1_core_damped.json",
+  "observation_config": "configs/observations/full_state_2d_clean.json",
+  "split_config": "configs/splits/linear_oscillator_v1_core_split_i.json",
+  "window_config": "configs/windows/linear_oscillator_v1_core_windows.json",
+  "benchmark_config": "configs/benchmarks/v1_core_linear_oscillator_damped_full_state.json"
+}
