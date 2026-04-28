@@ -1,0 +1,9 @@
+{
+  "split_id": "vanderpol_smoke_split_i",
+  "split_type": "initial_condition",
+  "train_ratio": 0.75,
+  "val_ratio": 0.125,
+  "test_ratio": 0.125,
+  "grouping_unit": "trajectory",
+  "seed": 20260428
+}

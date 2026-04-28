@@ -1,0 +1,40 @@
+{
+  "release_id": "vanderpol_unforced_fullobs_v1",
+  "release_version": "0.1.0-dev",
+  "family": "v1_core",
+  "system_id": "vanderpol_unforced",
+  "variants": [
+    "smoke_mu1_full_state",
+    "formal_mu1_to_3_full_state"
+  ],
+  "benchmark_ids": [
+    "vanderpol_unforced_fullobs_v1_smoke",
+    "vanderpol_unforced_fullobs_v1_formal"
+  ],
+  "system_configs": [
+    "configs/systems/v1_core/vanderpol_unforced_smoke.json",
+    "configs/systems/v1_core/vanderpol_unforced_formal.json"
+  ],
+  "observation_config": "configs/observations/full_state_2d_clean.json",
+  "split_configs": [
+    "configs/splits/v1_core/vanderpol_smoke_split_i.json",
+    "configs/splits/v1_core/vanderpol_formal_split_i.json",
+    "configs/splits/v1_core/vanderpol_formal_split_p.json"
+  ],
+  "window_configs": [
+    "configs/windows/v1_core/vanderpol_smoke_windows.json",
+    "configs/windows/v1_core/vanderpol_formal_windows.json"
+  ],
+  "task_configs": [
+    "configs/tasks/v1_core/vanderpol_smoke_tasks.json",
+    "configs/tasks/v1_core/vanderpol_formal_tasks.json"
+  ],
+  "benchmark_configs": [
+    "configs/benchmarks/v1_core/vanderpol_smoke_benchmark.json",
+    "configs/benchmarks/v1_core/vanderpol_formal_benchmark.json"
+  ],
+  "manifest_paths": [
+    "data/manifests/v1_core/vanderpol_unforced/smoke/manifest.json",
+    "data/manifests/v1_core/vanderpol_unforced/formal/manifest.json"
+  ]
+}

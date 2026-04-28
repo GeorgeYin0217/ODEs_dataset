@@ -1,0 +1,24 @@
+{
+  "task_group_id": "vanderpol_smoke_tasks",
+  "tasks": [
+    {
+      "task_id": "vanderpol_one_step_forecast",
+      "task_type": "one_step_forecast",
+      "window_id": "vanderpol_one_step_lag1",
+      "target": "observation"
+    },
+    {
+      "task_id": "vanderpol_rollout_short",
+      "task_type": "multi_step_rollout",
+      "window_id": "vanderpol_rollout_short",
+      "target": "observation",
+      "horizons": [25, 100]
+    },
+    {
+      "task_id": "vanderpol_long_time_statistics_smoke",
+      "task_type": "long_time_statistics",
+      "window_id": "vanderpol_statistics_h100",
+      "target": "observation_statistics"
+    }
+  ]
+}

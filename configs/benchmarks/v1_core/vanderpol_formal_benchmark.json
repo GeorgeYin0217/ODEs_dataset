@@ -1,0 +1,31 @@
+{
+  "benchmark_id": "vanderpol_unforced_fullobs_v1_formal",
+  "system_ids": ["vanderpol_unforced"],
+  "observation_ids": ["full_state_2d_clean"],
+  "split_ids": [
+    "vanderpol_formal_split_i",
+    "vanderpol_formal_split_p"
+  ],
+  "window_ids": [
+    "vanderpol_one_step_lag1",
+    "vanderpol_rollout_formal",
+    "vanderpol_statistics_h500"
+  ],
+  "task_ids": [
+    "vanderpol_one_step_forecast",
+    "vanderpol_multi_step_rollout",
+    "vanderpol_long_time_statistics"
+  ],
+  "difficulty_level": "formal",
+  "release_version": "0.1.0-dev",
+  "output_policy": {
+    "raw_path": "data/raw/v1_core/vanderpol_unforced/formal/raw_trajectories.jld2",
+    "processed_path": "data/processed/v1_core/vanderpol_unforced/full_state_2d_clean/formal/observed_trajectories.jld2",
+    "split_i_path": "data/processed/v1_core/vanderpol_unforced/full_state_2d_clean/formal/split_i.json",
+    "split_p_path": "data/processed/v1_core/vanderpol_unforced/full_state_2d_clean/formal/split_p.json",
+    "windows_i_summary_path": "data/processed/v1_core/vanderpol_unforced/full_state_2d_clean/formal/windows_split_i_summary.json",
+    "windows_p_summary_path": "data/processed/v1_core/vanderpol_unforced/full_state_2d_clean/formal/windows_split_p_summary.json",
+    "manifest_path": "data/manifests/v1_core/vanderpol_unforced/formal/manifest.json",
+    "release_index_path": "data/releases/v1_core/vanderpol_unforced/formal/release_index.json"
+  }
+}

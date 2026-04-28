@@ -1,0 +1,10 @@
+{
+  "split_id": "vanderpol_formal_split_p",
+  "split_type": "parameter",
+  "parameter_name": "mu",
+  "train_ratio": 0.70,
+  "val_ratio": 0.15,
+  "test_ratio": 0.15,
+  "grouping_unit": "trajectory",
+  "seed": 20260429
+}

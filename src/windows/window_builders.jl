@@ -57,7 +57,37 @@ function build_rollout_windows(
     return windows
 end
 
-## 3. Check horizon bounds and split isolation
+## 3. Define statistics window index format
+
+function build_statistics_windows(
+    split::AbstractDict,
+    trajectory_length::Integer;
+    window_id::AbstractString = "statistics_horizon100",
+    horizon::Integer,
+)
+    horizon >= 1 || throw(ArgumentError("horizon must be at least 1"))
+    horizon <= trajectory_length + 1 || throw(ArgumentError("horizon cannot exceed trajectory_length + 1"))
+
+    max_start = trajectory_length + 2 - horizon
+    windows = Dict{String,Any}(
+        "window_id" => String(window_id),
+        "window_type" => "statistics",
+        "horizon" => Int(horizon),
+        "splits" => Dict{String,Any}(),
+    )
+
+    for split_name in ("train", "val", "test")
+        ids = split[string(split_name, "_trajectory_ids")]
+        windows["splits"][split_name] = [
+            Dict("trajectory_id" => id, "start_index" => s, "horizon" => Int(horizon))
+            for id in ids for s in 1:max_start
+        ]
+    end
+
+    return windows
+end
+
+## 4. Check horizon bounds and split isolation
 
 function validate_window_indices(windows::AbstractDict, split::AbstractDict, trajectory_length::Integer)
     window_type = windows["window_type"]
@@ -75,6 +105,10 @@ function validate_window_indices(windows::AbstractDict, split::AbstractDict, tra
                 horizon = Int(window["horizon"])
                 1 <= Int(window["start_index"]) <= trajectory_length + 1 - horizon ||
                     throw(ArgumentError("rollout start_index is out of bounds"))
+            elseif window_type == "statistics"
+                horizon = Int(window["horizon"])
+                1 <= Int(window["start_index"]) <= trajectory_length + 2 - horizon ||
+                    throw(ArgumentError("statistics start_index is out of bounds"))
             else
                 throw(ArgumentError("unsupported window_type: $(window_type)"))
             end

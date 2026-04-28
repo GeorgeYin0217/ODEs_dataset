@@ -1,0 +1,35 @@
+{
+  "system_id": "vanderpol_unforced",
+  "family": "v1_core",
+  "variant": "formal_mu1_to_3_full_state",
+  "state_dim": 2,
+  "parameter_names": ["mu"],
+  "default_parameters": {
+    "mu": 1.0
+  },
+  "parameter_domain": {
+    "mu": [1.0, 3.0]
+  },
+  "parameter_sampling": {
+    "type": "linspace",
+    "parameter_name": "mu",
+    "lower": 1.0,
+    "upper": 3.0
+  },
+  "initial_condition_domain": {
+    "type": "box",
+    "lower": [-3.0, -3.0],
+    "upper": [3.0, 3.0],
+    "min_norm": 0.5
+  },
+  "dt": 0.02,
+  "tspan": [0.0, 40.0],
+  "trajectory_length": 2000,
+  "num_trajectories": 48,
+  "solver_name": "fixed_step_rk4",
+  "solver_abstol": 0.0,
+  "solver_reltol": 0.0,
+  "seed_policy": {
+    "generation_seed": 20260429
+  }
+}

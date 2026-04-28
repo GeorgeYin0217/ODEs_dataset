@@ -1,0 +1,26 @@
+{
+  "benchmark_id": "vanderpol_unforced_fullobs_v1_smoke",
+  "system_ids": ["vanderpol_unforced"],
+  "observation_ids": ["full_state_2d_clean"],
+  "split_ids": ["vanderpol_smoke_split_i"],
+  "window_ids": [
+    "vanderpol_one_step_lag1",
+    "vanderpol_rollout_short",
+    "vanderpol_statistics_h100"
+  ],
+  "task_ids": [
+    "vanderpol_one_step_forecast",
+    "vanderpol_rollout_short",
+    "vanderpol_long_time_statistics_smoke"
+  ],
+  "difficulty_level": "smoke",
+  "release_version": "0.1.0-dev",
+  "output_policy": {
+    "raw_path": "data/raw/v1_core/vanderpol_unforced/smoke/raw_trajectories.jld2",
+    "processed_path": "data/processed/v1_core/vanderpol_unforced/full_state_2d_clean/smoke/observed_trajectories.jld2",
+    "split_path": "data/processed/v1_core/vanderpol_unforced/full_state_2d_clean/smoke/splits.json",
+    "windows_summary_path": "data/processed/v1_core/vanderpol_unforced/full_state_2d_clean/smoke/windows_summary.json",
+    "manifest_path": "data/manifests/v1_core/vanderpol_unforced/smoke/manifest.json",
+    "release_index_path": "data/releases/v1_core/vanderpol_unforced/smoke/release_index.json"
+  }
+}

@@ -1,0 +1,607 @@
+{
+  "array_layout": "state_dim_by_time_by_trajectory",
+  "benchmark_id": "vanderpol_unforced_fullobs_v1_formal",
+  "created_at": "2026-04-28T19:59:17.379",
+  "dataset_version": "0.1.0-dev",
+  "diagnostics": {
+    "all_states_finite": true,
+    "array_layout": "state_dim_by_time",
+    "dt": 0.02,
+    "family": "v1_core",
+    "formal_passed": true,
+    "full_state_observation_error_max": 0.0,
+    "mu": 1.0,
+    "mu_max": 3.0,
+    "mu_mean": 2.0000000000000004,
+    "mu_min": 1.0,
+    "mu_values": [
+      1.0,
+      1.0425531914893618,
+      1.0851063829787233,
+      1.127659574468085,
+      1.1702127659574468,
+      1.2127659574468086,
+      1.2553191489361701,
+      1.297872340425532,
+      1.3404255319148937,
+      1.3829787234042554,
+      1.425531914893617,
+      1.4680851063829787,
+      1.5106382978723405,
+      1.553191489361702,
+      1.5957446808510638,
+      1.6382978723404256,
+      1.6808510638297873,
+      1.7234042553191489,
+      1.7659574468085106,
+      1.8085106382978724,
+      1.851063829787234,
+      1.8936170212765957,
+      1.9361702127659575,
+      1.9787234042553192,
+      2.021276595744681,
+      2.0638297872340425,
+      2.106382978723404,
+      2.148936170212766,
+      2.1914893617021276,
+      2.234042553191489,
+      2.276595744680851,
+      2.3191489361702127,
+      2.3617021276595747,
+      2.404255319148936,
+      2.4468085106382977,
+      2.4893617021276597,
+      2.5319148936170213,
+      2.574468085106383,
+      2.617021276595745,
+      2.6595744680851063,
+      2.702127659574468,
+      2.74468085106383,
+      2.7872340425531914,
+      2.8297872340425534,
+      2.872340425531915,
+      2.9148936170212765,
+      2.9574468085106385,
+      3.0
+    ],
+    "num_trajectories": 48,
+    "one_step_window_counts": {
+      "split_i": {
+        "test": 14000,
+        "train": 68000,
+        "val": 14000
+      },
+      "split_p": {
+        "test": 14000,
+        "train": 68000,
+        "val": 14000
+      }
+    },
+    "rk4_self_residual_max": 0.0,
+    "rollout_window_counts": {
+      "split_i": {
+        "h250": {
+          "counts": {
+            "test": 12257,
+            "train": 59534,
+            "val": 12257
+          },
+          "horizon": 250,
+          "starts_per_trajectory": 1751,
+          "window_id": "vanderpol_rollout_h250"
+        },
+        "h50": {
+          "counts": {
+            "test": 13657,
+            "train": 66334,
+            "val": 13657
+          },
+          "horizon": 50,
+          "starts_per_trajectory": 1951,
+          "window_id": "vanderpol_rollout_h50"
+        },
+        "h500": {
+          "counts": {
+            "test": 10507,
+            "train": 51034,
+            "val": 10507
+          },
+          "horizon": 500,
+          "starts_per_trajectory": 1501,
+          "window_id": "vanderpol_rollout_h500"
+        }
+      },
+      "split_p": {
+        "h250": {
+          "counts": {
+            "test": 12257,
+            "train": 59534,
+            "val": 12257
+          },
+          "horizon": 250,
+          "starts_per_trajectory": 1751,
+          "window_id": "vanderpol_rollout_h250"
+        },
+        "h50": {
+          "counts": {
+            "test": 13657,
+            "train": 66334,
+            "val": 13657
+          },
+          "horizon": 50,
+          "starts_per_trajectory": 1951,
+          "window_id": "vanderpol_rollout_h50"
+        },
+        "h500": {
+          "counts": {
+            "test": 10507,
+            "train": 51034,
+            "val": 10507
+          },
+          "horizon": 500,
+          "starts_per_trajectory": 1501,
+          "window_id": "vanderpol_rollout_h500"
+        }
+      }
+    },
+    "smoke_passed": true,
+    "split_i_counts": {
+      "test": 7,
+      "train": 34,
+      "val": 7
+    },
+    "split_p_counts": {
+      "test": 7,
+      "train": 34,
+      "val": 7
+    },
+    "split_p_parameter_ranges": {
+      "test": {
+        "max": 3.0,
+        "min": 2.74468085106383,
+        "values": [
+          2.74468085106383,
+          2.7872340425531914,
+          2.8297872340425534,
+          2.872340425531915,
+          2.9148936170212765,
+          2.9574468085106385,
+          3.0
+        ]
+      },
+      "train": {
+        "max": 2.404255319148936,
+        "min": 1.0,
+        "values": [
+          1.0,
+          1.0425531914893618,
+          1.0851063829787233,
+          1.127659574468085,
+          1.1702127659574468,
+          1.2127659574468086,
+          1.2553191489361701,
+          1.297872340425532,
+          1.3404255319148937,
+          1.3829787234042554,
+          1.425531914893617,
+          1.4680851063829787,
+          1.5106382978723405,
+          1.553191489361702,
+          1.5957446808510638,
+          1.6382978723404256,
+          1.6808510638297873,
+          1.7234042553191489,
+          1.7659574468085106,
+          1.8085106382978724,
+          1.851063829787234,
+          1.8936170212765957,
+          1.9361702127659575,
+          1.9787234042553192,
+          2.021276595744681,
+          2.0638297872340425,
+          2.106382978723404,
+          2.148936170212766,
+          2.1914893617021276,
+          2.234042553191489,
+          2.276595744680851,
+          2.3191489361702127,
+          2.3617021276595747,
+          2.404255319148936
+        ]
+      },
+      "val": {
+        "max": 2.702127659574468,
+        "min": 2.4468085106382977,
+        "values": [
+          2.4468085106382977,
+          2.4893617021276597,
+          2.5319148936170213,
+          2.574468085106383,
+          2.617021276595745,
+          2.6595744680851063,
+          2.702127659574468
+        ]
+      }
+    },
+    "state_matrix_size": [
+      2,
+      2001
+    ],
+    "state_norm_max": 5.95954682166886,
+    "statistics_window_counts": {
+      "split_i": {
+        "test": 10514,
+        "train": 51068,
+        "val": 10514
+      },
+      "split_p": {
+        "test": 10514,
+        "train": 51068,
+        "val": 10514
+      }
+    },
+    "system_id": "vanderpol_unforced",
+    "tail_radius_mean_max": 2.020236128613131,
+    "tail_radius_mean_min": 1.9463215740328155,
+    "tail_radius_std_max": 0.8748898173205117,
+    "tail_x1_sign_changes_max": 6,
+    "tail_x1_sign_changes_min": 4,
+    "trajectory_length": 2000,
+    "tspan": [
+      0.0,
+      40.0
+    ],
+    "variant": "formal_mu1_to_3_full_state",
+    "velocity_norm_max": 47.44434982398939,
+    "x1_max": 2.970638216339752,
+    "x1_min": -2.9735138443191387,
+    "x2_max": 5.646038357195228,
+    "x2_min": -5.8745618049069614
+  },
+  "difficulty_level": "formal",
+  "dt": 0.02,
+  "family": "v1_core",
+  "generated_files": {
+    "diagnostics_table": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\tables\\v1_core\\vanderpol\\formal\\diagnostics.csv",
+    "log": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\logs\\v1_core\\vanderpol\\formal.log",
+    "plots": [
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\v1_core\\vanderpol\\formal\\vanderpol_time_series.png",
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\v1_core\\vanderpol\\formal\\vanderpol_phase_portrait.png"
+    ],
+    "processed_trajectories": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\v1_core\\vanderpol_unforced\\full_state_2d_clean\\formal\\observed_trajectories.jld2",
+    "raw_trajectories": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\raw\\v1_core\\vanderpol_unforced\\formal\\raw_trajectories.jld2",
+    "split_i": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\v1_core\\vanderpol_unforced\\full_state_2d_clean\\formal\\split_i.json",
+    "split_p": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\v1_core\\vanderpol_unforced\\full_state_2d_clean\\formal\\split_p.json",
+    "windows_split_i_summary": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\v1_core\\vanderpol_unforced\\full_state_2d_clean\\formal\\windows_split_i_summary.json",
+    "windows_split_p_summary": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\v1_core\\vanderpol_unforced\\full_state_2d_clean\\formal\\windows_split_p_summary.json"
+  },
+  "initial_condition_policy": {
+    "type": "box",
+    "lower": [
+      -3.0,
+      -3.0
+    ],
+    "upper": [
+      3.0,
+      3.0
+    ],
+    "min_norm": 0.5
+  },
+  "num_trajectories": 48,
+  "observation_dim": 2,
+  "observation_id": "full_state_2d_clean",
+  "parameter_domain": {
+    "mu": [
+      1.0,
+      3.0
+    ]
+  },
+  "parameter_sampling": {
+    "type": "linspace",
+    "parameter_name": "mu",
+    "lower": 1.0,
+    "upper": 3.0
+  },
+  "seed": 20260429,
+  "solver_abstol": 0.0,
+  "solver_name": "fixed_step_rk4",
+  "solver_reltol": 0.0,
+  "split_i_summary": {
+    "grouping_unit": "trajectory",
+    "seed": 20260429,
+    "split_id": "vanderpol_formal_split_i",
+    "split_type": "initial_condition",
+    "test_ratio": 0.15,
+    "test_trajectory_ids": [
+      "vanderpol_unforced_traj_0040",
+      "vanderpol_unforced_traj_0004",
+      "vanderpol_unforced_traj_0009",
+      "vanderpol_unforced_traj_0033",
+      "vanderpol_unforced_traj_0029",
+      "vanderpol_unforced_traj_0019",
+      "vanderpol_unforced_traj_0010"
+    ],
+    "train_ratio": 0.7,
+    "train_trajectory_ids": [
+      "vanderpol_unforced_traj_0013",
+      "vanderpol_unforced_traj_0002",
+      "vanderpol_unforced_traj_0034",
+      "vanderpol_unforced_traj_0043",
+      "vanderpol_unforced_traj_0032",
+      "vanderpol_unforced_traj_0026",
+      "vanderpol_unforced_traj_0031",
+      "vanderpol_unforced_traj_0028",
+      "vanderpol_unforced_traj_0036",
+      "vanderpol_unforced_traj_0037",
+      "vanderpol_unforced_traj_0018",
+      "vanderpol_unforced_traj_0011",
+      "vanderpol_unforced_traj_0024",
+      "vanderpol_unforced_traj_0015",
+      "vanderpol_unforced_traj_0041",
+      "vanderpol_unforced_traj_0030",
+      "vanderpol_unforced_traj_0014",
+      "vanderpol_unforced_traj_0048",
+      "vanderpol_unforced_traj_0006",
+      "vanderpol_unforced_traj_0017",
+      "vanderpol_unforced_traj_0007",
+      "vanderpol_unforced_traj_0012",
+      "vanderpol_unforced_traj_0025",
+      "vanderpol_unforced_traj_0035",
+      "vanderpol_unforced_traj_0038",
+      "vanderpol_unforced_traj_0027",
+      "vanderpol_unforced_traj_0016",
+      "vanderpol_unforced_traj_0003",
+      "vanderpol_unforced_traj_0042",
+      "vanderpol_unforced_traj_0008",
+      "vanderpol_unforced_traj_0001",
+      "vanderpol_unforced_traj_0047",
+      "vanderpol_unforced_traj_0021",
+      "vanderpol_unforced_traj_0046"
+    ],
+    "val_ratio": 0.15,
+    "val_trajectory_ids": [
+      "vanderpol_unforced_traj_0023",
+      "vanderpol_unforced_traj_0005",
+      "vanderpol_unforced_traj_0020",
+      "vanderpol_unforced_traj_0044",
+      "vanderpol_unforced_traj_0039",
+      "vanderpol_unforced_traj_0045",
+      "vanderpol_unforced_traj_0022"
+    ]
+  },
+  "split_ids": [
+    "vanderpol_formal_split_i",
+    "vanderpol_formal_split_p"
+  ],
+  "split_p_parameter_ranges": {
+    "test": {
+      "max": 3.0,
+      "min": 2.74468085106383,
+      "values": [
+        2.74468085106383,
+        2.7872340425531914,
+        2.8297872340425534,
+        2.872340425531915,
+        2.9148936170212765,
+        2.9574468085106385,
+        3.0
+      ]
+    },
+    "train": {
+      "max": 2.404255319148936,
+      "min": 1.0,
+      "values": [
+        1.0,
+        1.0425531914893618,
+        1.0851063829787233,
+        1.127659574468085,
+        1.1702127659574468,
+        1.2127659574468086,
+        1.2553191489361701,
+        1.297872340425532,
+        1.3404255319148937,
+        1.3829787234042554,
+        1.425531914893617,
+        1.4680851063829787,
+        1.5106382978723405,
+        1.553191489361702,
+        1.5957446808510638,
+        1.6382978723404256,
+        1.6808510638297873,
+        1.7234042553191489,
+        1.7659574468085106,
+        1.8085106382978724,
+        1.851063829787234,
+        1.8936170212765957,
+        1.9361702127659575,
+        1.9787234042553192,
+        2.021276595744681,
+        2.0638297872340425,
+        2.106382978723404,
+        2.148936170212766,
+        2.1914893617021276,
+        2.234042553191489,
+        2.276595744680851,
+        2.3191489361702127,
+        2.3617021276595747,
+        2.404255319148936
+      ]
+    },
+    "val": {
+      "max": 2.702127659574468,
+      "min": 2.4468085106382977,
+      "values": [
+        2.4468085106382977,
+        2.4893617021276597,
+        2.5319148936170213,
+        2.574468085106383,
+        2.617021276595745,
+        2.6595744680851063,
+        2.702127659574468
+      ]
+    }
+  },
+  "state_dim": 2,
+  "system_id": "vanderpol_unforced",
+  "system_metadata": {
+    "dt": 0.02,
+    "family": "v1_core",
+    "mu": 1.0,
+    "solver_abstol": 0.0,
+    "solver_name": "fixed_step_rk4",
+    "solver_reltol": 0.0,
+    "state_dim": 2,
+    "system_id": "vanderpol_unforced",
+    "trajectory_length": 2000,
+    "tspan": [
+      0.0,
+      40.0
+    ],
+    "variant": "formal_mu1_to_3_full_state",
+    "vector_field": "x1_dot = x2; x2_dot = mu * (1 - x1^2) * x2 - x1"
+  },
+  "task_ids": [
+    "vanderpol_one_step_forecast",
+    "vanderpol_multi_step_rollout",
+    "vanderpol_long_time_statistics"
+  ],
+  "trajectory_length": 2000,
+  "tspan": [
+    0.0,
+    40.0
+  ],
+  "variant": "formal_mu1_to_3_full_state",
+  "window_ids": [
+    "vanderpol_one_step_lag1",
+    "vanderpol_rollout_formal",
+    "vanderpol_statistics_h500"
+  ],
+  "window_summary_by_split": {
+    "split_i": {
+      "one_step": {
+        "counts": {
+          "test": 14000,
+          "train": 68000,
+          "val": 14000
+        },
+        "lag": 1,
+        "samples_per_trajectory": 2000,
+        "window_id": "vanderpol_one_step_lag1"
+      },
+      "rollout": {
+        "by_horizon": {
+          "h250": {
+            "counts": {
+              "test": 12257,
+              "train": 59534,
+              "val": 12257
+            },
+            "horizon": 250,
+            "starts_per_trajectory": 1751,
+            "window_id": "vanderpol_rollout_h250"
+          },
+          "h50": {
+            "counts": {
+              "test": 13657,
+              "train": 66334,
+              "val": 13657
+            },
+            "horizon": 50,
+            "starts_per_trajectory": 1951,
+            "window_id": "vanderpol_rollout_h50"
+          },
+          "h500": {
+            "counts": {
+              "test": 10507,
+              "train": 51034,
+              "val": 10507
+            },
+            "horizon": 500,
+            "starts_per_trajectory": 1501,
+            "window_id": "vanderpol_rollout_h500"
+          }
+        },
+        "horizons": [
+          50,
+          250,
+          500
+        ],
+        "window_id": "vanderpol_rollout_formal"
+      },
+      "statistics": {
+        "counts": {
+          "test": 10514,
+          "train": 51068,
+          "val": 10514
+        },
+        "horizon": 500,
+        "starts_per_trajectory": 1502,
+        "window_id": "vanderpol_statistics_h500"
+      },
+      "window_id": "vanderpol_formal_windows"
+    },
+    "split_p": {
+      "one_step": {
+        "counts": {
+          "test": 14000,
+          "train": 68000,
+          "val": 14000
+        },
+        "lag": 1,
+        "samples_per_trajectory": 2000,
+        "window_id": "vanderpol_one_step_lag1"
+      },
+      "rollout": {
+        "by_horizon": {
+          "h250": {
+            "counts": {
+              "test": 12257,
+              "train": 59534,
+              "val": 12257
+            },
+            "horizon": 250,
+            "starts_per_trajectory": 1751,
+            "window_id": "vanderpol_rollout_h250"
+          },
+          "h50": {
+            "counts": {
+              "test": 13657,
+              "train": 66334,
+              "val": 13657
+            },
+            "horizon": 50,
+            "starts_per_trajectory": 1951,
+            "window_id": "vanderpol_rollout_h50"
+          },
+          "h500": {
+            "counts": {
+              "test": 10507,
+              "train": 51034,
+              "val": 10507
+            },
+            "horizon": 500,
+            "starts_per_trajectory": 1501,
+            "window_id": "vanderpol_rollout_h500"
+          }
+        },
+        "horizons": [
+          50,
+          250,
+          500
+        ],
+        "window_id": "vanderpol_rollout_formal"
+      },
+      "statistics": {
+        "counts": {
+          "test": 10514,
+          "train": 51068,
+          "val": 10514
+        },
+        "horizon": 500,
+        "starts_per_trajectory": 1502,
+        "window_id": "vanderpol_statistics_h500"
+      },
+      "window_id": "vanderpol_formal_windows"
+    }
+  }
+}
