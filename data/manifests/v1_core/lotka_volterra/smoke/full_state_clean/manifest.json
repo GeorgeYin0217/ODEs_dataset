@@ -1,0 +1,263 @@
+{
+  "alpha_default": 1.5,
+  "array_layout": "state_dim_by_time_by_trajectory",
+  "benchmark_id": "lotka_volterra_fullobs_v1_smoke",
+  "beta_default": 1.0,
+  "created_at": "2026-04-28T22:12:23.288",
+  "dataset_version": "0.1.0-dev",
+  "delta_default": 1.0,
+  "diagnostics": {
+    "all_states_finite": true,
+    "all_states_positive": true,
+    "alpha": 1.5,
+    "array_layout": "state_dim_by_time",
+    "beta": 1.0,
+    "delta": 1.0,
+    "dt": 0.005,
+    "family": "v1_core",
+    "full_state_observation_error_max": 0.0,
+    "gamma": 3.0,
+    "invariant_final_abs_drift_max": 4.287348254194967e-11,
+    "invariant_initial_max": 0.8517811544255449,
+    "invariant_initial_min": 0.6490008014515606,
+    "invariant_initial_std": 0.07757988632697581,
+    "invariant_max_abs_drift": 8.782818916586166e-11,
+    "invariant_max_abs_drift_by_trajectory": [
+      6.5175642660619815e-12,
+      1.5460743796325005e-11,
+      8.782818916586166e-11,
+      6.306910549369604e-11,
+      2.4019675137765262e-11
+    ],
+    "invariant_max_rel_drift": 1.0311121431783073e-10,
+    "invariant_max_rel_drift_by_trajectory": [
+      1.0042459503108071e-11,
+      2.24606838631832e-11,
+      1.0311121431783073e-10,
+      8.286076519785361e-11,
+      3.3292360015106044e-11
+    ],
+    "local_frequency": 2.1213203435596424,
+    "num_trajectories": 5,
+    "one_step_window_counts": {
+      "test": 1600,
+      "train": 4800,
+      "val": 1600
+    },
+    "positive_equilibrium": [
+      3.0,
+      1.5
+    ],
+    "rk4_self_residual_max": 0.0,
+    "rollout_window_counts": {
+      "h200": {
+        "test": 1401,
+        "train": 4203,
+        "val": 1401
+      },
+      "h50": {
+        "test": 1551,
+        "train": 4653,
+        "val": 1551
+      }
+    },
+    "smoke_passed": true,
+    "split_counts": {
+      "test": 1,
+      "train": 3,
+      "val": 1
+    },
+    "state_matrix_size": [
+      2,
+      1601
+    ],
+    "state_norm_max": 4.6950591430486766,
+    "statistics_window_counts": {
+      "test": 1402,
+      "train": 4206,
+      "val": 1402
+    },
+    "system_id": "lotka_volterra",
+    "trajectory_length": 1600,
+    "tspan": [
+      0.0,
+      8.0
+    ],
+    "variant": "smoke_default_full_state",
+    "velocity_norm_max": 3.6323057067004276,
+    "x_max": 4.414997331030344,
+    "x_min": 1.925438488284792,
+    "y_max": 2.55426428201113,
+    "y_min": 0.7855376130850655
+  },
+  "dt": 0.005,
+  "family": "v1_core",
+  "gamma_default": 3.0,
+  "generated_files": {
+    "diagnostics_table": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\tables\\v1_core\\lotka_volterra\\smoke\\diagnostics.csv",
+    "log": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\logs\\v1_core\\lotka_volterra\\smoke.log",
+    "plots": [
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\v1_core\\lotka_volterra\\smoke\\smoke_time_series.png",
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\v1_core\\lotka_volterra\\smoke\\smoke_phase_portrait.png",
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\v1_core\\lotka_volterra\\smoke\\smoke_invariant_drift.png"
+    ],
+    "processed_trajectories": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\v1_core\\lotka_volterra\\smoke\\full_state_clean\\observed_trajectories.jld2",
+    "raw_trajectories": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\raw\\v1_core\\lotka_volterra\\smoke\\full_state_clean\\raw_trajectories.jld2",
+    "split": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\v1_core\\lotka_volterra\\smoke\\full_state_clean\\splits.json",
+    "windows_summary": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\v1_core\\lotka_volterra\\smoke\\full_state_clean\\windows_summary.json"
+  },
+  "generator_commit_hash_or_local_placeholder": "local_uncommitted_or_unknown",
+  "initial_condition_policy": {
+    "type": "manual_smoke_set",
+    "description": "Positive initial conditions around the equilibrium (3.0, 1.5), with several invariant levels.",
+    "values": [
+      [
+        3.6,
+        1.5
+      ],
+      [
+        2.5,
+        1.9
+      ],
+      [
+        4.2,
+        1.1
+      ],
+      [
+        2.2,
+        1.2
+      ],
+      [
+        3.0,
+        2.2
+      ]
+    ]
+  },
+  "num_trajectories": 5,
+  "observation_dim": 2,
+  "observation_id": "lotka_volterra_full_state_clean",
+  "parameter_domain": {
+    "alpha": [
+      1.5,
+      1.5
+    ],
+    "beta": [
+      1.0,
+      1.0
+    ],
+    "gamma": [
+      3.0,
+      3.0
+    ],
+    "delta": [
+      1.0,
+      1.0
+    ]
+  },
+  "seed": 20260428,
+  "solver_abstol": 0.0,
+  "solver_name": "fixed_step_rk4",
+  "solver_reltol": 0.0,
+  "split_counts": {
+    "test": 1,
+    "train": 3,
+    "val": 1
+  },
+  "split_id": "lotka_volterra_smoke_split_i",
+  "state_dim": 2,
+  "system_id": "lotka_volterra",
+  "system_metadata": {
+    "alpha": 1.5,
+    "beta": 1.0,
+    "delta": 1.0,
+    "dt": 0.005,
+    "family": "v1_core",
+    "gamma": 3.0,
+    "invariant": "H(x,y) = delta*x - gamma*log(x) + beta*y - alpha*log(y)",
+    "local_frequency": 2.1213203435596424,
+    "positive_equilibrium": [
+      3.0,
+      1.5
+    ],
+    "solver_abstol": 0.0,
+    "solver_name": "fixed_step_rk4",
+    "solver_reltol": 0.0,
+    "state_dim": 2,
+    "system_id": "lotka_volterra",
+    "trajectory_length": 1600,
+    "tspan": [
+      0.0,
+      8.0
+    ],
+    "variant": "smoke_default_full_state",
+    "vector_field": "x_dot = alpha*x - beta*x*y; y_dot = delta*x*y - gamma*y"
+  },
+  "task_ids": [
+    "lotka_volterra_one_step_forecast",
+    "lotka_volterra_rollout_short",
+    "lotka_volterra_long_time_statistics_smoke"
+  ],
+  "trajectory_length": 1600,
+  "tspan": [
+    0.0,
+    8.0
+  ],
+  "variant": "smoke_default_full_state",
+  "window_ids": [
+    "lotka_volterra_one_step_lag1",
+    "lotka_volterra_rollout_short",
+    "lotka_volterra_statistics_h200"
+  ],
+  "window_summary": {
+    "one_step": {
+      "counts": {
+        "test": 1600,
+        "train": 4800,
+        "val": 1600
+      },
+      "lag": 1,
+      "samples_per_trajectory": 1600,
+      "window_id": "lotka_volterra_one_step_lag1"
+    },
+    "rollout": {
+      "by_horizon": {
+        "h200": {
+          "counts": {
+            "test": 1401,
+            "train": 4203,
+            "val": 1401
+          },
+          "horizon": 200,
+          "starts_per_trajectory": 1401,
+          "window_id": "lotka_volterra_rollout_h200"
+        },
+        "h50": {
+          "counts": {
+            "test": 1551,
+            "train": 4653,
+            "val": 1551
+          },
+          "horizon": 50,
+          "starts_per_trajectory": 1551,
+          "window_id": "lotka_volterra_rollout_h50"
+        }
+      },
+      "horizons": [
+        50,
+        200
+      ],
+      "window_id": "lotka_volterra_rollout_short"
+    },
+    "statistics": {
+      "counts": {
+        "test": 1402,
+        "train": 4206,
+        "val": 1402
+      },
+      "horizon": 200,
+      "starts_per_trajectory": 1402,
+      "window_id": "lotka_volterra_statistics_h200"
+    },
+    "window_id": "lotka_volterra_smoke_windows"
+  }
+}

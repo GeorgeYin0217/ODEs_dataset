@@ -1,0 +1,40 @@
+{
+  "system_id": "lotka_volterra",
+  "family": "v1_core",
+  "variant": "smoke_default_full_state",
+  "state_dim": 2,
+  "parameter_names": ["alpha", "beta", "gamma", "delta"],
+  "default_parameters": {
+    "alpha": 1.5,
+    "beta": 1.0,
+    "gamma": 3.0,
+    "delta": 1.0
+  },
+  "parameter_domain": {
+    "alpha": [1.5, 1.5],
+    "beta": [1.0, 1.0],
+    "gamma": [3.0, 3.0],
+    "delta": [1.0, 1.0]
+  },
+  "initial_condition_domain": {
+    "type": "manual_smoke_set",
+    "description": "Positive initial conditions around the equilibrium (3.0, 1.5), with several invariant levels.",
+    "values": [
+      [3.6, 1.5],
+      [2.5, 1.9],
+      [4.2, 1.1],
+      [2.2, 1.2],
+      [3.0, 2.2]
+    ]
+  },
+  "dt": 0.005,
+  "tspan": [0.0, 8.0],
+  "trajectory_length": 1600,
+  "num_trajectories": 5,
+  "solver_name": "fixed_step_rk4",
+  "solver_abstol": 0.0,
+  "solver_reltol": 0.0,
+  "seed_policy": {
+    "generation_seed": 20260428
+  }
+}

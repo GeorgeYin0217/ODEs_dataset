@@ -418,3 +418,43 @@ Failed or blocked objects:
 - None. The formal script passed with the same smoke-scale parameters:
   8 trajectories, 800 time steps, zero positive energy jumps, and final
   left/right well counts of 4/4.
+
+## 2026-04-28, Lotka-Volterra Smoke Workflow
+
+Successful objects:
+
+- v1-core smoke system config:
+  `configs/systems/v1_core/lotka_volterra_smoke.json`.
+- v1-core observation config:
+  `configs/observations/lotka_volterra_full_state_clean.json`.
+- v1-core split config:
+  `configs/splits/v1_core/lotka_volterra_smoke_split_i.json`.
+- v1-core window config:
+  `configs/windows/v1_core/lotka_volterra_smoke_windows.json`.
+- v1-core task config:
+  `configs/tasks/v1_core/lotka_volterra_smoke_tasks.json`.
+- v1-core benchmark config:
+  `configs/benchmarks/v1_core/lotka_volterra_smoke_benchmark.json`.
+- Reusable dynamics module:
+  `src/dynamics/lotka_volterra.jl`.
+- Reusable generator:
+  `src/generators/lotka_volterra_dataset_generator.jl`.
+- Reusable diagnostics module:
+  `src/diagnostics/lotka_volterra_diagnostics.jl`.
+- Smoke entry point:
+  `experiments/smoke_tests/run_lotka_volterra_smoke.jl`.
+- Smoke manifest:
+  `data/manifests/v1_core/lotka_volterra/smoke/full_state_clean/manifest.json`.
+- Diagnostics table:
+  `reports/tables/v1_core/lotka_volterra/smoke/diagnostics.csv`.
+- Diagnostic plots under:
+  `reports/plots/v1_core/lotka_volterra/smoke/`.
+- File explanation:
+  `docs/notes/file explanation/lotka_volterra_smoke.md`.
+- Task report:
+  `reports/notebooks/lotka_volterra_smoke_report.md`.
+
+Failed or blocked objects:
+
+- None. The smoke command passed with 5 positive trajectories, trajectory
+  length 1600, and maximum relative invariant drift about `1.031112e-10`.
