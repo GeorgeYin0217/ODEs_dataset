@@ -1,0 +1,26 @@
+{
+  "benchmark_id": "duffing_unforced_double_well_fullobs_v1_smoke",
+  "system_ids": ["duffing_unforced_double_well"],
+  "observation_ids": ["duffing_full_state_clean"],
+  "split_ids": ["duffing_smoke_split_i"],
+  "window_ids": [
+    "duffing_one_step_lag1",
+    "duffing_rollout_short",
+    "duffing_statistics_h100"
+  ],
+  "task_ids": [
+    "duffing_one_step_forecast",
+    "duffing_rollout_short",
+    "duffing_long_time_statistics_smoke"
+  ],
+  "difficulty_level": "smoke",
+  "release_version": "0.1.0-dev",
+  "output_policy": {
+    "raw_path": "data/raw/v1_core/duffing_unforced_double_well/smoke/raw_trajectories.jld2",
+    "processed_path": "data/processed/v1_core/duffing_unforced_double_well/smoke/full_state_clean/observed_trajectories.jld2",
+    "split_path": "data/processed/v1_core/duffing_unforced_double_well/smoke/full_state_clean/splits.json",
+    "windows_summary_path": "data/processed/v1_core/duffing_unforced_double_well/smoke/full_state_clean/windows_summary.json",
+    "manifest_path": "data/manifests/v1_core/duffing_unforced_double_well/smoke/manifest.json",
+    "release_index_path": "data/releases/v1_core/duffing_unforced_double_well/smoke/release_index.json"
+  }
+}

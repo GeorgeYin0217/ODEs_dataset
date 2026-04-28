@@ -351,3 +351,43 @@ Successful objects:
 Failed or blocked objects:
 
 - None.
+
+## 2026-04-28, Duffing Unforced Double-Well Smoke Workflow
+
+Successful objects:
+
+- v1-core smoke system config:
+  `configs/systems/v1_core/duffing_unforced_double_well_smoke.json`.
+- v1-core observation config:
+  `configs/observations/duffing_full_state_clean.json`.
+- v1-core split config:
+  `configs/splits/v1_core/duffing_smoke_split_i.json`.
+- v1-core window config:
+  `configs/windows/v1_core/duffing_smoke_windows.json`.
+- v1-core task config:
+  `configs/tasks/v1_core/duffing_smoke_tasks.json`.
+- v1-core benchmark config:
+  `configs/benchmarks/v1_core/duffing_smoke_benchmark.json`.
+- Reusable dynamics module:
+  `src/dynamics/duffing.jl`.
+- Reusable generator:
+  `src/generators/duffing_dataset_generator.jl`.
+- Reusable diagnostics module:
+  `src/diagnostics/duffing_diagnostics.jl`.
+- Smoke entry point:
+  `experiments/smoke_tests/run_duffing_unforced_double_well_smoke.jl`.
+- Smoke manifest:
+  `data/manifests/v1_core/duffing_unforced_double_well/smoke/manifest.json`.
+- Diagnostics table:
+  `reports/tables/v1_core/duffing/smoke/diagnostics.csv`.
+- Diagnostic plots under:
+  `reports/plots/v1_core/duffing/smoke/`.
+- File explanation:
+  `docs/notes/file explanation/duffing_unforced_double_well_smoke.md`.
+- Task report:
+  `reports/notebooks/duffing_unforced_double_well_smoke_report.md`.
+
+Failed or blocked objects:
+
+- None. The smoke command passed with zero positive energy jumps and balanced
+  final left/right well counts.

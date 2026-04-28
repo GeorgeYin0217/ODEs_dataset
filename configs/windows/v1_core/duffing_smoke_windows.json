@@ -1,0 +1,18 @@
+{
+  "window_id": "duffing_smoke_windows",
+  "one_step": {
+    "window_id": "duffing_one_step_lag1",
+    "window_type": "one_step",
+    "lag": 1
+  },
+  "rollout": {
+    "window_id": "duffing_rollout_short",
+    "window_type": "rollout",
+    "horizons": [25, 100]
+  },
+  "statistics": {
+    "window_id": "duffing_statistics_h100",
+    "window_type": "statistics",
+    "horizon": 100
+  }
+}

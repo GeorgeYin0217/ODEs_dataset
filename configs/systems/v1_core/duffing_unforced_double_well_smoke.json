@@ -1,0 +1,41 @@
+{
+  "system_id": "duffing_unforced_double_well",
+  "family": "v1_core",
+  "variant": "smoke_default_full_state",
+  "state_dim": 2,
+  "parameter_names": ["delta", "alpha", "beta"],
+  "default_parameters": {
+    "delta": 0.2,
+    "alpha": -1.0,
+    "beta": 1.0
+  },
+  "parameter_domain": {
+    "delta": [0.2, 0.2],
+    "alpha": [-1.0, -1.0],
+    "beta": [1.0, 1.0]
+  },
+  "initial_condition_domain": {
+    "type": "manual_smoke_set",
+    "description": "Covers left well, right well, near barrier, and higher-energy cross-well starts.",
+    "values": [
+      [-1.0, 0.0],
+      [1.0, 0.0],
+      [-0.75, 0.35],
+      [0.75, -0.35],
+      [0.0, 0.4],
+      [0.0, -0.4],
+      [-1.5, 1.2],
+      [1.5, -1.2]
+    ]
+  },
+  "dt": 0.02,
+  "tspan": [0.0, 16.0],
+  "trajectory_length": 800,
+  "num_trajectories": 8,
+  "solver_name": "fixed_step_rk4",
+  "solver_abstol": 0.0,
+  "solver_reltol": 0.0,
+  "seed_policy": {
+    "generation_seed": 20260428
+  }
+}

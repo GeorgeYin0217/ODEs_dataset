@@ -1,0 +1,294 @@
+{
+  "alpha_default": -1.0,
+  "array_layout": "state_dim_by_time_by_trajectory",
+  "benchmark_id": "duffing_unforced_double_well_fullobs_v1_smoke",
+  "beta_default": 1.0,
+  "created_at": "2026-04-28T21:52:22.864",
+  "dataset_version": "0.1.0-dev",
+  "delta_default": 0.2,
+  "diagnostics": {
+    "all_states_finite": true,
+    "alpha": -1.0,
+    "array_layout": "state_dim_by_time",
+    "beta": 1.0,
+    "delta": 0.2,
+    "dt": 0.02,
+    "energy_drop_max": 1.0641614973630413,
+    "energy_drop_min": 0.0,
+    "energy_final_max": -0.20353649736304133,
+    "energy_final_min": -0.25,
+    "energy_initial_max": 0.860625,
+    "energy_initial_min": -0.25,
+    "family": "v1_core",
+    "final_well_counts": {
+      "left": 4,
+      "near_barrier": 0,
+      "right": 4
+    },
+    "final_well_labels": [
+      "left",
+      "right",
+      "left",
+      "right",
+      "right",
+      "left",
+      "left",
+      "right"
+    ],
+    "full_state_observation_error_max": 0.0,
+    "initial_well_counts": {
+      "left": 3,
+      "near_barrier": 2,
+      "right": 3
+    },
+    "initial_well_labels": [
+      "left",
+      "right",
+      "left",
+      "right",
+      "near_barrier",
+      "near_barrier",
+      "left",
+      "right"
+    ],
+    "max_positive_energy_jump": 0.0,
+    "mean_energy_drop_mean": 0.0004636762266617207,
+    "num_trajectories": 8,
+    "one_step_window_counts": {
+      "test": 800,
+      "train": 4800,
+      "val": 800
+    },
+    "positive_energy_jump_count_total": 0,
+    "q_max": 1.5304107195391745,
+    "q_min": -1.5304107195391745,
+    "rk4_self_residual_max": 0.0,
+    "rollout_window_counts": {
+      "h100": {
+        "test": 701,
+        "train": 4206,
+        "val": 701
+      },
+      "h25": {
+        "test": 776,
+        "train": 4656,
+        "val": 776
+      }
+    },
+    "smoke_passed": true,
+    "split_counts": {
+      "test": 1,
+      "train": 6,
+      "val": 1
+    },
+    "state_matrix_size": [
+      2,
+      801
+    ],
+    "state_norm_max": 1.921885739273962,
+    "statistics_window_counts": {
+      "test": 702,
+      "train": 4212,
+      "val": 702
+    },
+    "system_id": "duffing_unforced_double_well",
+    "trajectory_length": 800,
+    "tspan": [
+      0.0,
+      16.0
+    ],
+    "v_max": 1.4086313931205092,
+    "v_min": -1.4086313931205092,
+    "variant": "smoke_default_full_state",
+    "velocity_norm_max": 2.0622609370825487
+  },
+  "dt": 0.02,
+  "family": "v1_core",
+  "generated_files": {
+    "diagnostics_table": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\tables\\v1_core\\duffing\\smoke\\diagnostics.csv",
+    "log": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\logs\\v1_core\\duffing\\smoke.log",
+    "plots": [
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\v1_core\\duffing\\smoke\\smoke_time_series.png",
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\v1_core\\duffing\\smoke\\smoke_phase_portrait.png",
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\v1_core\\duffing\\smoke\\smoke_energy_curves.png",
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\v1_core\\duffing\\smoke\\smoke_initial_conditions.png",
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\v1_core\\duffing\\smoke\\smoke_final_well_distribution.png"
+    ],
+    "processed_trajectories": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\v1_core\\duffing_unforced_double_well\\smoke\\full_state_clean\\observed_trajectories.jld2",
+    "raw_trajectories": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\raw\\v1_core\\duffing_unforced_double_well\\smoke\\raw_trajectories.jld2",
+    "split": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\v1_core\\duffing_unforced_double_well\\smoke\\full_state_clean\\splits.json",
+    "windows_summary": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\v1_core\\duffing_unforced_double_well\\smoke\\full_state_clean\\windows_summary.json"
+  },
+  "generator_commit_hash_or_local_placeholder": "local_uncommitted_or_unknown",
+  "initial_condition_policy": {
+    "type": "manual_smoke_set",
+    "description": "Covers left well, right well, near barrier, and higher-energy cross-well starts.",
+    "values": [
+      [
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        -0.75,
+        0.35
+      ],
+      [
+        0.75,
+        -0.35
+      ],
+      [
+        0.0,
+        0.4
+      ],
+      [
+        0.0,
+        -0.4
+      ],
+      [
+        -1.5,
+        1.2
+      ],
+      [
+        1.5,
+        -1.2
+      ]
+    ]
+  },
+  "num_trajectories": 8,
+  "observation_dim": 2,
+  "observation_id": "duffing_full_state_clean",
+  "parameter_domain": {
+    "delta": [
+      0.2,
+      0.2
+    ],
+    "alpha": [
+      -1.0,
+      -1.0
+    ],
+    "beta": [
+      1.0,
+      1.0
+    ]
+  },
+  "seed": 20260428,
+  "solver_abstol": 0.0,
+  "solver_name": "fixed_step_rk4",
+  "solver_reltol": 0.0,
+  "split_counts": {
+    "test": 1,
+    "train": 6,
+    "val": 1
+  },
+  "split_id": "duffing_smoke_split_i",
+  "state_dim": 2,
+  "system_id": "duffing_unforced_double_well",
+  "system_metadata": {
+    "alpha": -1.0,
+    "beta": 1.0,
+    "delta": 0.2,
+    "dt": 0.02,
+    "energy_derivative": "dE/dt = -delta*v^2",
+    "equilibrium_points": [
+      [
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0
+      ]
+    ],
+    "family": "v1_core",
+    "potential_energy": "V(q) = alpha*q^2/2 + beta*q^4/4",
+    "solver_abstol": 0.0,
+    "solver_name": "fixed_step_rk4",
+    "solver_reltol": 0.0,
+    "state_dim": 2,
+    "system_id": "duffing_unforced_double_well",
+    "total_energy": "E(q,v) = v^2/2 + V(q)",
+    "trajectory_length": 800,
+    "tspan": [
+      0.0,
+      16.0
+    ],
+    "variant": "smoke_default_full_state",
+    "vector_field": "q_dot = v; v_dot = -delta*v - alpha*q - beta*q^3"
+  },
+  "task_ids": [
+    "duffing_one_step_forecast",
+    "duffing_rollout_short",
+    "duffing_long_time_statistics_smoke"
+  ],
+  "trajectory_length": 800,
+  "tspan": [
+    0.0,
+    16.0
+  ],
+  "variant": "smoke_default_full_state",
+  "window_ids": [
+    "duffing_one_step_lag1",
+    "duffing_rollout_short",
+    "duffing_statistics_h100"
+  ],
+  "window_summary": {
+    "one_step": {
+      "counts": {
+        "test": 800,
+        "train": 4800,
+        "val": 800
+      },
+      "lag": 1,
+      "samples_per_trajectory": 800,
+      "window_id": "duffing_one_step_lag1"
+    },
+    "rollout": {
+      "by_horizon": {
+        "h100": {
+          "counts": {
+            "test": 701,
+            "train": 4206,
+            "val": 701
+          },
+          "horizon": 100,
+          "starts_per_trajectory": 701,
+          "window_id": "duffing_rollout_h100"
+        },
+        "h25": {
+          "counts": {
+            "test": 776,
+            "train": 4656,
+            "val": 776
+          },
+          "horizon": 25,
+          "starts_per_trajectory": 776,
+          "window_id": "duffing_rollout_h25"
+        }
+      },
+      "horizons": [
+        25,
+        100
+      ],
+      "window_id": "duffing_rollout_short"
+    },
+    "statistics": {
+      "counts": {
+        "test": 702,
+        "train": 4212,
+        "val": 702
+      },
+      "horizon": 100,
+      "starts_per_trajectory": 702,
+      "window_id": "duffing_statistics_h100"
+    },
+    "window_id": "duffing_smoke_windows"
+  }
+}
