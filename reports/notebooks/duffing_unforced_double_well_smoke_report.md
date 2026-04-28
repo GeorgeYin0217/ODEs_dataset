@@ -1,4 +1,4 @@
-# Duffing Unforced Double-Well Smoke Report
+# Duffing Unforced Double-Well Smoke And Formal Report
 
 ## What Ran
 
@@ -10,10 +10,19 @@ with the project environment:
 julia --project=. experiments/smoke_tests/run_duffing_unforced_double_well_smoke.jl
 ```
 
+After smoke confirmation, the formal entry point
+`experiments/data_generation/generate_duffing_unforced_double_well_formal_dataset.jl`
+was also run. This formal script intentionally reuses the smoke-scale system,
+split, window, and task parameters, and writes to `formal/` output paths:
+
+```powershell
+julia --project=. experiments/data_generation/generate_duffing_unforced_double_well_formal_dataset.jl
+```
+
 ## Key Result
 
-The smoke run passed. It generated eight trajectories for the damped
-double-well Duffing oscillator with full-state clean observation.
+Both runs passed. Each generated eight trajectories for the damped double-well
+Duffing oscillator with full-state clean observation.
 
 Important diagnostics:
 
@@ -37,11 +46,18 @@ The smoke command wrote a manifest and human-readable reports at:
 - `reports/tables/v1_core/duffing/smoke/diagnostics.csv`
 - `reports/plots/v1_core/duffing/smoke/`
 
+The formal command wrote matching smoke-parameter outputs at:
+
+- `data/manifests/v1_core/duffing_unforced_double_well/formal/manifest.json`
+- `reports/tables/v1_core/duffing/formal/diagnostics.csv`
+- `reports/plots/v1_core/duffing/formal/`
+
 Raw and processed trajectory files were also generated under `data/raw/` and
 `data/processed/`, but those directories are ignored by version control.
 
 ## Next Manual Step
 
-Review the smoke diagnostics and plots. If the smoke stage is accepted, the
-next workflow step is to add the formal or small Duffing data-generation
-scripts from the task plan.
+The current formal script is a smoke-parameter formal entry point, as requested.
+The next larger step would be a true small benchmark configuration with more
+trajectories and the wider initial-condition sampling policy from the original
+Duffing plan.

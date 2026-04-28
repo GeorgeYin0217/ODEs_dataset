@@ -391,3 +391,30 @@ Failed or blocked objects:
 
 - None. The smoke command passed with zero positive energy jumps and balanced
   final left/right well counts.
+
+## 2026-04-28, Duffing Formal Entry Point With Smoke Parameters
+
+Successful objects:
+
+- Formal data-generation entry point:
+  `experiments/data_generation/generate_duffing_unforced_double_well_formal_dataset.jl`.
+- Reused smoke-scale configs for the formal run:
+  `configs/systems/v1_core/duffing_unforced_double_well_smoke.json`,
+  `configs/splits/v1_core/duffing_smoke_split_i.json`,
+  `configs/windows/v1_core/duffing_smoke_windows.json`, and
+  `configs/tasks/v1_core/duffing_smoke_tasks.json`.
+- Updated reusable generator output routing:
+  `src/generators/duffing_dataset_generator.jl` now writes tables, plots, and
+  logs according to the benchmark `difficulty_level`.
+- Formal manifest:
+  `data/manifests/v1_core/duffing_unforced_double_well/formal/manifest.json`.
+- Formal diagnostics table:
+  `reports/tables/v1_core/duffing/formal/diagnostics.csv`.
+- Formal diagnostic plots under:
+  `reports/plots/v1_core/duffing/formal/`.
+
+Failed or blocked objects:
+
+- None. The formal script passed with the same smoke-scale parameters:
+  8 trajectories, 800 time steps, zero positive energy jumps, and final
+  left/right well counts of 4/4.

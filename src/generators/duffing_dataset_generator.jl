@@ -231,6 +231,7 @@ function maybe_save_duffing_plots(
     spec::DuffingUnforcedDoubleWellSpec,
     raw_trajectories::AbstractVector{RawTrajectory},
     plot_dir::AbstractString,
+    run_label::AbstractString = "smoke",
 )
     if !isdefined(Main, :PLOTS_AVAILABLE) || !Main.PLOTS_AVAILABLE
         if isdefined(Main, :PLOTS_LOAD_ERROR)
@@ -252,26 +253,26 @@ function maybe_save_duffing_plots(
             xlabel = "t",
             ylabel = "state",
             label = ["q(t)" "v(t)"],
-            title = "Duffing smoke time series",
+            title = string("Duffing ", run_label, " time series"),
         )
-        time_path = joinpath(plot_dir, "smoke_time_series.png")
+        time_path = joinpath(plot_dir, string(run_label, "_time_series.png"))
         Main.Plots.savefig(p_time, time_path)
         push!(plot_files, time_path)
 
-        p_phase = Main.Plots.plot(; xlabel = "q", ylabel = "v", title = "Duffing smoke phase portrait")
+        p_phase = Main.Plots.plot(; xlabel = "q", ylabel = "v", title = string("Duffing ", run_label, " phase portrait"))
         for traj in raw_trajectories
             Main.Plots.plot!(p_phase, traj.state_matrix[1, :], traj.state_matrix[2, :]; label = false)
         end
-        phase_path = joinpath(plot_dir, "smoke_phase_portrait.png")
+        phase_path = joinpath(plot_dir, string(run_label, "_phase_portrait.png"))
         Main.Plots.savefig(p_phase, phase_path)
         push!(plot_files, phase_path)
 
-        p_energy = Main.Plots.plot(; xlabel = "t", ylabel = "E(q,v)", title = "Duffing smoke energy curves")
+        p_energy = Main.Plots.plot(; xlabel = "t", ylabel = "E(q,v)", title = string("Duffing ", run_label, " energy curves"))
         for traj in raw_trajectories
             energies = duffing_energy_sequence(spec, traj)
             Main.Plots.plot!(p_energy, traj.times, energies; label = false)
         end
-        energy_path = joinpath(plot_dir, "smoke_energy_curves.png")
+        energy_path = joinpath(plot_dir, string(run_label, "_energy_curves.png"))
         Main.Plots.savefig(p_energy, energy_path)
         push!(plot_files, energy_path)
 
@@ -283,9 +284,9 @@ function maybe_save_duffing_plots(
             xlabel = "q0",
             ylabel = "v0",
             label = false,
-            title = "Duffing smoke initial conditions",
+            title = string("Duffing ", run_label, " initial conditions"),
         )
-        initial_path = joinpath(plot_dir, "smoke_initial_conditions.png")
+        initial_path = joinpath(plot_dir, string(run_label, "_initial_conditions.png"))
         Main.Plots.savefig(p_initial, initial_path)
         push!(plot_files, initial_path)
 
@@ -297,9 +298,9 @@ function maybe_save_duffing_plots(
             xlabel = "final well",
             ylabel = "count",
             label = false,
-            title = "Duffing smoke final well distribution",
+            title = string("Duffing ", run_label, " final well distribution"),
         )
-        well_path = joinpath(plot_dir, "smoke_final_well_distribution.png")
+        well_path = joinpath(plot_dir, string(run_label, "_final_well_distribution.png"))
         Main.Plots.savefig(p_well, well_path)
         push!(plot_files, well_path)
 
@@ -369,6 +370,7 @@ function save_duffing_outputs(;
     diagnostics::AbstractDict,
 )
     output_policy = configs["benchmark"]["output_policy"]
+    run_label = String(configs["benchmark"]["difficulty_level"])
     raw_path = duffing_project_path(project_root, output_policy["raw_path"])
     processed_path = duffing_project_path(project_root, output_policy["processed_path"])
     split_path = duffing_project_path(project_root, output_policy["split_path"])
@@ -376,16 +378,16 @@ function save_duffing_outputs(;
     manifest_path = duffing_project_path(project_root, output_policy["manifest_path"])
     release_index_path = duffing_project_path(project_root, output_policy["release_index_path"])
 
-    table_path = joinpath(project_root, "reports", "tables", "v1_core", "duffing", "smoke", "diagnostics.csv")
-    plot_dir = joinpath(project_root, "reports", "plots", "v1_core", "duffing", "smoke")
-    log_path = joinpath(project_root, "reports", "logs", "v1_core", "duffing", "smoke.log")
+    table_path = joinpath(project_root, "reports", "tables", "v1_core", "duffing", run_label, "diagnostics.csv")
+    plot_dir = joinpath(project_root, "reports", "plots", "v1_core", "duffing", run_label)
+    log_path = joinpath(project_root, "reports", "logs", "v1_core", "duffing", string(run_label, ".log"))
 
     save_duffing_raw(raw_path, raw_trajectories)
     save_duffing_observed(processed_path, observed_trajectories)
     write_json_file(split_path, split)
     write_json_file(windows_summary_path, window_summary)
 
-    plot_files = maybe_save_duffing_plots(spec, raw_trajectories, plot_dir)
+    plot_files = maybe_save_duffing_plots(spec, raw_trajectories, plot_dir, run_label)
     generated_files = Dict(
         "raw_trajectories" => raw_path,
         "processed_trajectories" => processed_path,
@@ -408,7 +410,7 @@ function save_duffing_outputs(;
     write_json_file(manifest_path, manifest)
 
     release_index = Dict(
-        "release_id" => "duffing_unforced_double_well_fullobs_v1_smoke",
+        "release_id" => string("duffing_unforced_double_well_fullobs_v1_", run_label),
         "release_version" => configs["benchmark"]["release_version"],
         "system_id" => spec.system_id,
         "family" => spec.family,

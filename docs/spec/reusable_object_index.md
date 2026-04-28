@@ -116,6 +116,7 @@ Dataset generation scripts:
 - `experiments/data_generation/generate_jordan_nonnormal_dataset.jl`
 - `experiments/data_generation/generate_linear_oscillator_damped_full_state.jl`
 - `experiments/data_generation/generate_vanderpol_formal_dataset.jl`
+- `experiments/data_generation/generate_duffing_unforced_double_well_formal_dataset.jl`
 
 ## Observation Configs
 
@@ -220,6 +221,7 @@ v1-core:
 | `vanderpol_unforced` smoke | `data/manifests/v1_core/vanderpol_unforced/smoke/manifest.json` | 8 trajectories, length 1000, fixed-step RK4, full-state observation. |
 | `vanderpol_unforced` formal | `data/manifests/v1_core/vanderpol_unforced/formal/manifest.json` | 48 trajectories, length 2000, Split-I and Split-P. |
 | `duffing_unforced_double_well` smoke | `data/manifests/v1_core/duffing_unforced_double_well/smoke/manifest.json` | 8 trajectories, length 800, fixed-step RK4, full-state observation, energy monotonicity checks. |
+| `duffing_unforced_double_well` formal smoke-params | `data/manifests/v1_core/duffing_unforced_double_well/formal/manifest.json` | Formal entry point using the same 8-trajectory, length-800 smoke parameters. |
 
 Auxiliary linear diagonal window/split manifests:
 
@@ -239,6 +241,7 @@ Diagnostics tables:
 - `reports/tables/v1_core/vanderpol/smoke/diagnostics.csv`
 - `reports/tables/v1_core/vanderpol/formal/diagnostics.csv`
 - `reports/tables/v1_core/duffing/smoke/diagnostics.csv`
+- `reports/tables/v1_core/duffing/formal/diagnostics.csv`
 
 Plot directories:
 
