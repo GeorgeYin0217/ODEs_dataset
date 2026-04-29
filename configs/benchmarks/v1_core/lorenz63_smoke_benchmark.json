@@ -1,0 +1,26 @@
+{
+  "benchmark_id": "lorenz63_standard_chaotic_fullobs_v1_smoke",
+  "system_ids": ["lorenz63"],
+  "observation_ids": ["lorenz63_full_state_clean"],
+  "split_ids": ["lorenz63_smoke_split_i"],
+  "window_ids": [
+    "lorenz63_one_step_lag1",
+    "lorenz63_rollout_smoke",
+    "lorenz63_statistics_h400"
+  ],
+  "task_ids": [
+    "lorenz63_one_step_forecast",
+    "lorenz63_rollout_smoke",
+    "lorenz63_long_time_statistics_smoke"
+  ],
+  "difficulty_level": "smoke",
+  "release_version": "0.1.0-dev",
+  "output_policy": {
+    "raw_path": "data/raw/v1_core/lorenz63/smoke/lorenz63_raw.jld2",
+    "processed_path": "data/processed/v1_core/lorenz63/smoke/full_state/lorenz63_observed.jld2",
+    "split_path": "data/processed/v1_core/lorenz63/smoke/full_state/lorenz63_split_I.json",
+    "windows_summary_path": "data/processed/v1_core/lorenz63/smoke/full_state/lorenz63_windows_summary.json",
+    "manifest_path": "data/manifests/v1_core/lorenz63/smoke/lorenz63_manifest.json",
+    "release_index_path": "data/releases/v1_core/lorenz63/lorenz63_release_index.json"
+  }
+}

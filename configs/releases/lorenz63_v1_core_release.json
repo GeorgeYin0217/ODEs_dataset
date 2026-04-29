@@ -1,0 +1,12 @@
+{
+  "release_id": "lorenz63_fullobs_v1_core",
+  "release_version": "0.1.0-dev",
+  "system_id": "lorenz63",
+  "family": "v1_core",
+  "difficulty_levels": ["smoke", "standard"],
+  "standard_benchmark_id": "lorenz63_standard_chaotic_fullobs_v1_standard",
+  "smoke_benchmark_id": "lorenz63_standard_chaotic_fullobs_v1_smoke",
+  "raw_path": "data/raw/v1_core/lorenz63/standard/lorenz63_raw.jld2",
+  "processed_path": "data/processed/v1_core/lorenz63/standard/full_state/lorenz63_observed.jld2",
+  "manifest_path": "data/manifests/v1_core/lorenz63/standard/lorenz63_manifest.json"
+}

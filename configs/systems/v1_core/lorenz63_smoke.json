@@ -1,0 +1,40 @@
+{
+  "system_id": "lorenz63",
+  "family": "v1_core",
+  "variant": "standard_chaotic_smoke_full_state",
+  "state_dim": 3,
+  "parameter_names": ["sigma", "rho", "beta"],
+  "default_parameters": {
+    "sigma": 10.0,
+    "rho": 28.0,
+    "beta": 2.6666666666666665
+  },
+  "parameter_domain": {
+    "sigma": [10.0, 10.0],
+    "rho": [28.0, 28.0],
+    "beta": [2.6666666666666665, 2.6666666666666665]
+  },
+  "initial_condition_domain": {
+    "type": "manual_smoke_set",
+    "description": "Small fixed Lorenz initial-condition ensemble with burn-in before retained attractor samples.",
+    "values": [
+      [1.0, 1.0, 1.0],
+      [-1.0, -1.0, 20.0],
+      [5.0, 5.0, 5.0],
+      [-8.0, 8.0, 27.0],
+      [8.0, -8.0, 25.0],
+      [0.1, 0.0, 20.0]
+    ]
+  },
+  "dt": 0.01,
+  "burn_in_time": 5.0,
+  "tspan": [0.0, 12.0],
+  "trajectory_length": 1200,
+  "num_trajectories": 6,
+  "solver_name": "fixed_step_rk4",
+  "solver_abstol": 0.0,
+  "solver_reltol": 0.0,
+  "seed_policy": {
+    "generation_seed": 20260429
+  }
+}
