@@ -756,18 +756,18 @@ $$
 
 | 文件路径 | 作用 |
 |---|---|
-| `reports/plots/duffing/smoke_phase_portrait.png` | smoke 相图 |
-| `reports/plots/duffing/smoke_energy_curves.png` | smoke 能量曲线 |
-| `reports/plots/duffing/smoke_initial_conditions.png` | smoke 初值分布 |
-| `reports/plots/duffing/small_phase_portrait_samples.png` | 正式 small 抽样相图 |
-| `reports/plots/duffing/small_energy_diagnostics.png` | 正式 small 能量诊断 |
-| `reports/plots/duffing/small_final_well_distribution.png` | 最终势阱分布图 |
-| `reports/tables/duffing/smoke_diagnostics.csv` | smoke 数值诊断表 |
-| `reports/tables/duffing/small_dataset_summary.csv` | 正式数据规模与统计摘要 |
-| `reports/tables/duffing/small_energy_checks.csv` | 能量单调性检查表 |
-| `reports/logs/duffing/smoke_generation.log` | smoke 运行日志 |
-| `reports/logs/duffing/small_generation.log` | 正式生成日志 |
-| `reports/logs/duffing/small_dataset_check.log` | 正式检查日志 |
+| `reports/v1_core/duffing_unforced_double_well_smoke/plots/smoke_phase_portrait.png` | smoke 相图 |
+| `reports/v1_core/duffing_unforced_double_well_smoke/plots/smoke_energy_curves.png` | smoke 能量曲线 |
+| `reports/v1_core/duffing_unforced_double_well_smoke/plots/smoke_initial_conditions.png` | smoke 初值分布 |
+| `reports/v1_core/duffing_unforced_double_well_smoke/plots/small_phase_portrait_samples.png` | 正式 small 抽样相图 |
+| `reports/v1_core/duffing_unforced_double_well_smoke/plots/small_energy_diagnostics.png` | 正式 small 能量诊断 |
+| `reports/v1_core/duffing_unforced_double_well_smoke/plots/small_final_well_distribution.png` | 最终势阱分布图 |
+| `reports/v1_core/duffing_unforced_double_well_smoke/tables/smoke_diagnostics.csv` | smoke 数值诊断表 |
+| `reports/v1_core/duffing_unforced_double_well_smoke/tables/small_dataset_summary.csv` | 正式数据规模与统计摘要 |
+| `reports/v1_core/duffing_unforced_double_well_smoke/tables/small_energy_checks.csv` | 能量单调性检查表 |
+| `reports/v1_core/duffing_unforced_double_well_smoke/logs/smoke_generation.log` | smoke 运行日志 |
+| `reports/v1_core/duffing_unforced_double_well_smoke/logs/small_generation.log` | 正式生成日志 |
+| `reports/v1_core/duffing_unforced_double_well_smoke/logs/small_dataset_check.log` | 正式检查日志 |
 
 ---
 
@@ -1337,7 +1337,7 @@ Julia 标准库接口即可，但仍需确认当前项目中的导入风格。
 
 **Expected functionality**
 
-- 写入 `reports/tables/duffing/*.csv`；
+- 写入 `reports/v1_core/duffing_unforced_double_well_smoke/tables/*.csv`；
 - 读取回归参考摘要；
 - 整理 dataset summary。
 
@@ -1514,23 +1514,23 @@ $$
 - `data/raw/v1_core/duffing_unforced_double_well/smoke/`
 - `data/processed/v1_core/duffing_unforced_double_well/smoke/full_state_clean/`
 - `data/manifests/v1_core/duffing_unforced_double_well/smoke/`
-- `reports/plots/duffing/smoke_phase_portrait.png`
-- `reports/plots/duffing/smoke_energy_curves.png`
-- `reports/tables/duffing/smoke_diagnostics.csv`
-- `reports/logs/duffing/smoke_generation.log`
+- `reports/v1_core/duffing_unforced_double_well_smoke/plots/smoke_phase_portrait.png`
+- `reports/v1_core/duffing_unforced_double_well_smoke/plots/smoke_energy_curves.png`
+- `reports/v1_core/duffing_unforced_double_well_smoke/tables/smoke_diagnostics.csv`
+- `reports/v1_core/duffing_unforced_double_well_smoke/logs/smoke_generation.log`
 
 ### 正式 small 输出
 
 - `data/raw/v1_core/duffing_unforced_double_well/small/`
 - `data/processed/v1_core/duffing_unforced_double_well/small/full_state_clean/`
 - `data/manifests/v1_core/duffing_unforced_double_well/small/`
-- `reports/plots/duffing/small_phase_portrait_samples.png`
-- `reports/plots/duffing/small_energy_diagnostics.png`
-- `reports/plots/duffing/small_final_well_distribution.png`
-- `reports/tables/duffing/small_dataset_summary.csv`
-- `reports/tables/duffing/small_energy_checks.csv`
-- `reports/logs/duffing/small_generation.log`
-- `reports/logs/duffing/small_dataset_check.log`
+- `reports/v1_core/duffing_unforced_double_well_smoke/plots/small_phase_portrait_samples.png`
+- `reports/v1_core/duffing_unforced_double_well_smoke/plots/small_energy_diagnostics.png`
+- `reports/v1_core/duffing_unforced_double_well_smoke/plots/small_final_well_distribution.png`
+- `reports/v1_core/duffing_unforced_double_well_smoke/tables/small_dataset_summary.csv`
+- `reports/v1_core/duffing_unforced_double_well_smoke/tables/small_energy_checks.csv`
+- `reports/v1_core/duffing_unforced_double_well_smoke/logs/small_generation.log`
+- `reports/v1_core/duffing_unforced_double_well_smoke/logs/small_dataset_check.log`
 
 ### 测试输出
 

@@ -78,10 +78,10 @@ The formal command generated:
 - `data/processed/v1_core/fitzhugh_nagumo/formal/full_state_clean/windows_summary.json`
 - `data/manifests/v1_core/fitzhugh_nagumo/formal/full_state_clean/manifest.json`
 - `data/releases/v1_core/fitzhugh_nagumo/formal/full_state_clean/release_index.json`
-- `reports/tables/v1_core/fitzhugh_nagumo/formal/diagnostics.csv`
-- `reports/plots/v1_core/fitzhugh_nagumo/formal/formal_time_series.png`
-- `reports/plots/v1_core/fitzhugh_nagumo/formal/formal_phase_portrait_nullclines.png`
-- `reports/logs/v1_core/fitzhugh_nagumo/formal.log`
+- `reports/v1_core/fitzhugh_nagumo_formal/tables/diagnostics.csv`
+- `reports/v1_core/fitzhugh_nagumo_formal/plots/formal_time_series.png`
+- `reports/v1_core/fitzhugh_nagumo_formal/plots/formal_phase_portrait_nullclines.png`
+- `reports/v1_core/fitzhugh_nagumo_formal/logs/formal.log`
 
 The raw trajectories, processed trajectories, release index, and logs are
 generated outputs ignored by the repository policy unless explicitly promoted.

@@ -97,7 +97,7 @@ function generate_linear_diagonal_dataset(;
         difficulty,
     )
     manifest_dir = joinpath(PROJECT_ROOT, "data", "manifests", system_spec.family, system_spec.system_id, difficulty)
-    plot_dir = joinpath(PROJECT_ROOT, "reports", "plots", system_spec.family, system_spec.system_id, plot_subdir)
+    plot_dir = joinpath(PROJECT_ROOT, "reports", system_spec.family, system_spec.system_id, "plots", plot_subdir)
 
     raw_trajectories = RawTrajectory[]
     observed_trajectories = ObservedTrajectory[]

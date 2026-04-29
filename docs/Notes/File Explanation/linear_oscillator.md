@@ -268,8 +268,8 @@ data/processed/v1_core/linear_oscillator/smoke_undamped_full_state/observed_traj
 data/processed/v1_core/linear_oscillator/smoke_undamped_full_state/splits.json
 data/processed/v1_core/linear_oscillator/smoke_undamped_full_state/windows_summary.json
 data/manifests/v1_core/linear_oscillator/smoke_undamped_full_state/manifest.json
-reports/tables/v1_core/linear_oscillator/smoke_undamped_full_state/diagnostics.csv
-reports/plots/v1_core/linear_oscillator/smoke_undamped_full_state/
+reports/v1_core/linear_oscillator/tables/smoke_undamped_full_state/diagnostics.csv
+reports/v1_core/linear_oscillator/plots/smoke_undamped_full_state/
 ```
 
 正式输出：
@@ -281,9 +281,9 @@ data/processed/v1_core/linear_oscillator/damped_full_state/splits.json
 data/processed/v1_core/linear_oscillator/damped_full_state/windows_summary.json
 data/manifests/v1_core/linear_oscillator/damped_full_state/manifest.json
 data/releases/v1_core/linear_oscillator/damped_full_state/release_index.json
-reports/tables/v1_core/linear_oscillator/damped_full_state/diagnostics.csv
-reports/plots/v1_core/linear_oscillator/damped_full_state/
-reports/logs/v1_core/linear_oscillator/damped_full_state.log
+reports/v1_core/linear_oscillator/tables/damped_full_state/diagnostics.csv
+reports/v1_core/linear_oscillator/plots/damped_full_state/
+reports/v1_core/linear_oscillator/logs/damped_full_state.log
 ```
 
 raw 和 processed JLD2 的主要字段：

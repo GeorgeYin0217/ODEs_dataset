@@ -34,11 +34,11 @@ julia --project=. experiments/data_generation/generate_lotka_volterra_orbit_fami
 - Manifest:
   `data/manifests/v1_core/lotka_volterra/orbit_family/full_state_clean/manifest.json`
 - Diagnostics table:
-  `reports/tables/v1_core/lotka_volterra/orbit_family/diagnostics.csv`
+  `reports/v1_core/lotka_volterra_orbit_family/tables/diagnostics.csv`
 - Plots:
-  `reports/plots/v1_core/lotka_volterra/orbit_family/orbit_family_time_series.png`,
-  `reports/plots/v1_core/lotka_volterra/orbit_family/orbit_family_phase_portrait.png`, and
-  `reports/plots/v1_core/lotka_volterra/orbit_family/orbit_family_invariant_drift.png`
+  `reports/v1_core/lotka_volterra_orbit_family/plots/orbit_family_time_series.png`,
+  `reports/v1_core/lotka_volterra_orbit_family/plots/orbit_family_phase_portrait.png`, and
+  `reports/v1_core/lotka_volterra_orbit_family/plots/orbit_family_invariant_drift.png`
 
 ## Next manual step
 

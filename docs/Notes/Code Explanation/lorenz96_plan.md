@@ -514,13 +514,13 @@ release 清单、smoke 脚本、integration / regression 测试对象。
 - `data/releases/lorenz96/`  
   release 索引与冻结清单。
 
-- `reports/tables/lorenz96/`  
+- `reports/v1_core/lorenz96_standard/tables/`  
   统计表、规模表、split 表。
 
-- `reports/plots/lorenz96/`  
+- `reports/v1_core/lorenz96_standard/plots/`  
   时间序列图、空间—时间热图、均值/方差图、协方差图。
 
-- `reports/logs/lorenz96/`  
+- `reports/v1_core/lorenz96_standard/logs/`  
   运行日志、诊断日志、异常记录。
 
 #### 测试层
@@ -908,7 +908,7 @@ Lorenz ’96 第一版最应强制检查的量如下。
 
 #### 表格
 
-保存到 `reports/tables/lorenz96/`：
+保存到 `reports/v1_core/lorenz96_standard/tables/`：
 
 - `trajectory_inventory.csv`：轨线条数、长度、参数、seed
 - `split_summary.csv`：train/val/test 轨线与窗口数量
@@ -918,7 +918,7 @@ Lorenz ’96 第一版最应强制检查的量如下。
 
 #### 图像
 
-保存到 `reports/plots/lorenz96/`：
+保存到 `reports/v1_core/lorenz96_standard/plots/`：
 
 - `representative_coordinates_timeseries.png`
 - `space_time_heatmap.png`
@@ -929,7 +929,7 @@ Lorenz ’96 第一版最应强制检查的量如下。
 
 #### 日志
 
-保存到 `reports/logs/lorenz96/`：
+保存到 `reports/v1_core/lorenz96_standard/logs/`：
 
 - smoke 运行日志
 - formal 运行日志

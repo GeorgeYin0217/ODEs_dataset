@@ -282,9 +282,9 @@ $$
 | `data/raw/v1_core/linear_oscillator/smoke_undamped_full_state/` | smoke raw 状态轨线 |
 | `data/processed/v1_core/linear_oscillator/smoke_undamped_full_state/` | smoke 全状态观测数据 |
 | `data/manifests/v1_core/linear_oscillator/smoke_undamped_full_state/` | smoke manifest |
-| `reports/plots/v1_core/linear_oscillator/smoke_undamped_full_state/` | smoke 图表 |
-| `reports/tables/v1_core/linear_oscillator/smoke_undamped_full_state/` | smoke 诊断表 |
-| `reports/logs/v1_core/linear_oscillator/smoke_undamped_full_state/` | smoke 日志 |
+| `reports/v1_core/linear_oscillator/plots/smoke_undamped_full_state/` | smoke 图表 |
+| `reports/v1_core/linear_oscillator/tables/smoke_undamped_full_state/` | smoke 诊断表 |
+| `reports/v1_core/linear_oscillator/logs/smoke_undamped_full_state/` | smoke 日志 |
 
 #### 正式数据
 
@@ -294,9 +294,9 @@ $$
 | `data/processed/v1_core/linear_oscillator/damped_full_state/` | 正式全状态观测数据 |
 | `data/manifests/v1_core/linear_oscillator/damped_full_state/` | 正式 manifest |
 | `data/releases/v1_core/linear_oscillator/damped_full_state/` | 正式 release 清单 |
-| `reports/plots/v1_core/linear_oscillator/damped_full_state/` | 正式图表 |
-| `reports/tables/v1_core/linear_oscillator/damped_full_state/` | 正式诊断表 |
-| `reports/logs/v1_core/linear_oscillator/damped_full_state/` | 正式日志 |
+| `reports/v1_core/linear_oscillator/plots/damped_full_state/` | 正式图表 |
+| `reports/v1_core/linear_oscillator/tables/damped_full_state/` | 正式诊断表 |
+| `reports/v1_core/linear_oscillator/logs/damped_full_state/` | 正式日志 |
 
 ---
 

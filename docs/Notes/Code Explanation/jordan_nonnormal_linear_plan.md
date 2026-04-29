@@ -569,15 +569,15 @@ $$
 
 | Target path | Role |
 |---|---|
-| `reports/tables/unit_internal/jordan_nonnormal_linear/smoke_diagnostics.csv` | smoke 诊断表 |
-| `reports/tables/unit_internal/jordan_nonnormal_linear/formal_diagnostics.csv` | formal 诊断表 |
-| `reports/plots/unit_internal/jordan_nonnormal_linear/smoke_phase_portrait.png` | smoke 相图 |
-| `reports/plots/unit_internal/jordan_nonnormal_linear/smoke_time_series.png` | smoke 时间序列 |
-| `reports/plots/unit_internal/jordan_nonnormal_linear/smoke_norm_amplification.png` | smoke 范数瞬态放大图 |
-| `reports/plots/unit_internal/jordan_nonnormal_linear/formal_phase_portrait.png` | formal 相图 |
-| `reports/plots/unit_internal/jordan_nonnormal_linear/formal_norm_amplification.png` | formal 范数放大图 |
-| `reports/logs/unit_internal/jordan_nonnormal_linear/smoke_generation.log` | smoke 运行日志 |
-| `reports/logs/unit_internal/jordan_nonnormal_linear/formal_generation.log` | formal 运行日志 |
+| `reports/unit_internal/jordan_nonnormal_linear/tables/smoke_diagnostics.csv` | smoke 诊断表 |
+| `reports/unit_internal/jordan_nonnormal_linear/tables/formal_diagnostics.csv` | formal 诊断表 |
+| `reports/unit_internal/jordan_nonnormal_linear/plots/smoke_phase_portrait.png` | smoke 相图 |
+| `reports/unit_internal/jordan_nonnormal_linear/plots/smoke_time_series.png` | smoke 时间序列 |
+| `reports/unit_internal/jordan_nonnormal_linear/plots/smoke_norm_amplification.png` | smoke 范数瞬态放大图 |
+| `reports/unit_internal/jordan_nonnormal_linear/plots/formal_phase_portrait.png` | formal 相图 |
+| `reports/unit_internal/jordan_nonnormal_linear/plots/formal_norm_amplification.png` | formal 范数放大图 |
+| `reports/unit_internal/jordan_nonnormal_linear/logs/smoke_generation.log` | smoke 运行日志 |
+| `reports/unit_internal/jordan_nonnormal_linear/logs/formal_generation.log` | formal 运行日志 |
 
 ---
 
@@ -1060,7 +1060,7 @@ $$
 
 \text{diagnostic table}
 \in
-\text{reports/tables}.
+\text{reports/unit_internal/jordan_nonnormal_linear/tables}.
 
 $$
 
@@ -1430,11 +1430,11 @@ Formal 至少保存：
 - `data/raw/unit_internal/jordan_nonnormal_linear/smoke/raw_trajectories.jld2`
 - `data/processed/unit_internal/jordan_nonnormal_linear/smoke/observed_trajectories.jld2`
 - `data/manifests/unit_internal/jordan_nonnormal_linear/smoke/manifest.json`
-- `reports/tables/unit_internal/jordan_nonnormal_linear/smoke_diagnostics.csv`
-- `reports/plots/unit_internal/jordan_nonnormal_linear/smoke_time_series.png`
-- `reports/plots/unit_internal/jordan_nonnormal_linear/smoke_phase_portrait.png`
-- `reports/plots/unit_internal/jordan_nonnormal_linear/smoke_norm_amplification.png`
-- `reports/logs/unit_internal/jordan_nonnormal_linear/smoke_generation.log`
+- `reports/unit_internal/jordan_nonnormal_linear/tables/smoke_diagnostics.csv`
+- `reports/unit_internal/jordan_nonnormal_linear/plots/smoke_time_series.png`
+- `reports/unit_internal/jordan_nonnormal_linear/plots/smoke_phase_portrait.png`
+- `reports/unit_internal/jordan_nonnormal_linear/plots/smoke_norm_amplification.png`
+- `reports/unit_internal/jordan_nonnormal_linear/logs/smoke_generation.log`
 
 ---
 
@@ -1447,10 +1447,10 @@ Formal 至少保存：
 - `data/processed/unit_internal/jordan_nonnormal_linear/formal/windows_rollout.jld2`
 - `data/manifests/unit_internal/jordan_nonnormal_linear/formal/manifest.json`
 - `data/releases/unit_internal/jordan_nonnormal_linear_v0_1/release_manifest.json`
-- `reports/tables/unit_internal/jordan_nonnormal_linear/formal_diagnostics.csv`
-- `reports/plots/unit_internal/jordan_nonnormal_linear/formal_phase_portrait.png`
-- `reports/plots/unit_internal/jordan_nonnormal_linear/formal_norm_amplification.png`
-- `reports/logs/unit_internal/jordan_nonnormal_linear/formal_generation.log`
+- `reports/unit_internal/jordan_nonnormal_linear/tables/formal_diagnostics.csv`
+- `reports/unit_internal/jordan_nonnormal_linear/plots/formal_phase_portrait.png`
+- `reports/unit_internal/jordan_nonnormal_linear/plots/formal_norm_amplification.png`
+- `reports/unit_internal/jordan_nonnormal_linear/logs/formal_generation.log`
 
 ---
 

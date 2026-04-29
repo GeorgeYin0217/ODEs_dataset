@@ -291,9 +291,18 @@ ODEs_dataset/
     baseline_representation/
 
   reports/
-    tables/
-    plots/
-    logs/
+    unit_internal/
+      <task_name>/
+        tables/
+        plots/
+        logs/
+        notebooks/
+    v1_core/
+      <task_name>/
+        tables/
+        plots/
+        logs/
+        notebooks/
 
   test/
     unit/
@@ -381,11 +390,7 @@ ODEs_dataset/
 
 ### `reports/`
 
-保存实验输出。
-
-- `reports/tables/`：误差表、数据规模表、评测表。
-- `reports/plots/`：轨线图、相图、误差曲线等。
-- `reports/logs/`：运行日志和调试记录。
+保存实验输出。报告目录先按任务 scope 分为 `unit_internal` 与 `v1_core`，再在各自 scope 下按任务建目录；每个任务目录按需包含 `tables/`、`plots/`、`logs/`、`notebooks/` 等任务本地报告文件。
 
 ### `test/`
 

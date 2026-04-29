@@ -576,9 +576,9 @@ release 级 manifest 与发布索引。
 
 #### 报告输出路径
 
-- `reports/tables/v1_core/vanderpol/`
-- `reports/plots/v1_core/vanderpol/`
-- `reports/logs/v1_core/vanderpol/`
+- `reports/v1_core/vanderpol_unforced_fullobs_v1/tables/`
+- `reports/v1_core/vanderpol_unforced_fullobs_v1/plots/`
+- `reports/v1_core/vanderpol_unforced_fullobs_v1/logs/`
 
 ---
 
@@ -1128,7 +1128,7 @@ $$
 #### 表格
 保存在：
 
-- `reports/tables/v1_core/vanderpol/`
+- `reports/v1_core/vanderpol_unforced_fullobs_v1/tables/`
 
 建议输出：
 
@@ -1142,7 +1142,7 @@ $$
 #### 图像
 保存在：
 
-- `reports/plots/v1_core/vanderpol/`
+- `reports/v1_core/vanderpol_unforced_fullobs_v1/plots/`
 
 建议输出：
 
@@ -1157,7 +1157,7 @@ $$
 #### 日志
 保存在：
 
-- `reports/logs/v1_core/vanderpol/`
+- `reports/v1_core/vanderpol_unforced_fullobs_v1/logs/`
 
 建议输出：
 

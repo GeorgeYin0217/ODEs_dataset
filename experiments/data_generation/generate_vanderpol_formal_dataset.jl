@@ -84,9 +84,10 @@ function save_vanderpol_formal_outputs(;
     windows_p_summary_path = vanderpol_project_path(PROJECT_ROOT, output_policy["windows_p_summary_path"])
     manifest_path = vanderpol_project_path(PROJECT_ROOT, output_policy["manifest_path"])
     release_index_path = vanderpol_project_path(PROJECT_ROOT, output_policy["release_index_path"])
-    table_path = joinpath(PROJECT_ROOT, "reports", "tables", "v1_core", "vanderpol", "formal", "diagnostics.csv")
-    plot_dir = joinpath(PROJECT_ROOT, "reports", "plots", "v1_core", "vanderpol", "formal")
-    log_path = joinpath(PROJECT_ROOT, "reports", "logs", "v1_core", "vanderpol", "formal.log")
+    report_root = joinpath(PROJECT_ROOT, "reports", "v1_core", "vanderpol_unforced_fullobs_v1")
+    table_path = joinpath(report_root, "tables", "formal", "diagnostics.csv")
+    plot_dir = joinpath(report_root, "plots", "formal")
+    log_path = joinpath(report_root, "logs", "formal.log")
 
     save_vanderpol_raw(raw_path, raw_trajectories)
     save_vanderpol_observed(processed_path, observed_trajectories)

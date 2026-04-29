@@ -394,18 +394,18 @@ function save_jordan_outputs(;
     table_path = joinpath(
         PROJECT_ROOT,
         "reports",
-        "tables",
         "unit_internal",
         "jordan_nonnormal_linear",
+        "tables",
         string(run_label, "_diagnostics.csv"),
     )
-    plot_dir = joinpath(PROJECT_ROOT, "reports", "plots", "unit_internal", "jordan_nonnormal_linear")
+    plot_dir = joinpath(PROJECT_ROOT, "reports", "unit_internal", "jordan_nonnormal_linear", "plots")
     log_path = joinpath(
         PROJECT_ROOT,
         "reports",
-        "logs",
         "unit_internal",
         "jordan_nonnormal_linear",
+        "logs",
         string(run_label, "_generation.log"),
     )
 

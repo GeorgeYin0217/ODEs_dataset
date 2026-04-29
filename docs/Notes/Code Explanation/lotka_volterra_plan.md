@@ -502,17 +502,17 @@ smoke 输出：
 
 | 路径 | 内容 |
 |---|---|
-| `reports/tables/lotka_volterra_smoke_diagnostics.csv` | smoke 轨线诊断表 |
-| `reports/tables/lotka_volterra_orbit_family_diagnostics.csv` | 正式轨道族诊断表 |
-| `reports/tables/lotka_volterra_split_summary.csv` | train / val / test 轨线与窗口数量 |
-| `reports/plots/lotka_volterra/smoke_phase_portrait.png` | smoke 相图 |
-| `reports/plots/lotka_volterra/smoke_time_series.png` | smoke 时间序列 |
-| `reports/plots/lotka_volterra/smoke_invariant_drift.png` | smoke 守恒量漂移 |
-| `reports/plots/lotka_volterra/orbit_family_phase_portraits.png` | 正式轨道族相图 |
-| `reports/plots/lotka_volterra/orbit_family_invariant_drift.png` | 正式轨道族守恒量漂移 |
-| `reports/plots/lotka_volterra/orbit_family_state_ranges.png` | 状态范围与尺度图 |
-| `reports/logs/lotka_volterra_smoke.log` | smoke 运行日志 |
-| `reports/logs/lotka_volterra_orbit_family_generation.log` | 正式生成日志 |
+| `reports/v1_core/lotka_volterra_smoke/tables/diagnostics.csv` | smoke 轨线诊断表 |
+| `reports/v1_core/lotka_volterra_orbit_family/tables/diagnostics.csv` | 正式轨道族诊断表 |
+| `reports/v1_core/lotka_volterra_orbit_family/tables/split_summary.csv` | train / val / test 轨线与窗口数量 |
+| `reports/v1_core/lotka_volterra_smoke/plots/smoke_phase_portrait.png` | smoke 相图 |
+| `reports/v1_core/lotka_volterra_smoke/plots/smoke_time_series.png` | smoke 时间序列 |
+| `reports/v1_core/lotka_volterra_smoke/plots/smoke_invariant_drift.png` | smoke 守恒量漂移 |
+| `reports/v1_core/lotka_volterra_orbit_family/plots/orbit_family_phase_portraits.png` | 正式轨道族相图 |
+| `reports/v1_core/lotka_volterra_orbit_family/plots/orbit_family_invariant_drift.png` | 正式轨道族守恒量漂移 |
+| `reports/v1_core/lotka_volterra_orbit_family/plots/orbit_family_state_ranges.png` | 状态范围与尺度图 |
+| `reports/v1_core/lotka_volterra_smoke/logs/smoke.log` | smoke 运行日志 |
+| `reports/v1_core/lotka_volterra_orbit_family/logs/orbit_family.log` | 正式生成日志 |
 
 本任务不产生模型 checkpoint，因为它是数据集生成任务，不是训练任务。
 

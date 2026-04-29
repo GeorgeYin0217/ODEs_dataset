@@ -478,9 +478,9 @@ A–I。
 
 ### 报告输出层
 
-- `reports/plots/fitzhugh_nagumo/...`
-- `reports/tables/fitzhugh_nagumo/...`
-- `reports/logs/fitzhugh_nagumo/...`
+- `reports/v1_core/fitzhugh_nagumo_formal/plots/...`
+- `reports/v1_core/fitzhugh_nagumo_formal/tables/...`
+- `reports/v1_core/fitzhugh_nagumo_formal/logs/...`
 
 ### 测试层
 
@@ -797,22 +797,22 @@ $$
 
 保存在：
 
-- `reports/plots/fitzhugh_nagumo/phase_portraits/`
-- `reports/plots/fitzhugh_nagumo/time_series/`
-- `reports/plots/fitzhugh_nagumo/split_coverage/`
+- `reports/v1_core/fitzhugh_nagumo_formal/plots/phase_portraits/`
+- `reports/v1_core/fitzhugh_nagumo_formal/plots/time_series/`
+- `reports/v1_core/fitzhugh_nagumo_formal/plots/split_coverage/`
 
 ### 表格
 
 保存在：
 
-- `reports/tables/fitzhugh_nagumo/generation_summary/`
-- `reports/tables/fitzhugh_nagumo/diagnostics/`
+- `reports/v1_core/fitzhugh_nagumo_formal/tables/generation_summary/`
+- `reports/v1_core/fitzhugh_nagumo_formal/tables/diagnostics/`
 
 ### 日志
 
 保存在：
 
-- `reports/logs/fitzhugh_nagumo/`
+- `reports/v1_core/fitzhugh_nagumo_formal/logs/`
 
 ### 发布对象
 

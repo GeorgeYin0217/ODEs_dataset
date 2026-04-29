@@ -47,9 +47,9 @@ Both commands completed successfully.
 - Observed trajectories: `data/processed/v1_core/rossler_standard/standard/full_state/rossler_observed.jld2`
 - Manifest: `data/manifests/v1_core/rossler_standard/standard/rossler_manifest.json`
 - Release index: `data/releases/v1_core/rossler_standard/rossler_release_index.json`
-- Diagnostic tables: `reports/tables/rossler_standard/standard/`
-- Diagnostic plots: `reports/plots/rossler_standard/standard/`
-- Run log: `reports/logs/rossler_standard/standard/generate_rossler_standard.log`
+- Diagnostic tables: `reports/v1_core/rossler_standard/tables/standard/`
+- Diagnostic plots: `reports/v1_core/rossler_standard/plots/standard/`
+- Run log: `reports/v1_core/rossler_standard/logs/standard/generate_rossler_standard.log`
 
 ## Next Manual Step
 

@@ -89,7 +89,7 @@ processed_dir = joinpath(
     difficulty,
 )
 manifest_dir = joinpath(project_root, "data", "manifests", system_spec.family, system_spec.system_id, difficulty)
-plot_dir = joinpath(project_root, "reports", "plots", system_spec.family, system_spec.system_id, "smoke")
+    plot_dir = joinpath(project_root, "reports", system_spec.family, system_spec.system_id, "plots", "smoke")
 
 raw_trajectories = RawTrajectory[]
 observed_trajectories = ObservedTrajectory[]

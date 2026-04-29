@@ -46,11 +46,11 @@ multiple invariant levels around the positive equilibrium.
   stores one-step, rollout, and statistics window counts.
 - `data/manifests/v1_core/lotka_volterra/orbit_family/full_state_clean/manifest.json`
   stores generation metadata and diagnostics.
-- `reports/tables/v1_core/lotka_volterra/orbit_family/diagnostics.csv`
+- `reports/v1_core/lotka_volterra_orbit_family/tables/diagnostics.csv`
   stores the human-readable diagnostics row.
-- `reports/plots/v1_core/lotka_volterra/orbit_family/` contains time-series,
+- `reports/v1_core/lotka_volterra_orbit_family/plots/` contains time-series,
   phase-portrait, and invariant-drift PNGs.
-- `reports/logs/v1_core/lotka_volterra/orbit_family.log` records the formal run
+- `reports/v1_core/lotka_volterra_orbit_family/logs/orbit_family.log` records the formal run
   summary.
 
 ## Script-to-script data flow

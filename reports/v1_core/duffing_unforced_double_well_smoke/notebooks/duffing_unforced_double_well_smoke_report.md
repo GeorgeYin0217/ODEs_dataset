@@ -43,14 +43,14 @@ Important diagnostics:
 The smoke command wrote a manifest and human-readable reports at:
 
 - `data/manifests/v1_core/duffing_unforced_double_well/smoke/manifest.json`
-- `reports/tables/v1_core/duffing/smoke/diagnostics.csv`
-- `reports/plots/v1_core/duffing/smoke/`
+- `reports/v1_core/duffing_unforced_double_well_smoke/tables/diagnostics.csv`
+- `reports/v1_core/duffing_unforced_double_well_smoke/plots/`
 
 The formal command wrote matching smoke-parameter outputs at:
 
 - `data/manifests/v1_core/duffing_unforced_double_well/formal/manifest.json`
-- `reports/tables/v1_core/duffing/formal/diagnostics.csv`
-- `reports/plots/v1_core/duffing/formal/`
+- `reports/v1_core/duffing_unforced_double_well_formal/tables/diagnostics.csv`
+- `reports/v1_core/duffing_unforced_double_well_formal/plots/`
 
 Raw and processed trajectory files were also generated under `data/raw/` and
 `data/processed/`, but those directories are ignored by version control.

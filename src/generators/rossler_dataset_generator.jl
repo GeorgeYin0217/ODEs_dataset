@@ -459,14 +459,14 @@ function save_rossler_outputs(;
     manifest_path = rossler_project_path(project_root, output_policy["manifest_path"])
     release_index_path = rossler_project_path(project_root, output_policy["release_index_path"])
 
-    table_dir = joinpath(project_root, "reports", "tables", "rossler_standard", run_label)
+    table_dir = joinpath(project_root, "reports", "v1_core", "rossler_standard", "tables", run_label)
     table_path = joinpath(table_dir, "rossler_diagnostics.csv")
     state_ranges_path = joinpath(table_dir, "rossler_state_ranges.csv")
     statistics_path = joinpath(table_dir, "rossler_statistics.csv")
     split_window_counts_path = joinpath(table_dir, "rossler_split_window_counts.csv")
-    plot_dir = joinpath(project_root, "reports", "plots", "rossler_standard", run_label)
+    plot_dir = joinpath(project_root, "reports", "v1_core", "rossler_standard", "plots", run_label)
     log_filename = run_label == "standard" ? "generate_rossler_standard.log" : "run_rossler_smoke.log"
-    log_path = joinpath(project_root, "reports", "logs", "rossler_standard", run_label, log_filename)
+    log_path = joinpath(project_root, "reports", "v1_core", "rossler_standard", "logs", run_label, log_filename)
 
     save_rossler_raw(raw_path, raw_trajectories)
     save_rossler_observed(processed_path, observed_trajectories)

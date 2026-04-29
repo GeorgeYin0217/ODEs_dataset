@@ -381,9 +381,10 @@ function save_rotation_contraction_outputs(;
     windows_summary_path = project_path(output_policy["windows_summary_path"])
     manifest_path = project_path(output_policy["manifest_path"])
     release_index_path = project_path(output_policy["release_index_path"])
-    table_path = joinpath(PROJECT_ROOT, "reports", "tables", "unit_internal", string(report_stem, "_diagnostics.csv"))
-    plot_dir = joinpath(PROJECT_ROOT, "reports", "plots", "unit_internal")
-    log_path = joinpath(PROJECT_ROOT, "reports", "logs", "unit_internal", string(report_stem, ".log"))
+    report_root = joinpath(PROJECT_ROOT, "reports", "unit_internal", "linear_rotation_contraction_2d")
+    table_path = joinpath(report_root, "tables", string(report_stem, "_diagnostics.csv"))
+    plot_dir = joinpath(report_root, "plots")
+    log_path = joinpath(report_root, "logs", string(report_stem, ".log"))
 
     save_rotation_contraction_raw(raw_path, raw_trajectories)
     save_rotation_contraction_observed(processed_path, observed_trajectories)

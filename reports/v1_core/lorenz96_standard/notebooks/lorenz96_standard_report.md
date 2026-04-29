@@ -60,11 +60,11 @@ Main standard outputs:
 - `data/raw/v1_core/lorenz96/standard/lorenz96_raw.jld2`
 - `data/processed/v1_core/lorenz96/standard/full_state/lorenz96_observed.jld2`
 - `data/manifests/v1_core/lorenz96/standard/lorenz96_manifest.json`
-- `reports/tables/lorenz96/standard/lorenz96_diagnostics.csv`
-- `reports/tables/lorenz96/standard/lorenz96_coordinate_statistics.csv`
-- `reports/tables/lorenz96/standard/lorenz96_split_window_counts.csv`
-- `reports/plots/lorenz96/standard/lorenz96_representative_coordinates.png`
-- `reports/plots/lorenz96/standard/lorenz96_space_time_heatmap.png`
+- `reports/v1_core/lorenz96_standard/tables/standard/lorenz96_diagnostics.csv`
+- `reports/v1_core/lorenz96_standard/tables/standard/lorenz96_coordinate_statistics.csv`
+- `reports/v1_core/lorenz96_standard/tables/standard/lorenz96_split_window_counts.csv`
+- `reports/v1_core/lorenz96_standard/plots/standard/lorenz96_representative_coordinates.png`
+- `reports/v1_core/lorenz96_standard/plots/standard/lorenz96_space_time_heatmap.png`
 
 ## Notes
 

@@ -192,11 +192,11 @@ data/processed/unit_internal/jordan_nonnormal_linear/smoke/observed_trajectories
 data/processed/unit_internal/jordan_nonnormal_linear/smoke/splits.json
 data/processed/unit_internal/jordan_nonnormal_linear/smoke/windows_summary.json
 data/manifests/unit_internal/jordan_nonnormal_linear/smoke/manifest.json
-reports/tables/unit_internal/jordan_nonnormal_linear/smoke_diagnostics.csv
-reports/logs/unit_internal/jordan_nonnormal_linear/smoke_generation.log
-reports/plots/unit_internal/jordan_nonnormal_linear/smoke_time_series.png
-reports/plots/unit_internal/jordan_nonnormal_linear/smoke_phase_portrait.png
-reports/plots/unit_internal/jordan_nonnormal_linear/smoke_norm_amplification.png
+reports/unit_internal/jordan_nonnormal_linear/tables/smoke_diagnostics.csv
+reports/unit_internal/jordan_nonnormal_linear/logs/smoke_generation.log
+reports/unit_internal/jordan_nonnormal_linear/plots/smoke_time_series.png
+reports/unit_internal/jordan_nonnormal_linear/plots/smoke_phase_portrait.png
+reports/unit_internal/jordan_nonnormal_linear/plots/smoke_norm_amplification.png
 ```
 
 ### Formal 输出
@@ -207,11 +207,11 @@ data/processed/unit_internal/jordan_nonnormal_linear/formal/observed_trajectorie
 data/processed/unit_internal/jordan_nonnormal_linear/formal/splits.json
 data/processed/unit_internal/jordan_nonnormal_linear/formal/windows_summary.json
 data/manifests/unit_internal/jordan_nonnormal_linear/formal/manifest.json
-reports/tables/unit_internal/jordan_nonnormal_linear/formal_diagnostics.csv
-reports/logs/unit_internal/jordan_nonnormal_linear/formal_generation.log
-reports/plots/unit_internal/jordan_nonnormal_linear/formal_time_series.png
-reports/plots/unit_internal/jordan_nonnormal_linear/formal_phase_portrait.png
-reports/plots/unit_internal/jordan_nonnormal_linear/formal_norm_amplification.png
+reports/unit_internal/jordan_nonnormal_linear/tables/formal_diagnostics.csv
+reports/unit_internal/jordan_nonnormal_linear/logs/formal_generation.log
+reports/unit_internal/jordan_nonnormal_linear/plots/formal_time_series.png
+reports/unit_internal/jordan_nonnormal_linear/plots/formal_phase_portrait.png
+reports/unit_internal/jordan_nonnormal_linear/plots/formal_norm_amplification.png
 ```
 
 raw JLD2 的主要字段：

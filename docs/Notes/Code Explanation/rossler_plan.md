@@ -728,16 +728,16 @@ $$
 
 | 目标路径 | 作用 |
 |---|---|
-| `reports/tables/rossler_standard/trajectory_summary.csv` | 轨线范围、均值、标准差、增量范数汇总 |
-| `reports/tables/rossler_standard/split_summary.csv` | train / val / test 轨线数与窗口数 |
-| `reports/tables/rossler_standard/statistics_summary.csv` | 长期统计诊断表 |
-| `reports/plots/rossler_standard/phase3d_attractor.png` | 正式三维相空间吸引子图 |
-| `reports/plots/rossler_standard/phase_xy.png` | $x$-$y$ 投影图 |
-| `reports/plots/rossler_standard/phase_xz.png` | $x$-$z$ 投影图 |
-| `reports/plots/rossler_standard/phase_yz.png` | $y$-$z$ 投影图 |
-| `reports/plots/rossler_standard/timeseries_xyz.png` | 三个坐标的时间序列图 |
-| `reports/logs/rossler_standard/generation_log.txt` | 正式生成日志 |
-| `reports/logs/rossler_standard/smoke_log.txt` | smoke 运行日志 |
+| `reports/v1_core/rossler_standard/tables/trajectory_summary.csv` | 轨线范围、均值、标准差、增量范数汇总 |
+| `reports/v1_core/rossler_standard/tables/split_summary.csv` | train / val / test 轨线数与窗口数 |
+| `reports/v1_core/rossler_standard/tables/statistics_summary.csv` | 长期统计诊断表 |
+| `reports/v1_core/rossler_standard/plots/phase3d_attractor.png` | 正式三维相空间吸引子图 |
+| `reports/v1_core/rossler_standard/plots/phase_xy.png` | $x$-$y$ 投影图 |
+| `reports/v1_core/rossler_standard/plots/phase_xz.png` | $x$-$z$ 投影图 |
+| `reports/v1_core/rossler_standard/plots/phase_yz.png` | $y$-$z$ 投影图 |
+| `reports/v1_core/rossler_standard/plots/timeseries_xyz.png` | 三个坐标的时间序列图 |
+| `reports/v1_core/rossler_standard/logs/generation_log.txt` | 正式生成日志 |
+| `reports/v1_core/rossler_standard/logs/smoke_log.txt` | smoke 运行日志 |
 
 ### 4.7 测试文件
 
@@ -1439,16 +1439,16 @@ smoke test 应输出紧凑日志：
 
 ### 10.2 报告输出
 
-- `reports/tables/rossler_standard/trajectory_summary.csv`
-- `reports/tables/rossler_standard/split_summary.csv`
-- `reports/tables/rossler_standard/statistics_summary.csv`
-- `reports/plots/rossler_standard/phase3d_attractor.png`
-- `reports/plots/rossler_standard/phase_xy.png`
-- `reports/plots/rossler_standard/phase_xz.png`
-- `reports/plots/rossler_standard/phase_yz.png`
-- `reports/plots/rossler_standard/timeseries_xyz.png`
-- `reports/logs/rossler_standard/generation_log.txt`
-- `reports/logs/rossler_standard/smoke_log.txt`
+- `reports/v1_core/rossler_standard/tables/trajectory_summary.csv`
+- `reports/v1_core/rossler_standard/tables/split_summary.csv`
+- `reports/v1_core/rossler_standard/tables/statistics_summary.csv`
+- `reports/v1_core/rossler_standard/plots/phase3d_attractor.png`
+- `reports/v1_core/rossler_standard/plots/phase_xy.png`
+- `reports/v1_core/rossler_standard/plots/phase_xz.png`
+- `reports/v1_core/rossler_standard/plots/phase_yz.png`
+- `reports/v1_core/rossler_standard/plots/timeseries_xyz.png`
+- `reports/v1_core/rossler_standard/logs/generation_log.txt`
+- `reports/v1_core/rossler_standard/logs/smoke_log.txt`
 
 ### 10.3 测试输出
 

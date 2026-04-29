@@ -366,9 +366,11 @@ function save_lotka_volterra_outputs(;
     manifest_path = lotka_volterra_project_path(project_root, output_policy["manifest_path"])
     release_index_path = lotka_volterra_project_path(project_root, output_policy["release_index_path"])
 
-    table_path = joinpath(project_root, "reports", "tables", "v1_core", "lotka_volterra", run_label, "diagnostics.csv")
-    plot_dir = joinpath(project_root, "reports", "plots", "v1_core", "lotka_volterra", run_label)
-    log_path = joinpath(project_root, "reports", "logs", "v1_core", "lotka_volterra", string(run_label, ".log"))
+    task_dir = run_label == "orbit_family" ? "lotka_volterra_orbit_family" : "lotka_volterra_smoke"
+    report_root = joinpath(project_root, "reports", "v1_core", task_dir)
+    table_path = joinpath(report_root, "tables", "diagnostics.csv")
+    plot_dir = joinpath(report_root, "plots")
+    log_path = joinpath(report_root, "logs", string(run_label, ".log"))
 
     save_lotka_volterra_raw(raw_path, raw_trajectories)
     save_lotka_volterra_observed(processed_path, observed_trajectories)

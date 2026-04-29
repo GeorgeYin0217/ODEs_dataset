@@ -58,13 +58,13 @@ Important diagnostics:
 - Manifest:
   `data/manifests/v1_core/fitzhugh_nagumo/formal/full_state_clean/manifest.json`
 - Diagnostics table:
-  `reports/tables/v1_core/fitzhugh_nagumo/formal/diagnostics.csv`
+  `reports/v1_core/fitzhugh_nagumo_formal/tables/diagnostics.csv`
 - Log:
-  `reports/logs/v1_core/fitzhugh_nagumo/formal.log`
+  `reports/v1_core/fitzhugh_nagumo_formal/logs/formal.log`
 - Plots:
-  `reports/plots/v1_core/fitzhugh_nagumo/formal/formal_time_series.png`
+  `reports/v1_core/fitzhugh_nagumo_formal/plots/formal_time_series.png`
   and
-  `reports/plots/v1_core/fitzhugh_nagumo/formal/formal_phase_portrait_nullclines.png`
+  `reports/v1_core/fitzhugh_nagumo_formal/plots/formal_phase_portrait_nullclines.png`
 
 ## Next Manual Step
 

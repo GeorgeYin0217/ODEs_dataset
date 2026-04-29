@@ -457,14 +457,14 @@ function save_lorenz63_outputs(;
     manifest_path = lorenz63_project_path(project_root, output_policy["manifest_path"])
     release_index_path = lorenz63_project_path(project_root, output_policy["release_index_path"])
 
-    table_dir = joinpath(project_root, "reports", "tables", "lorenz63", run_label)
+    table_dir = joinpath(project_root, "reports", "v1_core", "lorenz63_standard", "tables", run_label)
     table_path = joinpath(table_dir, "lorenz63_diagnostics.csv")
     state_ranges_path = joinpath(table_dir, "lorenz63_state_ranges.csv")
     statistics_path = joinpath(table_dir, "lorenz63_statistics.csv")
     split_window_counts_path = joinpath(table_dir, "lorenz63_split_window_counts.csv")
-    plot_dir = joinpath(project_root, "reports", "plots", "lorenz63", run_label)
+    plot_dir = joinpath(project_root, "reports", "v1_core", "lorenz63_standard", "plots", run_label)
     log_filename = run_label == "standard" ? "generate_lorenz63_standard.log" : "run_lorenz63_smoke.log"
-    log_path = joinpath(project_root, "reports", "logs", "lorenz63", run_label, log_filename)
+    log_path = joinpath(project_root, "reports", "v1_core", "lorenz63_standard", "logs", run_label, log_filename)
 
     save_lorenz63_raw(raw_path, raw_trajectories)
     save_lorenz63_observed(processed_path, observed_trajectories)

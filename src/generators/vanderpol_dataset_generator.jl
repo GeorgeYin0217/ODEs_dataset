@@ -434,9 +434,10 @@ function save_vanderpol_outputs(;
     manifest_path = vanderpol_project_path(project_root, output_policy["manifest_path"])
     release_index_path = vanderpol_project_path(project_root, output_policy["release_index_path"])
 
-    table_path = joinpath(project_root, "reports", "tables", "v1_core", "vanderpol", "smoke", "diagnostics.csv")
-    plot_dir = joinpath(project_root, "reports", "plots", "v1_core", "vanderpol", "smoke")
-    log_path = joinpath(project_root, "reports", "logs", "v1_core", "vanderpol", "smoke.log")
+    report_root = joinpath(project_root, "reports", "v1_core", "vanderpol_unforced_fullobs_v1")
+    table_path = joinpath(report_root, "tables", "smoke", "diagnostics.csv")
+    plot_dir = joinpath(report_root, "plots", "smoke")
+    log_path = joinpath(report_root, "logs", "smoke.log")
 
     save_vanderpol_raw(raw_path, raw_trajectories)
     save_vanderpol_observed(processed_path, observed_trajectories)

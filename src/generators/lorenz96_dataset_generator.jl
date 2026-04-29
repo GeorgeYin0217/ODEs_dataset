@@ -397,13 +397,13 @@ function save_lorenz96_outputs(;
     manifest_path = lorenz96_project_path(project_root, output_policy["manifest_path"])
     release_index_path = lorenz96_project_path(project_root, output_policy["release_index_path"])
 
-    table_dir = joinpath(project_root, "reports", "tables", "lorenz96", run_label)
+    table_dir = joinpath(project_root, "reports", "v1_core", "lorenz96_standard", "tables", run_label)
     table_path = joinpath(table_dir, "lorenz96_diagnostics.csv")
     coordinate_statistics_path = joinpath(table_dir, "lorenz96_coordinate_statistics.csv")
     split_window_counts_path = joinpath(table_dir, "lorenz96_split_window_counts.csv")
-    plot_dir = joinpath(project_root, "reports", "plots", "lorenz96", run_label)
+    plot_dir = joinpath(project_root, "reports", "v1_core", "lorenz96_standard", "plots", run_label)
     log_filename = run_label == "standard" ? "generate_lorenz96_standard.log" : "run_lorenz96_smoke.log"
-    log_path = joinpath(project_root, "reports", "logs", "lorenz96", run_label, log_filename)
+    log_path = joinpath(project_root, "reports", "v1_core", "lorenz96_standard", "logs", run_label, log_filename)
 
     save_lorenz96_raw(raw_path, raw_trajectories)
     save_lorenz96_observed(processed_path, observed_trajectories)

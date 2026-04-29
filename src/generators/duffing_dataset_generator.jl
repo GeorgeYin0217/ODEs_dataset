@@ -378,9 +378,11 @@ function save_duffing_outputs(;
     manifest_path = duffing_project_path(project_root, output_policy["manifest_path"])
     release_index_path = duffing_project_path(project_root, output_policy["release_index_path"])
 
-    table_path = joinpath(project_root, "reports", "tables", "v1_core", "duffing", run_label, "diagnostics.csv")
-    plot_dir = joinpath(project_root, "reports", "plots", "v1_core", "duffing", run_label)
-    log_path = joinpath(project_root, "reports", "logs", "v1_core", "duffing", string(run_label, ".log"))
+    task_dir = run_label == "formal" ? "duffing_unforced_double_well_formal" : "duffing_unforced_double_well_smoke"
+    report_root = joinpath(project_root, "reports", "v1_core", task_dir)
+    table_path = joinpath(report_root, "tables", "diagnostics.csv")
+    plot_dir = joinpath(report_root, "plots")
+    log_path = joinpath(report_root, "logs", string(run_label, ".log"))
 
     save_duffing_raw(raw_path, raw_trajectories)
     save_duffing_observed(processed_path, observed_trajectories)

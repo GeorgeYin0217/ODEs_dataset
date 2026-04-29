@@ -123,14 +123,14 @@ julia --project=. experiments/data_generation/generate_vanderpol_formal_dataset.
   - `data/releases/v1_core/vanderpol_unforced/formal/release_index.json`
 
 - Human-readable reports:
-  - `reports/tables/v1_core/vanderpol/smoke/diagnostics.csv`
-  - `reports/plots/v1_core/vanderpol/smoke/vanderpol_time_series.png`
-  - `reports/plots/v1_core/vanderpol/smoke/vanderpol_phase_portrait.png`
-  - `reports/logs/v1_core/vanderpol/smoke.log`
-  - `reports/tables/v1_core/vanderpol/formal/diagnostics.csv`
-  - `reports/plots/v1_core/vanderpol/formal/vanderpol_time_series.png`
-  - `reports/plots/v1_core/vanderpol/formal/vanderpol_phase_portrait.png`
-  - `reports/logs/v1_core/vanderpol/formal.log`
+  - `reports/v1_core/vanderpol_unforced_fullobs_v1/tables/smoke/diagnostics.csv`
+  - `reports/v1_core/vanderpol_unforced_fullobs_v1/plots/smoke/vanderpol_time_series.png`
+  - `reports/v1_core/vanderpol_unforced_fullobs_v1/plots/smoke/vanderpol_phase_portrait.png`
+  - `reports/v1_core/vanderpol_unforced_fullobs_v1/logs/smoke.log`
+  - `reports/v1_core/vanderpol_unforced_fullobs_v1/tables/formal/diagnostics.csv`
+  - `reports/v1_core/vanderpol_unforced_fullobs_v1/plots/formal/vanderpol_time_series.png`
+  - `reports/v1_core/vanderpol_unforced_fullobs_v1/plots/formal/vanderpol_phase_portrait.png`
+  - `reports/v1_core/vanderpol_unforced_fullobs_v1/logs/formal.log`
 
 ## Script-to-script data flow
 

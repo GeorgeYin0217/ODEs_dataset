@@ -408,9 +408,9 @@ function save_linear_oscillator_outputs(;
     manifest_path = linear_oscillator_project_path(project_root, output_policy["manifest_path"])
     release_index_path = linear_oscillator_project_path(project_root, output_policy["release_index_path"])
 
-    table_path = joinpath(project_root, "reports", "tables", report_subdir..., "diagnostics.csv")
-    plot_dir = joinpath(project_root, "reports", "plots", report_subdir...)
-    log_path = joinpath(project_root, "reports", "logs", report_subdir[1:(end - 1)]..., string(last(report_subdir), ".log"))
+    table_path = joinpath(project_root, "reports", report_subdir[1], report_subdir[2], "tables", report_subdir[3:end]..., "diagnostics.csv")
+    plot_dir = joinpath(project_root, "reports", report_subdir[1], report_subdir[2], "plots", report_subdir[3:end]...)
+    log_path = joinpath(project_root, "reports", report_subdir[1], report_subdir[2], "logs", report_subdir[3:(end - 1)]..., string(last(report_subdir), ".log"))
 
     save_linear_oscillator_raw(raw_path, raw_trajectories)
     save_linear_oscillator_observed(processed_path, observed_trajectories)

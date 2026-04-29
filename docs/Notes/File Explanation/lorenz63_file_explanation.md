@@ -71,9 +71,9 @@ Smoke outputs:
 - `data/processed/v1_core/lorenz63/smoke/full_state/lorenz63_split_I.json`
 - `data/processed/v1_core/lorenz63/smoke/full_state/lorenz63_windows_summary.json`
 - `data/manifests/v1_core/lorenz63/smoke/lorenz63_manifest.json`
-- `reports/plots/lorenz63/smoke/lorenz63_phase3d.png`
-- `reports/tables/lorenz63/smoke/lorenz63_diagnostics.csv`
-- `reports/logs/lorenz63/smoke/run_lorenz63_smoke.log`
+- `reports/v1_core/lorenz63_standard/plots/smoke/lorenz63_phase3d.png`
+- `reports/v1_core/lorenz63_standard/tables/smoke/lorenz63_diagnostics.csv`
+- `reports/v1_core/lorenz63_standard/logs/smoke/run_lorenz63_smoke.log`
 
 Standard outputs:
 
@@ -83,16 +83,16 @@ Standard outputs:
 - `data/processed/v1_core/lorenz63/standard/full_state/lorenz63_windows_summary.json`
 - `data/manifests/v1_core/lorenz63/standard/lorenz63_manifest.json`
 - `data/releases/v1_core/lorenz63/lorenz63_release_index.json`
-- `reports/plots/lorenz63/standard/lorenz63_phase3d.png`
-- `reports/plots/lorenz63/standard/lorenz63_projection_xy.png`
-- `reports/plots/lorenz63/standard/lorenz63_projection_xz.png`
-- `reports/plots/lorenz63/standard/lorenz63_projection_yz.png`
-- `reports/plots/lorenz63/standard/lorenz63_timeseries_xyz.png`
-- `reports/tables/lorenz63/standard/lorenz63_diagnostics.csv`
-- `reports/tables/lorenz63/standard/lorenz63_state_ranges.csv`
-- `reports/tables/lorenz63/standard/lorenz63_statistics.csv`
-- `reports/tables/lorenz63/standard/lorenz63_split_window_counts.csv`
-- `reports/logs/lorenz63/standard/generate_lorenz63_standard.log`
+- `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_phase3d.png`
+- `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_projection_xy.png`
+- `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_projection_xz.png`
+- `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_projection_yz.png`
+- `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_timeseries_xyz.png`
+- `reports/v1_core/lorenz63_standard/tables/standard/lorenz63_diagnostics.csv`
+- `reports/v1_core/lorenz63_standard/tables/standard/lorenz63_state_ranges.csv`
+- `reports/v1_core/lorenz63_standard/tables/standard/lorenz63_statistics.csv`
+- `reports/v1_core/lorenz63_standard/tables/standard/lorenz63_split_window_counts.csv`
+- `reports/v1_core/lorenz63_standard/logs/standard/generate_lorenz63_standard.log`
 
 The large raw, processed, release, and log outputs are intentionally covered by
 the repository ignore policy. The manifest, plots, tables, configs, source, and

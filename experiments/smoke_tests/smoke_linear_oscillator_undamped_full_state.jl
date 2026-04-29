@@ -162,26 +162,26 @@ function save_linear_oscillator_smoke_outputs(;
     table_path = joinpath(
         PROJECT_ROOT,
         "reports",
-        "tables",
         "v1_core",
         "linear_oscillator",
+        "tables",
         "smoke_undamped_full_state",
         "diagnostics.csv",
     )
     plot_dir = joinpath(
         PROJECT_ROOT,
         "reports",
-        "plots",
         "v1_core",
         "linear_oscillator",
+        "plots",
         "smoke_undamped_full_state",
     )
     log_path = joinpath(
         PROJECT_ROOT,
         "reports",
-        "logs",
         "v1_core",
         "linear_oscillator",
+        "logs",
         "smoke_undamped_full_state.log",
     )
 

@@ -370,9 +370,11 @@ function save_fitzhugh_nagumo_outputs(;
     manifest_path = fitzhugh_nagumo_project_path(project_root, output_policy["manifest_path"])
     release_index_path = fitzhugh_nagumo_project_path(project_root, output_policy["release_index_path"])
 
-    table_path = joinpath(project_root, "reports", "tables", "v1_core", "fitzhugh_nagumo", run_label, "diagnostics.csv")
-    plot_dir = joinpath(project_root, "reports", "plots", "v1_core", "fitzhugh_nagumo", run_label)
-    log_path = joinpath(project_root, "reports", "logs", "v1_core", "fitzhugh_nagumo", string(run_label, ".log"))
+    task_dir = run_label == "formal" ? "fitzhugh_nagumo_formal" : "fitzhugh_nagumo_smoke"
+    report_root = joinpath(project_root, "reports", "v1_core", task_dir)
+    table_path = joinpath(report_root, "tables", "diagnostics.csv")
+    plot_dir = joinpath(report_root, "plots")
+    log_path = joinpath(report_root, "logs", string(run_label, ".log"))
 
     save_fitzhugh_nagumo_raw(raw_path, raw_trajectories)
     save_fitzhugh_nagumo_observed(processed_path, observed_trajectories)

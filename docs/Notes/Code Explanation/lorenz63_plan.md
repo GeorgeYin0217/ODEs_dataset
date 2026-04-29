@@ -741,17 +741,17 @@ $$
 
 | 路径 | 作用 |
 |---|---|
-| `reports/plots/lorenz63/smoke/lorenz63_phase3d.png` | smoke 三维相空间轨线图。 |
-| `reports/plots/lorenz63/standard/lorenz63_phase3d.png` | 正式三维相空间轨线图。 |
-| `reports/plots/lorenz63/standard/lorenz63_projection_xy.png` | $xy$ 投影图。 |
-| `reports/plots/lorenz63/standard/lorenz63_projection_xz.png` | $xz$ 投影图。 |
-| `reports/plots/lorenz63/standard/lorenz63_projection_yz.png` | $yz$ 投影图。 |
-| `reports/plots/lorenz63/standard/lorenz63_timeseries_xyz.png` | $x,y,z$ 时间序列图。 |
-| `reports/tables/lorenz63/standard/lorenz63_state_ranges.csv` | 状态范围表。 |
-| `reports/tables/lorenz63/standard/lorenz63_statistics.csv` | 均值、方差、协方差摘要。 |
-| `reports/tables/lorenz63/standard/lorenz63_split_window_counts.csv` | split 与窗口样本数量表。 |
-| `reports/logs/lorenz63/smoke/run_lorenz63_smoke.log` | smoke 运行日志。 |
-| `reports/logs/lorenz63/standard/generate_lorenz63_standard.log` | 正式生成日志。 |
+| `reports/v1_core/lorenz63_standard/plots/smoke/lorenz63_phase3d.png` | smoke 三维相空间轨线图。 |
+| `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_phase3d.png` | 正式三维相空间轨线图。 |
+| `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_projection_xy.png` | $xy$ 投影图。 |
+| `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_projection_xz.png` | $xz$ 投影图。 |
+| `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_projection_yz.png` | $yz$ 投影图。 |
+| `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_timeseries_xyz.png` | $x,y,z$ 时间序列图。 |
+| `reports/v1_core/lorenz63_standard/tables/standard/lorenz63_state_ranges.csv` | 状态范围表。 |
+| `reports/v1_core/lorenz63_standard/tables/standard/lorenz63_statistics.csv` | 均值、方差、协方差摘要。 |
+| `reports/v1_core/lorenz63_standard/tables/standard/lorenz63_split_window_counts.csv` | split 与窗口样本数量表。 |
+| `reports/v1_core/lorenz63_standard/logs/smoke/run_lorenz63_smoke.log` | smoke 运行日志。 |
+| `reports/v1_core/lorenz63_standard/logs/standard/generate_lorenz63_standard.log` | 正式生成日志。 |
 
 ---
 
@@ -1399,23 +1399,23 @@ $$
 
 #### 10.3 图像
 
-- `reports/plots/lorenz63/smoke/lorenz63_phase3d.png`
-- `reports/plots/lorenz63/standard/lorenz63_phase3d.png`
-- `reports/plots/lorenz63/standard/lorenz63_projection_xy.png`
-- `reports/plots/lorenz63/standard/lorenz63_projection_xz.png`
-- `reports/plots/lorenz63/standard/lorenz63_projection_yz.png`
-- `reports/plots/lorenz63/standard/lorenz63_timeseries_xyz.png`
+- `reports/v1_core/lorenz63_standard/plots/smoke/lorenz63_phase3d.png`
+- `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_phase3d.png`
+- `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_projection_xy.png`
+- `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_projection_xz.png`
+- `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_projection_yz.png`
+- `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_timeseries_xyz.png`
 
 #### 10.4 表格
 
-- `reports/tables/lorenz63/standard/lorenz63_state_ranges.csv`
-- `reports/tables/lorenz63/standard/lorenz63_statistics.csv`
-- `reports/tables/lorenz63/standard/lorenz63_split_window_counts.csv`
+- `reports/v1_core/lorenz63_standard/tables/standard/lorenz63_state_ranges.csv`
+- `reports/v1_core/lorenz63_standard/tables/standard/lorenz63_statistics.csv`
+- `reports/v1_core/lorenz63_standard/tables/standard/lorenz63_split_window_counts.csv`
 
 #### 10.5 日志
 
-- `reports/logs/lorenz63/smoke/run_lorenz63_smoke.log`
-- `reports/logs/lorenz63/standard/generate_lorenz63_standard.log`
+- `reports/v1_core/lorenz63_standard/logs/smoke/run_lorenz63_smoke.log`
+- `reports/v1_core/lorenz63_standard/logs/standard/generate_lorenz63_standard.log`
 
 ---
 

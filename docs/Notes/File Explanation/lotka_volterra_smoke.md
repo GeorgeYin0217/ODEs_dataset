@@ -50,11 +50,11 @@ full-state observation error, RK4 self residual, and invariant drift.
   stores one-step, rollout, and statistics window counts.
 - `data/manifests/v1_core/lotka_volterra/smoke/full_state_clean/manifest.json`
   stores generation metadata and diagnostics.
-- `reports/tables/v1_core/lotka_volterra/smoke/diagnostics.csv` stores the
+- `reports/v1_core/lotka_volterra_smoke/tables/diagnostics.csv` stores the
   human-readable smoke diagnostics row.
-- `reports/plots/v1_core/lotka_volterra/smoke/` contains time-series, phase
+- `reports/v1_core/lotka_volterra_smoke/plots/` contains time-series, phase
   portrait, and invariant-drift PNGs.
-- `reports/logs/v1_core/lotka_volterra/smoke.log` records the smoke summary.
+- `reports/v1_core/lotka_volterra_smoke/logs/smoke.log` records the smoke summary.
 
 ## Script-to-script data flow
 

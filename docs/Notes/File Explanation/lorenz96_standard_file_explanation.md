@@ -51,12 +51,12 @@ Smoke outputs:
 - `data/processed/v1_core/lorenz96/smoke/full_state/lorenz96_split_I.json`
 - `data/processed/v1_core/lorenz96/smoke/full_state/lorenz96_windows_summary.json`
 - `data/manifests/v1_core/lorenz96/smoke/lorenz96_manifest.json`
-- `reports/tables/lorenz96/smoke/lorenz96_diagnostics.csv`
-- `reports/tables/lorenz96/smoke/lorenz96_coordinate_statistics.csv`
-- `reports/tables/lorenz96/smoke/lorenz96_split_window_counts.csv`
-- `reports/plots/lorenz96/smoke/lorenz96_representative_coordinates.png`
-- `reports/plots/lorenz96/smoke/lorenz96_space_time_heatmap.png`
-- `reports/logs/lorenz96/smoke/run_lorenz96_smoke.log`
+- `reports/v1_core/lorenz96_standard/tables/smoke/lorenz96_diagnostics.csv`
+- `reports/v1_core/lorenz96_standard/tables/smoke/lorenz96_coordinate_statistics.csv`
+- `reports/v1_core/lorenz96_standard/tables/smoke/lorenz96_split_window_counts.csv`
+- `reports/v1_core/lorenz96_standard/plots/smoke/lorenz96_representative_coordinates.png`
+- `reports/v1_core/lorenz96_standard/plots/smoke/lorenz96_space_time_heatmap.png`
+- `reports/v1_core/lorenz96_standard/logs/smoke/run_lorenz96_smoke.log`
 
 Standard outputs:
 
@@ -65,12 +65,12 @@ Standard outputs:
 - `data/processed/v1_core/lorenz96/standard/full_state/lorenz96_split_I.json`
 - `data/processed/v1_core/lorenz96/standard/full_state/lorenz96_windows_summary.json`
 - `data/manifests/v1_core/lorenz96/standard/lorenz96_manifest.json`
-- `reports/tables/lorenz96/standard/lorenz96_diagnostics.csv`
-- `reports/tables/lorenz96/standard/lorenz96_coordinate_statistics.csv`
-- `reports/tables/lorenz96/standard/lorenz96_split_window_counts.csv`
-- `reports/plots/lorenz96/standard/lorenz96_representative_coordinates.png`
-- `reports/plots/lorenz96/standard/lorenz96_space_time_heatmap.png`
-- `reports/logs/lorenz96/standard/generate_lorenz96_standard.log`
+- `reports/v1_core/lorenz96_standard/tables/standard/lorenz96_diagnostics.csv`
+- `reports/v1_core/lorenz96_standard/tables/standard/lorenz96_coordinate_statistics.csv`
+- `reports/v1_core/lorenz96_standard/tables/standard/lorenz96_split_window_counts.csv`
+- `reports/v1_core/lorenz96_standard/plots/standard/lorenz96_representative_coordinates.png`
+- `reports/v1_core/lorenz96_standard/plots/standard/lorenz96_space_time_heatmap.png`
+- `reports/v1_core/lorenz96_standard/logs/standard/generate_lorenz96_standard.log`
 
 The raw and processed JLD2 files are generated dataset artifacts and remain ignored by version control. The manifests, tables, plots, configs, scripts, source files, and wrap-up documents are lightweight enough to track.
 

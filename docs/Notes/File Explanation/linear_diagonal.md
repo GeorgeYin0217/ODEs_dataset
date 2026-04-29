@@ -205,22 +205,22 @@ rollout horizon 20 使用：
 旧图像目录：
 
 ```text
-reports/plots/linear_diagonal/
+reports/unit_internal/linear_diagonal/plots/
 ```
 
 已移动为：
 
 ```text
-reports/plots/unit_internal/linear_diagonal/
+reports/unit_internal/linear_diagonal/plots/
 ```
 
 当前包含：
 
 ```text
-reports/plots/unit_internal/linear_diagonal/smoke/coordinate_timeseries.png
-reports/plots/unit_internal/linear_diagonal/smoke/log_amplitudes.png
-reports/plots/unit_internal/linear_diagonal/diagnostics/coordinate_timeseries.png
-reports/plots/unit_internal/linear_diagonal/diagnostics/log_amplitudes.png
+reports/unit_internal/linear_diagonal/plots/smoke/coordinate_timeseries.png
+reports/unit_internal/linear_diagonal/plots/smoke/log_amplitudes.png
+reports/unit_internal/linear_diagonal/plots/diagnostics/coordinate_timeseries.png
+reports/unit_internal/linear_diagonal/plots/diagnostics/log_amplitudes.png
 ```
 
 图像用途：
@@ -248,7 +248,7 @@ experiments/data_generation/
 data/raw/unit_internal/<system_id>/
 data/processed/unit_internal/<system_id>/<observation_id>/
 data/manifests/unit_internal/<system_id>/
-reports/plots/unit_internal/<system_id>/
+reports/unit_internal/<system_id>/plots/
 ```
 
 这样后续新增 unit-internal 系统时，可以继续沿用相同分类：
@@ -265,7 +265,7 @@ jordan_or_nonnormal_linear_system
 
 ```text
 data/manifests/unit_internal/linear_diagonal/small/
-reports/plots/unit_internal/linear_diagonal/
+reports/unit_internal/linear_diagonal/plots/
 ```
 
 因此当前入口可以直接运行：

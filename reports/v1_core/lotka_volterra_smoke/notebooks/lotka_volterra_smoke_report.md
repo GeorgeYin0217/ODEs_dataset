@@ -32,11 +32,11 @@ julia --project=. experiments/smoke_tests/run_lotka_volterra_smoke.jl
 - Manifest:
   `data/manifests/v1_core/lotka_volterra/smoke/full_state_clean/manifest.json`
 - Diagnostics table:
-  `reports/tables/v1_core/lotka_volterra/smoke/diagnostics.csv`
+  `reports/v1_core/lotka_volterra_smoke/tables/diagnostics.csv`
 - Plots:
-  `reports/plots/v1_core/lotka_volterra/smoke/smoke_time_series.png`,
-  `reports/plots/v1_core/lotka_volterra/smoke/smoke_phase_portrait.png`, and
-  `reports/plots/v1_core/lotka_volterra/smoke/smoke_invariant_drift.png`
+  `reports/v1_core/lotka_volterra_smoke/plots/smoke_time_series.png`,
+  `reports/v1_core/lotka_volterra_smoke/plots/smoke_phase_portrait.png`, and
+  `reports/v1_core/lotka_volterra_smoke/plots/smoke_invariant_drift.png`
 
 ## Next manual step
 

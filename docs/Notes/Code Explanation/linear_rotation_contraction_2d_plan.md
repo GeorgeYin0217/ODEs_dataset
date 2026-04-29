@@ -862,7 +862,7 @@ created_at
 
 ## 3.5 报告输出
 
-### `reports/tables/unit_internal/rotation_contraction_smoke_diagnostics.csv`
+### `reports/unit_internal/linear_rotation_contraction_2d/tables/rotation_contraction_smoke_diagnostics.csv`
 
 角色：系统诊断表。
 
@@ -888,7 +888,7 @@ trajectory_length
 
 ---
 
-### `reports/plots/unit_internal/rotation_contraction_phase_portrait.png`
+### `reports/unit_internal/linear_rotation_contraction_2d/plots/rotation_contraction_phase_portrait.png`
 
 角色：相图。
 
@@ -896,7 +896,7 @@ trajectory_length
 
 ---
 
-### `reports/plots/unit_internal/rotation_contraction_radius_decay.png`
+### `reports/unit_internal/linear_rotation_contraction_2d/plots/rotation_contraction_radius_decay.png`
 
 角色：半径衰减图。
 
@@ -904,7 +904,7 @@ trajectory_length
 
 ---
 
-### `reports/plots/unit_internal/rotation_contraction_angle_increment.png`
+### `reports/unit_internal/linear_rotation_contraction_2d/plots/rotation_contraction_angle_increment.png`
 
 角色：角度增量图。
 
@@ -912,7 +912,7 @@ trajectory_length
 
 ---
 
-### `reports/plots/unit_internal/rotation_contraction_discrete_spectrum.png`
+### `reports/unit_internal/linear_rotation_contraction_2d/plots/rotation_contraction_discrete_spectrum.png`
 
 角色：离散谱图。
 
@@ -920,7 +920,7 @@ trajectory_length
 
 ---
 
-### `reports/logs/unit_internal/rotation_contraction_smoke.log`
+### `reports/unit_internal/linear_rotation_contraction_2d/logs/rotation_contraction_smoke.log`
 
 角色：smoke test 日志。
 
@@ -1903,22 +1903,22 @@ data/releases/unit_internal/dev_rotation_contraction_index.json
 ## 表格
 
 ```text
-reports/tables/unit_internal/rotation_contraction_smoke_diagnostics.csv
+reports/unit_internal/linear_rotation_contraction_2d/tables/rotation_contraction_smoke_diagnostics.csv
 ```
 
 ## 图像
 
 ```text
-reports/plots/unit_internal/rotation_contraction_phase_portrait.png
-reports/plots/unit_internal/rotation_contraction_radius_decay.png
-reports/plots/unit_internal/rotation_contraction_angle_increment.png
-reports/plots/unit_internal/rotation_contraction_discrete_spectrum.png
+reports/unit_internal/linear_rotation_contraction_2d/plots/rotation_contraction_phase_portrait.png
+reports/unit_internal/linear_rotation_contraction_2d/plots/rotation_contraction_radius_decay.png
+reports/unit_internal/linear_rotation_contraction_2d/plots/rotation_contraction_angle_increment.png
+reports/unit_internal/linear_rotation_contraction_2d/plots/rotation_contraction_discrete_spectrum.png
 ```
 
 ## 日志
 
 ```text
-reports/logs/unit_internal/rotation_contraction_smoke.log
+reports/unit_internal/linear_rotation_contraction_2d/logs/rotation_contraction_smoke.log
 ```
 
 ## 测试参考输出

@@ -59,15 +59,15 @@ Both commands completed successfully.
 Core metadata and human-readable outputs:
 
 - `data/manifests/v1_core/lorenz63/standard/lorenz63_manifest.json`
-- `reports/plots/lorenz63/standard/lorenz63_phase3d.png`
-- `reports/plots/lorenz63/standard/lorenz63_projection_xy.png`
-- `reports/plots/lorenz63/standard/lorenz63_projection_xz.png`
-- `reports/plots/lorenz63/standard/lorenz63_projection_yz.png`
-- `reports/plots/lorenz63/standard/lorenz63_timeseries_xyz.png`
-- `reports/tables/lorenz63/standard/lorenz63_diagnostics.csv`
-- `reports/tables/lorenz63/standard/lorenz63_state_ranges.csv`
-- `reports/tables/lorenz63/standard/lorenz63_statistics.csv`
-- `reports/tables/lorenz63/standard/lorenz63_split_window_counts.csv`
+- `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_phase3d.png`
+- `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_projection_xy.png`
+- `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_projection_xz.png`
+- `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_projection_yz.png`
+- `reports/v1_core/lorenz63_standard/plots/standard/lorenz63_timeseries_xyz.png`
+- `reports/v1_core/lorenz63_standard/tables/standard/lorenz63_diagnostics.csv`
+- `reports/v1_core/lorenz63_standard/tables/standard/lorenz63_state_ranges.csv`
+- `reports/v1_core/lorenz63_standard/tables/standard/lorenz63_statistics.csv`
+- `reports/v1_core/lorenz63_standard/tables/standard/lorenz63_split_window_counts.csv`
 
 Large raw and processed data outputs are generated under `data/raw/` and
 `data/processed/`, which are ignored by repository policy.

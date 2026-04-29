@@ -482,13 +482,13 @@ data/manifests/linear_diagonal/
 保存 manifest JSON。
 
 ```text
-reports/plots/linear_diagonal/smoke/
+reports/unit_internal/linear_diagonal/plots/smoke/
 ```
 
 保存 smoke test 图像。
 
 ```text
-reports/logs/linear_diagonal/
+reports/unit_internal/linear_diagonal/logs/
 ```
 
 保存生成日志。

@@ -42,9 +42,9 @@ Smoke outputs:
 - `data/processed/v1_core/rossler_standard/smoke/full_state/rossler_split_I.json`
 - `data/processed/v1_core/rossler_standard/smoke/full_state/rossler_windows_summary.json`
 - `data/manifests/v1_core/rossler_standard/smoke/rossler_manifest.json`
-- `reports/tables/rossler_standard/smoke/`
-- `reports/plots/rossler_standard/smoke/`
-- `reports/logs/rossler_standard/smoke/run_rossler_smoke.log`
+- `reports/v1_core/rossler_standard/tables/smoke/`
+- `reports/v1_core/rossler_standard/plots/smoke/`
+- `reports/v1_core/rossler_standard/logs/smoke/run_rossler_smoke.log`
 
 Standard outputs:
 
@@ -54,9 +54,9 @@ Standard outputs:
 - `data/processed/v1_core/rossler_standard/standard/full_state/rossler_windows_summary.json`
 - `data/manifests/v1_core/rossler_standard/standard/rossler_manifest.json`
 - `data/releases/v1_core/rossler_standard/rossler_release_index.json`
-- `reports/tables/rossler_standard/standard/`
-- `reports/plots/rossler_standard/standard/`
-- `reports/logs/rossler_standard/standard/generate_rossler_standard.log`
+- `reports/v1_core/rossler_standard/tables/standard/`
+- `reports/v1_core/rossler_standard/plots/standard/`
+- `reports/v1_core/rossler_standard/logs/standard/generate_rossler_standard.log`
 
 The raw and processed trajectory arrays use the layout `state_dim_by_time_by_trajectory`.
 
