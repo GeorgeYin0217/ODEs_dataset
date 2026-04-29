@@ -1,0 +1,2 @@
+system_id,observation_id,variant,a,b,epsilon,I,dt,num_trajectories,trajectory_length,v_min,v_max,w_min,w_max,state_norm_max,velocity_norm_max,rk4_self_residual_max,full_state_observation_error_max,equilibrium_count,equilibrium_residual_max,excursion_trajectory_count,max_threshold_crossings,smoke_passed,formal_passed
+"fitzhugh_nagumo","fitzhugh_nagumo_full_state_clean","fixed_excitable_formal_full_state",0.7,0.8,0.08,0.3,0.02,48,6000,-1.991987109075212,1.9436676357144838,-0.5268308191525055,1.2299863334347922,2.216350802709984,1.5521228245658096,0.0,0.0,1,0.0,17,1,true,true

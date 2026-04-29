@@ -1,0 +1,29 @@
+# Project Task List
+
+This list records the `ODEs_dataset` work that advances the dataset goal. It is
+not a development log and not a file inventory. Engineering-only work, layout
+cleanup, documentation repair, and registry maintenance belong in
+`docs/spec/object_registry.md`.
+
+Status values: `success`, `failed`, `blocked`.
+
+## Dataset Goal Tasks
+
+| Task | Scope | Status | Configuration summary | Key result | Reuse or next step | Details |
+| --- | --- | --- | --- | --- | --- | --- |
+| Linear diagonal dataset workflow | `unit_internal` sanity system | success | Diagonal linear dynamics; full-state identity observation; Split-I `70/15/15`; lag-1 one-step task; rollout horizon 20 | Smoke and unit workflow generated manifests and diagnostic plots | Use as the exact diagonal sanity check for data plumbing and linear rollout behavior | `docs/notes/file explanation/linear_diagonal.md` |
+| Rotation-contraction dataset workflow | `unit_internal` stable spiral system | success | Stable 2D spiral; clean and `1e-3` noisy full-state observations; exact linear trajectory generator | Smoke diagnostics covered rotation, contraction, and spectral checks | Use as the complex-pair and stable-spiral sanity check | `docs/notes/file explanation/linear_rotation_contraction_2d.md` |
+| Jordan nonnormal dataset workflow | `unit_internal` nonnormal linear system | success | Nonnormal/non-diagonalizable linear dynamics; smoke and formal configs; one-step and rollout tasks | Smoke and formal manifests, diagnostics tables, and plots generated | Use as the nonnormal amplification stress test | `docs/notes/file explanation/jordan_nonnormal_linear.md` |
+| Linear oscillator dataset workflow | `v1_core` linear benchmark | success | Undamped smoke and damped full-state dataset; exact discrete linear propagation; Split-I | Smoke and damped manifests, diagnostics tables, and plots generated | Use as the community-facing linear baseline | `docs/notes/file explanation/linear_oscillator.md` |
+| Van der Pol full-state dataset workflow | `v1_core` nonlinear limit-cycle benchmark | success | Full-state observation; smoke and formal configs; Split-I and Split-P; fixed-step RK4 | Smoke and formal manifests, diagnostics tables, and plots generated | Use as the nonlinear limit-cycle benchmark | `docs/notes/file explanation/vanderpol_unforced_fullobs_v1_file_guide.md` |
+| Duffing double-well smoke workflow | `v1_core` nonlinear double-well benchmark | success | Unforced damped double-well; 8 trajectories; length 800; fixed-step RK4; full-state clean observation; Split-I | Smoke passed with zero positive energy jumps and balanced final well counts `4/4` | Use as smoke-scale validation; enlarge configs before treating it as a full release dataset | `docs/notes/file explanation/duffing_unforced_double_well_smoke.md`; `reports/notebooks/duffing_unforced_double_well_smoke_report.md` |
+| Duffing formal entry point | `v1_core` formal-run template | success | Formal script currently reuses smoke-scale parameters; output routing by `difficulty_level` | Formal command passed with 8 trajectories, length 800, zero positive energy jumps, and final well counts `4/4` | Reuse the entry point as a formal-run template; scale configs before release-style use | `docs/notes/file explanation/duffing_unforced_double_well_smoke.md` |
+| Lotka-Volterra smoke workflow | `v1_core` positive-state nonlinear benchmark | success | 5 positive trajectories; length 1600; fixed-step RK4; full-state clean observation; Split-I | Smoke passed; maximum relative invariant drift about `1.031112e-10` | Use as the small positive-state and invariant-drift check | `docs/notes/file explanation/lotka_volterra_smoke.md`; `reports/notebooks/lotka_volterra_smoke_report.md` |
+| Lotka-Volterra orbit-family workflow | `v1_core` orbit-family release candidate | success | 24 positive trajectories; length 4000; manual orbit-family initial conditions; Split-I counts `17/4/3`; fixed-step RK4 | Orbit-family command passed; maximum relative invariant drift about `3.544013388196914e-10` | Prefer this over the smoke object for reusable Lotka-Volterra orbit-family studies | `docs/notes/file explanation/lotka_volterra_orbit_family.md`; `reports/notebooks/lotka_volterra_orbit_family_report.md` |
+| FitzHugh-Nagumo formal workflow | `v1_core` fast-slow excitable benchmark | success | Fixed excitable parameters `a=0.7`, `b=0.8`, `epsilon=0.08`, `I=0.3`; 48 trajectories; length 6000; fixed-step RK4; full-state clean observation; Split-I counts `34/7/7` | Formal command passed; 17 trajectories crossed the spike threshold; state range `v in [-1.99199, 1.94367]`, `w in [-0.526831, 1.22999]` | Use as the fixed-parameter spike-recovery baseline; extend later with parameter or observation generalization variants | `docs/notes/file explanation/fitzhugh_nagumo_formal.md`; `reports/notebooks/fitzhugh_nagumo_formal_report.md` |
+
+## Not Recorded Here
+
+Documentation cleanup, namespace layout changes, source-helper additions, registry
+rewrites, and other engineering work are recorded only in
+`docs/spec/object_registry.md` unless they directly define a dataset-facing task.

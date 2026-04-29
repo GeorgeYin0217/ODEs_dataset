@@ -1,0 +1,26 @@
+{
+  "benchmark_id": "fitzhugh_nagumo_fixed_excitable_fullobs_v1_formal",
+  "system_ids": ["fitzhugh_nagumo"],
+  "observation_ids": ["fitzhugh_nagumo_full_state_clean"],
+  "split_ids": ["fitzhugh_nagumo_formal_split_i"],
+  "window_ids": [
+    "fitzhugh_nagumo_one_step_lag1",
+    "fitzhugh_nagumo_rollout_formal",
+    "fitzhugh_nagumo_statistics_h1000"
+  ],
+  "task_ids": [
+    "fitzhugh_nagumo_one_step_forecast",
+    "fitzhugh_nagumo_multi_step_rollout",
+    "fitzhugh_nagumo_long_time_statistics"
+  ],
+  "difficulty_level": "formal",
+  "release_version": "0.1.0-dev",
+  "output_policy": {
+    "raw_path": "data/raw/v1_core/fitzhugh_nagumo/formal/full_state_clean/raw_trajectories.jld2",
+    "processed_path": "data/processed/v1_core/fitzhugh_nagumo/formal/full_state_clean/observed_trajectories.jld2",
+    "split_path": "data/processed/v1_core/fitzhugh_nagumo/formal/full_state_clean/splits.json",
+    "windows_summary_path": "data/processed/v1_core/fitzhugh_nagumo/formal/full_state_clean/windows_summary.json",
+    "manifest_path": "data/manifests/v1_core/fitzhugh_nagumo/formal/full_state_clean/manifest.json",
+    "release_index_path": "data/releases/v1_core/fitzhugh_nagumo/formal/full_state_clean/release_index.json"
+  }
+}

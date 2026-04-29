@@ -1,0 +1,24 @@
+{
+  "task_group_id": "fitzhugh_nagumo_smoke_tasks",
+  "tasks": [
+    {
+      "task_id": "fitzhugh_nagumo_one_step_forecast",
+      "task_type": "one_step_forecast",
+      "window_id": "fitzhugh_nagumo_one_step_lag1",
+      "target": "observation"
+    },
+    {
+      "task_id": "fitzhugh_nagumo_rollout_short",
+      "task_type": "multi_step_rollout",
+      "window_id": "fitzhugh_nagumo_rollout_short",
+      "target": "observation",
+      "horizons": [100, 400]
+    },
+    {
+      "task_id": "fitzhugh_nagumo_long_time_statistics_smoke",
+      "task_type": "long_time_statistics",
+      "window_id": "fitzhugh_nagumo_statistics_h400",
+      "target": "observation_statistics"
+    }
+  ]
+}

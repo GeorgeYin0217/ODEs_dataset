@@ -252,11 +252,8 @@ ODEs_dataset/
 	project guide/
 	notes/
     spec/
-      ODEs_dataset_spec.md
-      system_registry.md
-      split_registry.md
-      task_registry.md
-      metric_registry.md
+      object_registry.md
+      project_task_list.md
 
   configs/
     systems/
@@ -329,7 +326,7 @@ ODEs_dataset/
 
 - `docs/project guide/`：工程计划、阶段目标、编码计划书。
 - `docs/notes/`：研究笔记、数学推导、实验想法。
-- `docs/spec/`：正式协议文档，例如系统、切分、任务、指标规范。
+- `docs/spec/`：简洁的人类可读项目登记文档。`object_registry.md` 记录开发流水账；`project_task_list.md` 记录围绕 ODE 数据集目标完成的任务、关键配置和结果。
 
 ### `configs/`
 
