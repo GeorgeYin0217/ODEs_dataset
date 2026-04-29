@@ -1,0 +1,12 @@
+{
+  "release_id": "rossler_fullobs_v1_core",
+  "release_version": "0.1.0-dev",
+  "system_id": "rossler_standard",
+  "family": "v1_core",
+  "difficulty_levels": ["smoke", "standard"],
+  "standard_benchmark_id": "rossler_standard_chaotic_fullobs_v1_standard",
+  "smoke_benchmark_id": "rossler_standard_chaotic_fullobs_v1_smoke",
+  "raw_path": "data/raw/v1_core/rossler_standard/standard/rossler_raw.jld2",
+  "processed_path": "data/processed/v1_core/rossler_standard/standard/full_state/rossler_observed.jld2",
+  "manifest_path": "data/manifests/v1_core/rossler_standard/standard/rossler_manifest.json"
+}

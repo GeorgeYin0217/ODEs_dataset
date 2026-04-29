@@ -1,0 +1,320 @@
+{
+  "a_default": 0.2,
+  "array_layout": "state_dim_by_time_by_trajectory",
+  "b_default": 0.2,
+  "benchmark_id": "rossler_standard_chaotic_fullobs_v1_smoke",
+  "burn_in_steps": 2500,
+  "burn_in_time": 50.0,
+  "c_default": 5.7,
+  "created_at": "2026-04-29T11:41:32.307",
+  "dataset_version": "0.1.0-dev",
+  "diagnostics": {
+    "a": 0.2,
+    "active_attractor_trajectory_count": 6,
+    "all_states_finite": true,
+    "array_layout": "state_dim_by_time",
+    "b": 0.2,
+    "burn_in_time": 50.0,
+    "c": 5.7,
+    "divergence_max": 5.878294794918191,
+    "divergence_mean": -5.34567818293063,
+    "divergence_min": -14.564922976098256,
+    "dt": 0.02,
+    "family": "v1_core",
+    "formal_passed": false,
+    "full_state_observation_error_max": 0.0,
+    "is_mean_dissipative": true,
+    "max_y_positive_crossing_count": 6,
+    "num_trajectories": 6,
+    "one_step_window_counts": {
+      "test": 3000,
+      "train": 4500,
+      "val": 1500
+    },
+    "rk4_self_residual_max": 0.0,
+    "rollout_window_counts": {
+      "h250": {
+        "test": 2502,
+        "train": 3753,
+        "val": 1251
+      },
+      "h50": {
+        "test": 2902,
+        "train": 4353,
+        "val": 1451
+      }
+    },
+    "smoke_passed": true,
+    "split_counts": {
+      "test": 2,
+      "train": 3,
+      "val": 1
+    },
+    "standard_passed": false,
+    "state_covariance": [
+      [
+        26.29602591180377,
+        -4.776688364889945,
+        4.31596531328908
+      ],
+      [
+        -4.776688364889945,
+        23.78523681159753,
+        1.9111070642231442
+      ],
+      [
+        4.31596531328908,
+        1.9111070642231442,
+        7.389131629168072
+      ]
+    ],
+    "state_matrix_size": [
+      3,
+      1501
+    ],
+    "state_mean": [
+      0.15432181706936948,
+      -0.7671130657805172,
+      0.8149507874798382
+    ],
+    "state_norm_max": 23.087609779256553,
+    "state_variance": [
+      26.296025911803785,
+      23.785236811597542,
+      7.389131629168065
+    ],
+    "statistics_window_counts": {
+      "test": 2004,
+      "train": 3006,
+      "val": 1002
+    },
+    "step_increment_max": 1.245753992937811,
+    "step_increment_mean": 0.1694671745871102,
+    "step_increment_min": 0.05124548434028093,
+    "system_id": "rossler_standard",
+    "trajectory_length": 1500,
+    "tspan": [
+      0.0,
+      30.0
+    ],
+    "variant": "standard_chaotic_smoke_full_state",
+    "velocity_norm_max": 62.278351629942996,
+    "x_max": 11.378294794918192,
+    "x_min": -9.064922976098256,
+    "x_span": 20.44321777101645,
+    "x_span_by_trajectory": [
+      20.29926634261725,
+      20.42655512400851,
+      19.224824674695327,
+      20.383474640944307,
+      20.341316362258706,
+      20.24575321258805
+    ],
+    "y_max": 7.805477632725961,
+    "y_min": -10.742537266194283,
+    "y_positive_crossing_counts": [
+      5,
+      5,
+      5,
+      5,
+      6,
+      5
+    ],
+    "y_span": 18.548014898920243,
+    "y_span_by_trajectory": [
+      18.38121845715719,
+      18.513965374660742,
+      18.548014898920243,
+      18.467886599371,
+      18.4254383474481,
+      18.32511660425746
+    ],
+    "z_max": 22.311292651863337,
+    "z_min": 0.013564808588590795,
+    "z_span": 22.297727843274746,
+    "z_span_by_trajectory": [
+      21.704359910628785,
+      22.297712478753564,
+      11.931014854834288,
+      22.101074065286006,
+      21.90438629365298,
+      21.44206765344595
+    ]
+  },
+  "dt": 0.02,
+  "family": "v1_core",
+  "generated_files": {
+    "diagnostics_table": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\tables\\rossler_standard\\smoke\\rossler_diagnostics.csv",
+    "log": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\logs\\rossler_standard\\smoke\\run_rossler_smoke.log",
+    "plots": [
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\rossler_standard\\smoke\\rossler_phase3d.png",
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\rossler_standard\\smoke\\rossler_projection_xy.png",
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\rossler_standard\\smoke\\rossler_projection_xz.png",
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\rossler_standard\\smoke\\rossler_projection_yz.png",
+      "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\plots\\rossler_standard\\smoke\\rossler_timeseries_xyz.png"
+    ],
+    "processed_trajectories": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\v1_core\\rossler_standard\\smoke\\full_state\\rossler_observed.jld2",
+    "raw_trajectories": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\raw\\v1_core\\rossler_standard\\smoke\\rossler_raw.jld2",
+    "release_index": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\releases\\v1_core\\rossler_standard\\rossler_release_index.json",
+    "split": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\v1_core\\rossler_standard\\smoke\\full_state\\rossler_split_I.json",
+    "split_window_counts_table": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\tables\\rossler_standard\\smoke\\rossler_split_window_counts.csv",
+    "state_ranges_table": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\tables\\rossler_standard\\smoke\\rossler_state_ranges.csv",
+    "statistics_table": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\reports\\tables\\rossler_standard\\smoke\\rossler_statistics.csv",
+    "windows_summary": "D:\\MyVault\\Projects\\Julia\\ODEs_dataset\\data\\processed\\v1_core\\rossler_standard\\smoke\\full_state\\rossler_windows_summary.json"
+  },
+  "generator_commit_hash_or_local_placeholder": "local_uncommitted_or_unknown",
+  "initial_condition_policy": {
+    "type": "manual_smoke_set",
+    "description": "Small fixed Rossler initial-condition ensemble with burn-in before retained attractor samples.",
+    "values": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.5
+      ],
+      [
+        2.0,
+        -2.0,
+        1.0
+      ],
+      [
+        -3.0,
+        3.0,
+        2.0
+      ],
+      [
+        4.0,
+        0.0,
+        4.0
+      ]
+    ]
+  },
+  "num_trajectories": 6,
+  "observation_dim": 3,
+  "observation_id": "rossler_full_state_clean",
+  "parameter_domain": {
+    "a": [
+      0.2,
+      0.2
+    ],
+    "b": [
+      0.2,
+      0.2
+    ],
+    "c": [
+      5.7,
+      5.7
+    ]
+  },
+  "seed": 20260429,
+  "solver_abstol": 0.0,
+  "solver_name": "fixed_step_rk4",
+  "solver_reltol": 0.0,
+  "split_counts": {
+    "test": 2,
+    "train": 3,
+    "val": 1
+  },
+  "split_id": "rossler_smoke_split_i",
+  "state_dim": 3,
+  "system_id": "rossler_standard",
+  "system_metadata": {
+    "a": 0.2,
+    "b": 0.2,
+    "burn_in_time": 50.0,
+    "c": 5.7,
+    "divergence": "x + a - c",
+    "dt": 0.02,
+    "family": "v1_core",
+    "solver_abstol": 0.0,
+    "solver_name": "fixed_step_rk4",
+    "solver_reltol": 0.0,
+    "state_dim": 3,
+    "system_id": "rossler_standard",
+    "trajectory_length": 1500,
+    "tspan": [
+      0.0,
+      30.0
+    ],
+    "variant": "standard_chaotic_smoke_full_state",
+    "vector_field": "x_dot = -y-z; y_dot = x+a*y; z_dot = b+z*(x-c)"
+  },
+  "task_ids": [
+    "rossler_one_step_forecast",
+    "rossler_rollout_smoke",
+    "rossler_long_time_statistics_smoke"
+  ],
+  "trajectory_length": 1500,
+  "tspan": [
+    0.0,
+    30.0
+  ],
+  "variant": "standard_chaotic_smoke_full_state",
+  "window_ids": [
+    "rossler_one_step_lag1",
+    "rossler_rollout_smoke",
+    "rossler_statistics_h500"
+  ],
+  "window_summary": {
+    "one_step": {
+      "counts": {
+        "test": 3000,
+        "train": 4500,
+        "val": 1500
+      },
+      "lag": 1,
+      "samples_per_trajectory": 1500,
+      "window_id": "rossler_one_step_lag1"
+    },
+    "rollout": {
+      "by_horizon": {
+        "h250": {
+          "counts": {
+            "test": 2502,
+            "train": 3753,
+            "val": 1251
+          },
+          "horizon": 250,
+          "starts_per_trajectory": 1251,
+          "window_id": "rossler_rollout_h250"
+        },
+        "h50": {
+          "counts": {
+            "test": 2902,
+            "train": 4353,
+            "val": 1451
+          },
+          "horizon": 50,
+          "starts_per_trajectory": 1451,
+          "window_id": "rossler_rollout_h50"
+        }
+      },
+      "horizons": [
+        50,
+        250
+      ],
+      "window_id": "rossler_rollout_smoke"
+    },
+    "statistics": {
+      "counts": {
+        "test": 2004,
+        "train": 3006,
+        "val": 1002
+      },
+      "horizon": 500,
+      "starts_per_trajectory": 1002,
+      "window_id": "rossler_statistics_h500"
+    },
+    "window_id": "rossler_smoke_windows"
+  }
+}

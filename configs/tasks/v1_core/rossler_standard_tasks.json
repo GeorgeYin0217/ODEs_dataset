@@ -1,0 +1,24 @@
+{
+  "task_group_id": "rossler_standard_tasks",
+  "tasks": [
+    {
+      "task_id": "rossler_one_step_forecast",
+      "task_type": "one_step_forecast",
+      "window_id": "rossler_one_step_lag1",
+      "target": "observation"
+    },
+    {
+      "task_id": "rossler_multi_step_rollout",
+      "task_type": "multi_step_rollout",
+      "window_id": "rossler_rollout_standard",
+      "target": "observation",
+      "horizons": [50, 250, 1000]
+    },
+    {
+      "task_id": "rossler_long_time_statistics",
+      "task_type": "long_time_statistics",
+      "window_id": "rossler_statistics_h2000",
+      "target": "observation_statistics"
+    }
+  ]
+}

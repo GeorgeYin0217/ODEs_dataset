@@ -1,0 +1,35 @@
+{
+  "system_id": "rossler_standard",
+  "family": "v1_core",
+  "variant": "standard_chaotic_standard_full_state",
+  "state_dim": 3,
+  "parameter_names": ["a", "b", "c"],
+  "default_parameters": {
+    "a": 0.2,
+    "b": 0.2,
+    "c": 5.7
+  },
+  "parameter_domain": {
+    "a": [0.2, 0.2],
+    "b": [0.2, 0.2],
+    "c": [5.7, 5.7]
+  },
+  "initial_condition_domain": {
+    "type": "manual_grid",
+    "description": "Formal fixed grid of pre-burn-in initial conditions for the standard Rossler attractor dataset.",
+    "x_values": [-8.0, -2.0, 2.0, 8.0],
+    "y_values": [-8.0, -2.0, 2.0, 8.0],
+    "z_values": [0.5, 4.0, 8.0]
+  },
+  "dt": 0.02,
+  "burn_in_time": 50.0,
+  "tspan": [0.0, 80.0],
+  "trajectory_length": 4000,
+  "num_trajectories": 48,
+  "solver_name": "fixed_step_rk4",
+  "solver_abstol": 0.0,
+  "solver_reltol": 0.0,
+  "seed_policy": {
+    "generation_seed": 20260429
+  }
+}

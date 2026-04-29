@@ -1,0 +1,9 @@
+{
+  "split_id": "rossler_standard_split_i",
+  "split_type": "initial_condition",
+  "train_ratio": 0.70,
+  "val_ratio": 0.15,
+  "test_ratio": 0.15,
+  "grouping_unit": "trajectory",
+  "seed": 20260429
+}

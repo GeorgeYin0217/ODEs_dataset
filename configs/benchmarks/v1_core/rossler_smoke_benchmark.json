@@ -1,0 +1,26 @@
+{
+  "benchmark_id": "rossler_standard_chaotic_fullobs_v1_smoke",
+  "system_ids": ["rossler_standard"],
+  "observation_ids": ["rossler_full_state_clean"],
+  "split_ids": ["rossler_smoke_split_i"],
+  "window_ids": [
+    "rossler_one_step_lag1",
+    "rossler_rollout_smoke",
+    "rossler_statistics_h500"
+  ],
+  "task_ids": [
+    "rossler_one_step_forecast",
+    "rossler_rollout_smoke",
+    "rossler_long_time_statistics_smoke"
+  ],
+  "difficulty_level": "smoke",
+  "release_version": "0.1.0-dev",
+  "output_policy": {
+    "raw_path": "data/raw/v1_core/rossler_standard/smoke/rossler_raw.jld2",
+    "processed_path": "data/processed/v1_core/rossler_standard/smoke/full_state/rossler_observed.jld2",
+    "split_path": "data/processed/v1_core/rossler_standard/smoke/full_state/rossler_split_I.json",
+    "windows_summary_path": "data/processed/v1_core/rossler_standard/smoke/full_state/rossler_windows_summary.json",
+    "manifest_path": "data/manifests/v1_core/rossler_standard/smoke/rossler_manifest.json",
+    "release_index_path": "data/releases/v1_core/rossler_standard/rossler_release_index.json"
+  }
+}

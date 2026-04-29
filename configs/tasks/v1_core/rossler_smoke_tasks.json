@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "task_id": "rossler_one_step_forecast",
+      "task_type": "one_step_forecast",
+      "window_id": "rossler_one_step_lag1",
+      "input_object_type": "z_now",
+      "target_object_type": "z_next",
+      "metric_ids": ["one_step_mse"]
+    },
+    {
+      "task_id": "rossler_rollout_smoke",
+      "task_type": "multi_step_rollout",
+      "window_id": "rossler_rollout_smoke",
+      "input_object_type": "z_start",
+      "target_object_type": "z_future",
+      "metric_ids": ["rollout_mse"]
+    },
+    {
+      "task_id": "rossler_long_time_statistics_smoke",
+      "task_type": "long_time_statistics",
+      "window_id": "rossler_statistics_h500",
+      "input_object_type": "z_segment",
+      "target_object_type": "statistics",
+      "metric_ids": ["mean_error", "covariance_error"]
+    }
+  ]
+}
