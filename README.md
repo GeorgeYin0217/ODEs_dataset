@@ -1,14 +1,16 @@
 # ODEs_dataset
 
-The main entry point of this repository is `docs/`, not `README`.
+This repository is designed to be read, managed, and operated with the help of an AI coding agent.
 
-For human readers, `docs/` is usually the only directory that needs to be read. It already contains the project goals, engineering structure, specifications, task records, and explanation documents. This `README` is intentionally minimal.
+The main entry point is `docs/`. That folder already contains the full project logic, including the goals, engineering structure, specifications, task records, and explanation documents. This `README` is only a short guide for how the repository is meant to be used.
 
 ## Recommended Use
 
-This repository is intended to be handled directly by a coding AGENT such as Codex or Claude Code rather than by manually reading source files from the top down.
+The preferred way to use this repository is to let a coding agent such as Codex or Claude Code take over the reading, navigation, modification, and execution work.
 
-For an AGENT, the recommended reading order is:
+In practice, a user who wants to understand, use, or modify this project does not need to manually inspect the whole source tree first. It is usually enough to ask the agent to read the documentation in order and then carry out the task.
+
+For an AI agent, the recommended reading order is:
 
 1. `docs/project guide/`
 2. `docs/spec/`
@@ -16,7 +18,9 @@ For an AGENT, the recommended reading order is:
 4. `docs/notes/file explanation/`
 5. `docs/notes/mathematical explanation/`
 
-This order means:
+If the agent reads these folders in order, it should be able to fully understand how this repository is organized, what it is trying to do, and how the main engineering logic fits together.
+
+The roles of these folders are:
 
 - `project guide` defines the project goals, engineering roadmap, and top-level constraints.
 - `spec` records the current project registry, object registry, and task list.
@@ -26,13 +30,13 @@ This order means:
 
 This project uses the Julia language.
 
-Package installation, environment setup, and other dependency handling may be delegated to the AI agent. The agent should install or instantiate whatever is required for the task instead of expecting a human to prepare the environment manually.
+Package installation, environment setup, and other dependency handling may also be delegated to the AI agent. The agent can install, instantiate, or prepare whatever is required for the task instead of relying on a human to do environment preparation first.
 
-## Minimal Note For Human Readers
+## For Human Users
 
-If you want to understand the project, start from `docs/` and not from the source tree.
+If you want to understand the project yourself, start from `docs/` rather than from the source tree.
 
-If you want an AGENT to work on this repository, giving it the reading order above is usually enough. A separate manual explanation of the repository layout is usually unnecessary.
+If you want to use this repository or change it, you can usually let an AI agent handle the process for you. In most cases, telling the agent to read `docs/` in the order above is enough to get it oriented.
 
 ## Repository Role
 
