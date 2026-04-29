@@ -1,0 +1,24 @@
+{
+  "task_group_id": "lorenz96_smoke_tasks",
+  "tasks": [
+    {
+      "task_id": "lorenz96_one_step_forecast",
+      "task_type": "one_step_forecast",
+      "window_id": "lorenz96_one_step_lag1",
+      "target": "observation"
+    },
+    {
+      "task_id": "lorenz96_rollout_smoke",
+      "task_type": "multi_step_rollout",
+      "window_id": "lorenz96_rollout_smoke",
+      "target": "observation",
+      "horizons": [25, 100]
+    },
+    {
+      "task_id": "lorenz96_long_time_statistics_smoke",
+      "task_type": "long_time_statistics",
+      "window_id": "lorenz96_statistics_h200",
+      "target": "observation_statistics"
+    }
+  ]
+}

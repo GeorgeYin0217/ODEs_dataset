@@ -1,0 +1,29 @@
+{
+  "system_id": "lorenz96",
+  "family": "v1_core",
+  "variant": "k40_f8_smoke_full_state",
+  "state_dim": 40,
+  "parameter_names": ["F"],
+  "default_parameters": {
+    "F": 8.0
+  },
+  "parameter_domain": {
+    "F": [8.0, 8.0]
+  },
+  "initial_condition_domain": {
+    "type": "seeded_perturbations_around_forcing",
+    "description": "Fixed-seed perturbations around the uniform Lorenz96 forcing state, followed by burn-in before retained samples.",
+    "perturbation_scale": 0.25
+  },
+  "dt": 0.01,
+  "burn_in_time": 2.0,
+  "tspan": [0.0, 5.0],
+  "trajectory_length": 500,
+  "num_trajectories": 6,
+  "solver_name": "fixed_step_rk4",
+  "solver_abstol": 0.0,
+  "solver_reltol": 0.0,
+  "seed_policy": {
+    "generation_seed": 20260429
+  }
+}

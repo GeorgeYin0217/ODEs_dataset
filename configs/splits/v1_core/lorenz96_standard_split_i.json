@@ -1,0 +1,9 @@
+{
+  "split_id": "lorenz96_standard_split_i",
+  "split_type": "initial_condition",
+  "grouping_unit": "trajectory",
+  "train_ratio": 0.70,
+  "val_ratio": 0.15,
+  "test_ratio": 0.15,
+  "seed": 20260429
+}

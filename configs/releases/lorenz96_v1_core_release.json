@@ -1,0 +1,12 @@
+{
+  "release_id": "lorenz96_fullobs_v1_core",
+  "release_version": "0.1.0-dev",
+  "system_id": "lorenz96",
+  "family": "v1_core",
+  "difficulty_levels": ["smoke", "standard"],
+  "standard_benchmark_id": "lorenz96_k40_f8_fullobs_v1_standard",
+  "smoke_benchmark_id": "lorenz96_k40_f8_fullobs_v1_smoke",
+  "raw_path": "data/raw/v1_core/lorenz96/standard/lorenz96_raw.jld2",
+  "processed_path": "data/processed/v1_core/lorenz96/standard/full_state/lorenz96_observed.jld2",
+  "manifest_path": "data/manifests/v1_core/lorenz96/standard/lorenz96_manifest.json"
+}
