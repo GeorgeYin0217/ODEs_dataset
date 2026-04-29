@@ -1,14 +1,14 @@
 # ODEs_dataset
 
-这个仓库的主入口是 `docs/`，不是 `README`。
+The main entry point of this repository is `docs/`, not `README`.
 
-对人类读者来说，通常只需要阅读 `docs/`。该目录已经包含这个项目的整体目标、工程结构、规范、任务记录与说明文档；`README` 只保留最小导航。
+For human readers, `docs/` is usually the only directory that needs to be read. It already contains the project goals, engineering structure, specifications, task records, and explanation documents. This `README` is intentionally minimal.
 
-## 推荐用法
+## Recommended Use
 
-建议直接让代码 AGENT 接管这个仓库，例如 Codex、Claude Code 等，而不是手动从源码层逐个文件阅读。
+This repository is intended to be handled directly by a coding AGENT such as Codex or Claude Code rather than by manually reading source files from the top down.
 
-对 AGENT，推荐入口顺序如下：
+For an AGENT, the recommended reading order is:
 
 1. `docs/project guide/`
 2. `docs/spec/`
@@ -16,18 +16,24 @@
 4. `docs/notes/file explanation/`
 5. `docs/notes/mathematical explanation/`
 
-这个顺序的含义是：
+This order means:
 
-- `project guide` 提供项目目标、工程路线和顶层约束；
-- `spec` 提供当前项目登记、对象注册和任务清单；
-- 三个 `explanation` 文件夹共同覆盖项目的具体说明、生成文件解释和数学背景。
+- `project guide` defines the project goals, engineering roadmap, and top-level constraints.
+- `spec` records the current project registry, object registry, and task list.
+- The three `explanation` folders together contain the project instructions, generated-file explanations, and mathematical background.
 
-## 给人类读者的最小说明
+## Julia And Dependencies
 
-如果你只是想理解这个项目，请直接从 `docs/` 开始，不需要先读源码。
+This project uses the Julia language.
 
-如果你只是想让 AGENT 工作，请把上面的入口顺序明确告诉它；通常不需要再单独为它解释仓库结构。
+Package installation, environment setup, and other dependency handling may be delegated to the AI agent. The agent should install or instantiate whatever is required for the task instead of expecting a human to prepare the environment manually.
 
-## 仓库定位
+## Minimal Note For Human Readers
 
-`ODEs_dataset` 是一个 ODE 测试数据集工程仓库。它的完整说明已经放在 `docs/` 中维护，这里不再重复展开。
+If you want to understand the project, start from `docs/` and not from the source tree.
+
+If you want an AGENT to work on this repository, giving it the reading order above is usually enough. A separate manual explanation of the repository layout is usually unnecessary.
+
+## Repository Role
+
+`ODEs_dataset` is an ODE test dataset engineering repository. Its full documentation is maintained in `docs/` and is not repeated here.
