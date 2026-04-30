@@ -1,0 +1,11 @@
+{
+  "release_id": "odes_dataset_v1_plus_pendulum_lusch2018",
+  "release_version": "0.1.0-dev",
+  "scope": "v1_plus",
+  "system_id": "nonlinear_pendulum_lusch2018",
+  "default_difficulty": "medium",
+  "benchmark_id": "nonlinear_pendulum_lusch2018_fullobs_v1_plus_medium",
+  "manifest_path": "data/manifests/v1_plus/nonlinear_pendulum_lusch2018/medium/manifest.json",
+  "release_index_path": "data/releases/v1_plus/nonlinear_pendulum_lusch2018/medium/release_index.json",
+  "notes": "Lusch-aligned nonlinear pendulum release candidate with full-state clean observations."
+}

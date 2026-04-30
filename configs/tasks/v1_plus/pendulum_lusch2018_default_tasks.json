@@ -1,0 +1,31 @@
+{
+  "task_group_id": "pendulum_lusch2018_default_tasks",
+  "tasks": [
+    {
+      "task_id": "pendulum_one_step_forecast",
+      "task_type": "one_step_forecast",
+      "window_id": "pendulum_one_step_lag1",
+      "target": "observation"
+    },
+    {
+      "task_id": "pendulum_rollout_short_h10",
+      "task_type": "multi_step_rollout",
+      "window_id": "pendulum_rollout_default",
+      "target": "observation",
+      "horizons": [10]
+    },
+    {
+      "task_id": "pendulum_rollout_medium_h25",
+      "task_type": "multi_step_rollout",
+      "window_id": "pendulum_rollout_default",
+      "target": "observation",
+      "horizons": [25]
+    },
+    {
+      "task_id": "pendulum_representation_evaluation",
+      "task_type": "representation_evaluation",
+      "window_id": "pendulum_statistics_h51",
+      "target": "observation_statistics"
+    }
+  ]
+}

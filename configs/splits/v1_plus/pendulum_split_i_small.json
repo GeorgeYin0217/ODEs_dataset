@@ -1,0 +1,9 @@
+{
+  "split_id": "pendulum_split_i_small",
+  "split_type": "initial_condition",
+  "train_ratio": 0.8,
+  "val_ratio": 0.1,
+  "test_ratio": 0.1,
+  "grouping_unit": "trajectory",
+  "seed": 20260430
+}

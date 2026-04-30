@@ -1,0 +1,29 @@
+{
+  "system_id": "nonlinear_pendulum_lusch2018",
+  "family": "v1_plus",
+  "variant": "medium_lusch_aligned_full_state",
+  "state_dim": 2,
+  "parameter_names": [],
+  "default_parameters": {},
+  "parameter_domain": {},
+  "initial_condition_domain": {
+    "type": "uniform_rejection_energy",
+    "description": "Uniform candidates on the Lusch-aligned box, accepted only when H(x0) < 0.99.",
+    "bounds": {
+      "x1": [-3.1, 3.1],
+      "x2": [-2.0, 2.0]
+    },
+    "energy_threshold": 0.99,
+    "max_candidates": 200000
+  },
+  "dt": 0.02,
+  "tspan": [0.0, 1.0],
+  "trajectory_length": 51,
+  "num_trajectories": 512,
+  "solver_name": "fixed_step_rk4",
+  "solver_abstol": 0.0,
+  "solver_reltol": 0.0,
+  "seed_policy": {
+    "generation_seed": 2026043001
+  }
+}

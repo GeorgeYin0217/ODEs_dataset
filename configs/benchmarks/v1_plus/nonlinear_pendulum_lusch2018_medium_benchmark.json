@@ -1,0 +1,28 @@
+{
+  "benchmark_id": "nonlinear_pendulum_lusch2018_fullobs_v1_plus_medium",
+  "system_ids": ["nonlinear_pendulum_lusch2018"],
+  "observation_ids": ["pendulum_fullstate_identity_clean"],
+  "split_ids": ["pendulum_split_i_default"],
+  "window_ids": [
+    "pendulum_one_step_lag1",
+    "pendulum_rollout_short_h10",
+    "pendulum_rollout_medium_h25",
+    "pendulum_statistics_h51"
+  ],
+  "task_ids": [
+    "pendulum_one_step_forecast",
+    "pendulum_rollout_short_h10",
+    "pendulum_rollout_medium_h25",
+    "pendulum_representation_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "release_version": "0.1.0-dev",
+  "output_policy": {
+    "raw_path": "data/raw/v1_plus/nonlinear_pendulum_lusch2018/medium/raw_trajectories.jld2",
+    "processed_path": "data/processed/v1_plus/nonlinear_pendulum_lusch2018/medium/full_state_clean/observed_trajectories.jld2",
+    "split_path": "data/processed/v1_plus/nonlinear_pendulum_lusch2018/medium/full_state_clean/splits.json",
+    "windows_summary_path": "data/processed/v1_plus/nonlinear_pendulum_lusch2018/medium/full_state_clean/windows_summary.json",
+    "manifest_path": "data/manifests/v1_plus/nonlinear_pendulum_lusch2018/medium/manifest.json",
+    "release_index_path": "data/releases/v1_plus/nonlinear_pendulum_lusch2018/medium/release_index.json"
+  }
+}

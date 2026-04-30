@@ -1,0 +1,18 @@
+{
+  "window_id": "pendulum_lusch2018_default_windows",
+  "one_step": {
+    "window_id": "pendulum_one_step_lag1",
+    "window_type": "one_step",
+    "lag": 1
+  },
+  "rollout": {
+    "window_id": "pendulum_rollout_default",
+    "window_type": "rollout",
+    "horizons": [10, 25]
+  },
+  "statistics": {
+    "window_id": "pendulum_statistics_h51",
+    "window_type": "statistics",
+    "horizon": 51
+  }
+}
