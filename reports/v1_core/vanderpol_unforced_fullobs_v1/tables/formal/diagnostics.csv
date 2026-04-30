@@ -1,2 +1,0 @@
-system_id,observation_id,variant,mu,mu_min,mu_max,dt,num_trajectories,trajectory_length,x1_min,x1_max,x2_min,x2_max,state_norm_max,velocity_norm_max,rk4_self_residual_max,full_state_observation_error_max,tail_x1_sign_changes_min,smoke_passed,formal_passed,split_i_train,split_i_val,split_i_test,split_p_train,split_p_val,split_p_test
-"vanderpol_unforced","full_state_2d_clean","formal_mu1_to_3_full_state",1.0,1.0,3.0,0.02,48,2000,-2.9735138443191387,2.970638216339752,-5.8745618049069614,5.646038357195228,5.95954682166886,47.44434982398939,0.0,0.0,4,true,1,34,7,7,34,7,7

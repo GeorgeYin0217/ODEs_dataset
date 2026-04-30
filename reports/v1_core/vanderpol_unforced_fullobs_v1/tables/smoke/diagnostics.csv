@@ -1,2 +1,0 @@
-system_id,observation_id,variant,mu,mu_min,mu_max,dt,num_trajectories,trajectory_length,x1_min,x1_max,x2_min,x2_max,state_norm_max,velocity_norm_max,rk4_self_residual_max,full_state_observation_error_max,tail_x1_sign_changes_min,smoke_passed
-"vanderpol_unforced","full_state_2d_clean","smoke_mu1_full_state",1.0,1.0,1.0,0.02,8,1000,-2.0852382025621927,2.322321939409127,-2.6916114934374273,3.8975298256728017,4.008411809554821,8.589986095739176,0.0,0.0,3,true

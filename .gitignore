@@ -1,34 +1,35 @@
-# Julia
-*.jl.cov
-*.jl.*.cov
-*.jl.mem
-/deps/deps.jl
-/docs/build/
+# Track only project source, configuration, experiments, tests, and docs by default.
+*
 
-# Local environments and editor state
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+# Root project files.
+!/.gitignore
+!/README.md
+!/Project.toml
+!/Manifest.toml
 
-# OS metadata
-.DS_Store
-Thumbs.db
+# Tracked project directories.
+!/docs/
+!/docs/**
+!/configs/
+!/configs/**
+!/src/
+!/src/**
+!/experiments/
+!/experiments/**
+!/test/
+!/test/**
 
-# Logs and generated reports
-*.log
-/reports/logs/*
-!/reports/logs/.gitkeep
-
-# Dataset artifacts
-/data/raw/*
-!/data/raw/.gitkeep
-/data/processed/*
-!/data/processed/.gitkeep
-/data/releases/*
-!/data/releases/.gitkeep
-
-# Temporary files
-/tmp/
-/scratch/
+# Generated data, runs, logs, checkpoints, caches, and most artifacts stay ignored.
+# Keep optional placeholders for generated-output directories without tracking contents.
+!/artifacts/
+/artifacts/**
+!/artifacts/.gitkeep
+!/artifacts/README.md
+!/runs/
+/runs/**
+!/runs/.gitkeep
+!/runs/README.md
+!/data/
+/data/**
+!/data/.gitkeep
+!/data/README.md
