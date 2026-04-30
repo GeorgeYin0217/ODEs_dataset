@@ -1,0 +1,9 @@
+{
+  "split_id": "duffing_controlled_formal_split_p_beta",
+  "split_type": "parameter_beta",
+  "grouping_unit": "trajectory",
+  "parameter_name": "beta",
+  "train_beta_values": [0.5],
+  "val_beta_values": [1.0],
+  "test_beta_values": [1.5]
+}

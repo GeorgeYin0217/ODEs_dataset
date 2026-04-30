@@ -1,0 +1,34 @@
+{
+  "benchmark_id": "duffing_controlled_edmdc_v1_formal",
+  "system_ids": ["duffing_controlled_edmdc"],
+  "observation_ids": [
+    "duffing_controlled_fullstate_clean",
+    "duffing_controlled_fullstate_noise_s1",
+    "duffing_controlled_fullstate_noise_s2",
+    "duffing_controlled_fullstate_noise_s3"
+  ],
+  "split_ids": [
+    "duffing_controlled_formal_split_i",
+    "duffing_controlled_formal_split_p_beta"
+  ],
+  "window_ids": [
+    "duffing_controlled_formal_one_step_lag1",
+    "duffing_controlled_formal_rollout"
+  ],
+  "task_ids": [
+    "duffing_controlled_edmdc_one_step_formal",
+    "duffing_controlled_edmdc_rollout_formal"
+  ],
+  "difficulty_level": "formal",
+  "release_version": "0.2.0-dev",
+  "output_policy": {
+    "raw_path": "data/raw/v1_core/duffing_controlled_edmdc/formal/raw_controlled_trajectories.jld2",
+    "processed_path_template": "data/processed/v1_core/duffing_controlled_edmdc/formal/{observation_id}/observed_controlled_trajectories.jld2",
+    "split_path": "data/processed/v1_core/duffing_controlled_edmdc/formal/split_i/splits.json",
+    "windows_summary_path": "data/processed/v1_core/duffing_controlled_edmdc/formal/split_i/windows_summary.json",
+    "split_beta_path": "data/processed/v1_core/duffing_controlled_edmdc/formal/split_p_beta/splits.json",
+    "windows_beta_summary_path": "data/processed/v1_core/duffing_controlled_edmdc/formal/split_p_beta/windows_summary.json",
+    "manifest_path": "data/manifests/v1_core/duffing_controlled_edmdc/formal/manifest.json",
+    "release_index_path": "data/releases/v1_core/duffing_controlled_edmdc/formal/release_index.json"
+  }
+}

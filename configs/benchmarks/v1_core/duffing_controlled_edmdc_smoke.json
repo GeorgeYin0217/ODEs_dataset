@@ -1,0 +1,27 @@
+{
+  "benchmark_id": "duffing_controlled_edmdc_v1_smoke",
+  "system_ids": ["duffing_controlled_edmdc"],
+  "observation_ids": [
+    "duffing_controlled_fullstate_clean",
+    "duffing_controlled_fullstate_noise_s1"
+  ],
+  "split_ids": ["duffing_controlled_smoke_split_i"],
+  "window_ids": [
+    "duffing_controlled_one_step_lag1",
+    "duffing_controlled_rollout_short"
+  ],
+  "task_ids": [
+    "duffing_controlled_edmdc_one_step_smoke",
+    "duffing_controlled_edmdc_rollout_smoke"
+  ],
+  "difficulty_level": "smoke",
+  "release_version": "0.1.0-dev",
+  "output_policy": {
+    "raw_path": "data/raw/v1_core/duffing_controlled_edmdc/smoke/raw_controlled_trajectories.jld2",
+    "processed_path_template": "data/processed/v1_core/duffing_controlled_edmdc/smoke/{observation_id}/observed_controlled_trajectories.jld2",
+    "split_path": "data/processed/v1_core/duffing_controlled_edmdc/smoke/splits.json",
+    "windows_summary_path": "data/processed/v1_core/duffing_controlled_edmdc/smoke/windows_summary.json",
+    "manifest_path": "data/manifests/v1_core/duffing_controlled_edmdc/smoke/manifest.json",
+    "release_index_path": "data/releases/v1_core/duffing_controlled_edmdc/smoke/release_index.json"
+  }
+}

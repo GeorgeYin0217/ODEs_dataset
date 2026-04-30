@@ -1,0 +1,47 @@
+{
+  "system_id": "duffing_controlled_edmdc",
+  "family": "v1_core",
+  "variant": "formal_beta_grid_fullstate_controlled",
+  "state_dim": 2,
+  "input_dim": 1,
+  "parameter_names": ["delta", "alpha", "beta", "input_gain"],
+  "default_parameters": {
+    "delta": 0.2,
+    "alpha": -1.0,
+    "beta": 1.0,
+    "input_gain": 1.0
+  },
+  "parameter_domain": {
+    "delta": [0.2, 0.2],
+    "alpha": [-1.0, -1.0],
+    "beta": [0.5, 1.5],
+    "input_gain": [1.0, 1.0]
+  },
+  "parameter_grid": {
+    "beta": [0.5, 1.0, 1.5]
+  },
+  "initial_condition_domain": {
+    "type": "manual_grid_2d",
+    "description": "Formal grid covering both wells, near-barrier states, and moderate velocities.",
+    "q_values": [-1.25, -0.75, -0.25, 0.25, 0.75, 1.25],
+    "v_values": [-0.45, 0.0, 0.45]
+  },
+  "input_policy": {
+    "type": "random_zoh_uniform",
+    "amplitude": 0.45,
+    "hold_steps": 20,
+    "description": "Open-loop piecewise-constant random input, independent of state feedback."
+  },
+  "dt": 0.02,
+  "tspan": [0.0, 80.0],
+  "trajectory_length": 4000,
+  "num_trajectories": 54,
+  "solver_name": "fixed_step_rk4_zoh",
+  "solver_abstol": 0.0,
+  "solver_reltol": 0.0,
+  "seed_policy": {
+    "generation_seed": 20260430,
+    "input_seed": 20260501,
+    "noise_seed": 20260502
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "split_id": "duffing_controlled_smoke_split_i",
+  "split_type": "initial_condition",
+  "train_ratio": 0.5,
+  "val_ratio": 0.25,
+  "test_ratio": 0.25,
+  "grouping_unit": "trajectory",
+  "seed": 20260430
+}

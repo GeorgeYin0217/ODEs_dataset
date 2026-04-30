@@ -1,0 +1,13 @@
+{
+  "window_id": "duffing_controlled_smoke_windows",
+  "one_step": {
+    "window_id": "duffing_controlled_one_step_lag1",
+    "window_type": "one_step_controlled",
+    "lag": 1
+  },
+  "rollout": {
+    "window_id": "duffing_controlled_rollout_short",
+    "window_type": "rollout_controlled",
+    "horizons": [10, 25]
+  }
+}

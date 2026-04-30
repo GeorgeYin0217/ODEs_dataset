@@ -1,0 +1,48 @@
+{
+  "system_id": "duffing_controlled_edmdc",
+  "family": "v1_core",
+  "variant": "smoke_beta1_fullstate_controlled",
+  "state_dim": 2,
+  "input_dim": 1,
+  "parameter_names": ["delta", "alpha", "beta", "input_gain"],
+  "default_parameters": {
+    "delta": 0.2,
+    "alpha": -1.0,
+    "beta": 1.0,
+    "input_gain": 1.0
+  },
+  "parameter_domain": {
+    "delta": [0.2, 0.2],
+    "alpha": [-1.0, -1.0],
+    "beta": [1.0, 1.0],
+    "input_gain": [1.0, 1.0]
+  },
+  "initial_condition_domain": {
+    "type": "manual_smoke_set",
+    "description": "Small controlled Duffing smoke set covering both wells and near-barrier starts.",
+    "values": [
+      [-1.0, 0.0],
+      [1.0, 0.0],
+      [-0.25, 0.35],
+      [0.25, -0.35]
+    ]
+  },
+  "input_policy": {
+    "type": "random_zoh_uniform",
+    "amplitude": 0.45,
+    "hold_steps": 6,
+    "description": "Open-loop piecewise-constant random input, independent of state feedback."
+  },
+  "dt": 0.02,
+  "tspan": [0.0, 2.4],
+  "trajectory_length": 120,
+  "num_trajectories": 4,
+  "solver_name": "fixed_step_rk4_zoh",
+  "solver_abstol": 0.0,
+  "solver_reltol": 0.0,
+  "seed_policy": {
+    "generation_seed": 20260430,
+    "input_seed": 20260431,
+    "noise_seed": 20260432
+  }
+}

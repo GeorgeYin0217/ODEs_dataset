@@ -1,0 +1,15 @@
+{
+  "observation_id": "duffing_controlled_fullstate_noise_s3",
+  "mode": "full_state",
+  "input_space_name": "state_and_control",
+  "sensor_map_id": "identity",
+  "noise_level_id": "relative_rms_5e-2",
+  "noise_model": "relative_gaussian_rms",
+  "state_noise_relative_rms": 0.05,
+  "input_noise_relative_rms": 0.05,
+  "normalization_policy": "none",
+  "quantization_policy": "none",
+  "output_dim": 2,
+  "input_dim": 1,
+  "seed_offset": 20260503
+}

@@ -1,0 +1,15 @@
+{
+  "observation_id": "duffing_controlled_fullstate_clean",
+  "mode": "full_state",
+  "input_space_name": "state_and_control",
+  "sensor_map_id": "identity",
+  "noise_level_id": "clean",
+  "noise_model": "none",
+  "state_noise_relative_rms": 0.0,
+  "input_noise_relative_rms": 0.0,
+  "normalization_policy": "none",
+  "quantization_policy": "none",
+  "output_dim": 2,
+  "input_dim": 1,
+  "seed_offset": 0
+}

@@ -1,0 +1,20 @@
+{
+  "task_group_id": "duffing_controlled_edmdc_formal_tasks",
+  "tasks": [
+    {
+      "task_id": "duffing_controlled_edmdc_one_step_formal",
+      "task_type": "edmdc_one_step_identification",
+      "window_id": "duffing_controlled_formal_one_step_lag1",
+      "sample_contract": "(z_m, u_m, z_{m+1})",
+      "target": "controlled_observation"
+    },
+    {
+      "task_id": "duffing_controlled_edmdc_rollout_formal",
+      "task_type": "edmdc_open_loop_rollout",
+      "window_id": "duffing_controlled_formal_rollout",
+      "sample_contract": "(z_s, u_s,...,u_{s+L-1}, z_{s+1},...,z_{s+L})",
+      "target": "controlled_observation",
+      "horizons": [10, 50, 100]
+    }
+  ]
+}

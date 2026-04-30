@@ -1,0 +1,18 @@
+{
+  "release_id": "duffing_controlled_edmdc_v1_smoke",
+  "release_version": "0.1.0-dev",
+  "family": "v1_core",
+  "system_id": "duffing_controlled_edmdc",
+  "variants": ["smoke_beta1_fullstate_controlled"],
+  "benchmark_ids": ["duffing_controlled_edmdc_v1_smoke"],
+  "system_configs": ["configs/systems/v1_core/duffing_controlled_edmdc_smoke.json"],
+  "observation_configs": [
+    "configs/observations/duffing_controlled_fullstate_clean.json",
+    "configs/observations/duffing_controlled_fullstate_noise_s1.json"
+  ],
+  "split_configs": ["configs/splits/v1_core/duffing_controlled_smoke_split_i.json"],
+  "window_configs": ["configs/windows/v1_core/duffing_controlled_smoke_windows.json"],
+  "task_configs": ["configs/tasks/v1_core/duffing_controlled_edmdc_smoke_tasks.json"],
+  "benchmark_configs": ["configs/benchmarks/v1_core/duffing_controlled_edmdc_smoke.json"],
+  "manifest_paths": ["data/manifests/v1_core/duffing_controlled_edmdc/smoke/manifest.json"]
+}

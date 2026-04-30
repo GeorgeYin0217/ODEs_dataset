@@ -1,0 +1,9 @@
+{
+  "split_id": "duffing_controlled_formal_split_i",
+  "split_type": "initial_condition",
+  "train_ratio": 0.6666666666666666,
+  "val_ratio": 0.1666666666666667,
+  "test_ratio": 0.1666666666666667,
+  "grouping_unit": "trajectory",
+  "seed": 20260430
+}
