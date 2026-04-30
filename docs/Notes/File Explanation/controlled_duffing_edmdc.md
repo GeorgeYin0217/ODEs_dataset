@@ -4,9 +4,11 @@
 
 Implemented and generated the controlled Duffing EDMDc dataset workflow. The system uses
 the controlled Duffing equations with open-loop zero-order-held random inputs, full-state
-observations, and separate state/input observation noise. The dataset layer exports raw,
-processed, split, window, manifest, and release-index objects for downstream EDMDc use;
-it does not implement EDMDc training.
+observations, and separate state/input observation noise. The formal data now includes
+clean observations plus four noisy levels: `1e-3`, `1e-2`, `5e-2`, and `15e-2`
+relative RMS for both state and input. The dataset layer exports raw, processed, split,
+window, manifest, and release-index objects for downstream EDMDc use; it does not
+implement EDMDc training.
 
 ## Run Entry Points And Scripts
 
@@ -30,6 +32,7 @@ build one-step and rollout windows, write manifests, and print validation diagno
 - `configs/observations/duffing_controlled_fullstate_noise_s1.json`: relative RMS `1e-3` state/input noise.
 - `configs/observations/duffing_controlled_fullstate_noise_s2.json`: relative RMS `1e-2` state/input noise.
 - `configs/observations/duffing_controlled_fullstate_noise_s3.json`: relative RMS `5e-2` state/input noise.
+- `configs/observations/duffing_controlled_fullstate_noise_s4.json`: relative RMS `15e-2` state/input noise, added as the high-noise level.
 - `configs/splits/v1_core/duffing_controlled_*`: Split-I and Split-P-beta declarations.
 - `configs/windows/v1_core/duffing_controlled_*`: one-step and rollout controlled window declarations.
 - `configs/tasks/v1_core/duffing_controlled_edmdc_*`: downstream EDMDc task declarations.
@@ -114,6 +117,7 @@ Formal result:
 - Raw input tensor shape: `(1, 4000, 54)`
 - Split-I counts: train/val/test = `36/9/9`
 - Split-P-beta counts: train/val/test = `18/18/18`
-- Noise levels: clean, `1e-3`, `1e-2`, `5e-2`
+- Noise levels: clean, `1e-3`, `1e-2`, `5e-2`, `15e-2`
+- High-noise `s4` state/input relative RMS mean: `0.15 / 0.15`
 - RK4 self residual max: `0.0`
 - `formal_passed: true`

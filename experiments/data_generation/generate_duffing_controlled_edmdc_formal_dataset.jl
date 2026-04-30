@@ -33,6 +33,7 @@ function load_controlled_duffing_formal_configs()
         ("observations", "duffing_controlled_fullstate_noise_s1.json"),
         ("observations", "duffing_controlled_fullstate_noise_s2.json"),
         ("observations", "duffing_controlled_fullstate_noise_s3.json"),
+        ("observations", "duffing_controlled_fullstate_noise_s4.json"),
     ]
     return Dict(
         "benchmark" => load_config("benchmarks", "v1_core", "duffing_controlled_edmdc_formal.json"),
@@ -150,6 +151,7 @@ function print_controlled_duffing_formal_summary(result::AbstractDict)
     s1 = diagnostics["observations"]["duffing_controlled_fullstate_noise_s1"]
     s2 = diagnostics["observations"]["duffing_controlled_fullstate_noise_s2"]
     s3 = diagnostics["observations"]["duffing_controlled_fullstate_noise_s3"]
+    s4 = diagnostics["observations"]["duffing_controlled_fullstate_noise_s4"]
     split_p = result["split_p_beta"]
 
     @printf("system_id: %s\n", spec.system_id)
@@ -190,6 +192,8 @@ function print_controlled_duffing_formal_summary(result::AbstractDict)
         s2["state_noise_relative_rms_mean"], s2["input_noise_relative_rms_mean"])
     @printf("s3 state/input relative rms mean: %.6e / %.6e\n",
         s3["state_noise_relative_rms_mean"], s3["input_noise_relative_rms_mean"])
+    @printf("s4 state/input relative rms mean: %.6e / %.6e\n",
+        s4["state_noise_relative_rms_mean"], s4["input_noise_relative_rms_mean"])
     @printf("formal_passed: %s\n", string(diagnostics["formal_passed"]))
     @printf("raw output: %s\n", output_paths["raw_path"])
     @printf("processed outputs: %s\n", string(output_paths["processed_files"]))

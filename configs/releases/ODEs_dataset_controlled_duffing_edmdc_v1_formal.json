@@ -1,6 +1,6 @@
 {
   "release_id": "duffing_controlled_edmdc_v1_formal",
-  "release_version": "0.2.0-dev",
+  "release_version": "0.2.1-dev",
   "family": "v1_core",
   "system_id": "duffing_controlled_edmdc",
   "variants": ["formal_beta_grid_fullstate_controlled"],
@@ -10,7 +10,8 @@
     "configs/observations/duffing_controlled_fullstate_clean.json",
     "configs/observations/duffing_controlled_fullstate_noise_s1.json",
     "configs/observations/duffing_controlled_fullstate_noise_s2.json",
-    "configs/observations/duffing_controlled_fullstate_noise_s3.json"
+    "configs/observations/duffing_controlled_fullstate_noise_s3.json",
+    "configs/observations/duffing_controlled_fullstate_noise_s4.json"
   ],
   "split_configs": [
     "configs/splits/v1_core/duffing_controlled_formal_split_i.json",

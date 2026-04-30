@@ -217,6 +217,7 @@ function controlled_duffing_formal_passed(diagnostics::AbstractDict)
         "duffing_controlled_fullstate_noise_s1",
         "duffing_controlled_fullstate_noise_s2",
         "duffing_controlled_fullstate_noise_s3",
+        "duffing_controlled_fullstate_noise_s4",
     ]
     has_all_observations = all(id -> haskey(diagnostics["observations"], id), required_observations)
     has_all_observations || return false
@@ -225,6 +226,7 @@ function controlled_duffing_formal_passed(diagnostics::AbstractDict)
     s1 = diagnostics["observations"]["duffing_controlled_fullstate_noise_s1"]
     s2 = diagnostics["observations"]["duffing_controlled_fullstate_noise_s2"]
     s3 = diagnostics["observations"]["duffing_controlled_fullstate_noise_s3"]
+    s4 = diagnostics["observations"]["duffing_controlled_fullstate_noise_s4"]
 
     return diagnostics["all_states_and_inputs_finite"] &&
         diagnostics["all_raw_dimensions_ok"] &&
@@ -242,7 +244,9 @@ function controlled_duffing_formal_passed(diagnostics::AbstractDict)
         5e-3 <= s2["state_noise_relative_rms_mean"] <= 2e-2 &&
         5e-3 <= s2["input_noise_relative_rms_mean"] <= 2e-2 &&
         2.5e-2 <= s3["state_noise_relative_rms_mean"] <= 7.5e-2 &&
-        2.5e-2 <= s3["input_noise_relative_rms_mean"] <= 7.5e-2
+        2.5e-2 <= s3["input_noise_relative_rms_mean"] <= 7.5e-2 &&
+        1.0e-1 <= s4["state_noise_relative_rms_mean"] <= 2.0e-1 &&
+        1.0e-1 <= s4["input_noise_relative_rms_mean"] <= 2.0e-1
 end
 
 ## Diagnostic table assembly
@@ -311,6 +315,8 @@ function controlled_duffing_diagnostics_csv_row(spec::ControlledDuffingSpec, dia
         "s2_input_relative_rms_mean",
         "s3_state_relative_rms_mean",
         "s3_input_relative_rms_mean",
+        "s4_state_relative_rms_mean",
+        "s4_input_relative_rms_mean",
         "smoke_passed",
         "formal_passed",
     ]
@@ -341,6 +347,8 @@ function controlled_duffing_diagnostics_csv_row(spec::ControlledDuffingSpec, dia
         noise_input_mean("duffing_controlled_fullstate_noise_s2"),
         noise_state_mean("duffing_controlled_fullstate_noise_s3"),
         noise_input_mean("duffing_controlled_fullstate_noise_s3"),
+        noise_state_mean("duffing_controlled_fullstate_noise_s4"),
+        noise_input_mean("duffing_controlled_fullstate_noise_s4"),
         diagnostics["smoke_passed"],
         diagnostics["formal_passed"],
     ]

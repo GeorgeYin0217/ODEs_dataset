@@ -5,7 +5,8 @@
     "duffing_controlled_fullstate_clean",
     "duffing_controlled_fullstate_noise_s1",
     "duffing_controlled_fullstate_noise_s2",
-    "duffing_controlled_fullstate_noise_s3"
+    "duffing_controlled_fullstate_noise_s3",
+    "duffing_controlled_fullstate_noise_s4"
   ],
   "split_ids": [
     "duffing_controlled_formal_split_i",
@@ -20,7 +21,7 @@
     "duffing_controlled_edmdc_rollout_formal"
   ],
   "difficulty_level": "formal",
-  "release_version": "0.2.0-dev",
+  "release_version": "0.2.1-dev",
   "output_policy": {
     "raw_path": "data/raw/v1_core/duffing_controlled_edmdc/formal/raw_controlled_trajectories.jld2",
     "processed_path_template": "data/processed/v1_core/duffing_controlled_edmdc/formal/{observation_id}/observed_controlled_trajectories.jld2",

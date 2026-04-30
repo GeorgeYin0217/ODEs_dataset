@@ -4,7 +4,7 @@
 
 Generated the controlled Duffing EDMDc formal dataset with long trajectories,
 three beta values, open-loop random ZOH inputs, clean full-state observations,
-and three noisy state/input observation levels.
+and four noisy state/input observation levels.
 
 ## Configuration
 
@@ -18,7 +18,8 @@ and three noisy state/input observation levels.
 - Trajectory length: `4000`
 - Raw trajectory count: `54`
 - Input policy: random open-loop ZOH, amplitude `0.45`, hold steps `20`
-- Observation levels: clean, `1e-3`, `1e-2`, `5e-2` relative RMS state/input noise
+- Observation levels: clean, `1e-3`, `1e-2`, `5e-2`, `15e-2` relative RMS state/input noise
+- Release version: `0.2.1-dev`
 
 ## Validation Results
 
@@ -32,6 +33,7 @@ and three noisy state/input observation levels.
 - s1 state/input relative RMS mean: `0.001 / 0.001`
 - s2 state/input relative RMS mean: `0.01 / 0.01`
 - s3 state/input relative RMS mean: `0.049999999999999996 / 0.05`
+- s4 state/input relative RMS mean: `0.15 / 0.15`
 - Formal validation passed: `true`
 
 ## Split And Window Counts
@@ -47,6 +49,7 @@ and three noisy state/input observation levels.
 
 - Raw JLD2: `data/raw/v1_core/duffing_controlled_edmdc/formal/raw_controlled_trajectories.jld2`
 - Processed JLD2 directory: `data/processed/v1_core/duffing_controlled_edmdc/formal/`
+- High-noise processed JLD2: `data/processed/v1_core/duffing_controlled_edmdc/formal/duffing_controlled_fullstate_noise_s4/observed_controlled_trajectories.jld2`
 - Split-I JSON: `data/processed/v1_core/duffing_controlled_edmdc/formal/split_i/splits.json`
 - Split-P-beta JSON: `data/processed/v1_core/duffing_controlled_edmdc/formal/split_p_beta/splits.json`
 - Manifest: `data/manifests/v1_core/duffing_controlled_edmdc/formal/manifest.json`
